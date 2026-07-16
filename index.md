@@ -8,8 +8,7 @@ title: neulas
 Benvenuto su **neulas**, il blog in cui racconto — onestamente, senza filtri —
 progetti realizzati con l'aiuto delle intelligenze artificiali.
 
-Dal bisogno alla soluzione, passando per vicoli ciechi, piccole vittorie e
-tanto apprendimento.
+Dal bisogno alla soluzione, un passo alla volta, passando per vicoli ciechi, piccole vittorie e tanto apprendimento.
 
 ### Ultimi articoli
 
