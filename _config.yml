@@ -3,8 +3,8 @@ description: >-
   Una persona non esperta, un'AI al fianco, un problema alla volta.
   Blog personale di Roberto — racconti onesti di progetti realizzati
   con l'affiancamento di una o più AI.
-url: "https://neulas.it"          # decommentare dopo aver collegato il dominio
-baseurl: ""                        # lasciare vuoto per dominio root
+# url: "https://neulas.it"          # decommentare dopo aver collegato il dominio
+baseurl: "/neulas"                        # lasciare vuoto per dominio root
 theme: minima
 lang: it-IT
 author:

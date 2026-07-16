@@ -17,7 +17,7 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 > ⚠️ **Prima di tutto: sicurezza.** Si lavora a 230 V. Ogni collegamento va fatto a impianto sezionato e tensione verificata assente. Nel dubbio, un elettricista. (Io l'ho chiamato, quando serviva. Nessuna vergogna.)
 
-> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto del progetto](/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
+> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
 
 ### Passo 0 — Cosa serve
 
@@ -76,7 +76,7 @@ Il sensore XKC-Y25-NPN è capacitivo e **senza contatto**: si applica all'estern
 
 **La logica di funzionamento:** il LED del sensore è **acceso** quando rileva il liquido. Quando il livello scende sotto la soglia, il LED **si spegne** — ed è proprio questo spegnimento l'evento che fa partire tutta la catena. In altre parole: *la pompa parte quando l'acqua manca, non quando c'è.* La sensibilità si regola con la piccola vite sul retro del sensore.
 
-> ⚠️ **Nota sulla tensione di alimentazione.** Nel mio impianto, sul morsetto VREF OUT ho misurato **~9,92 V a vuoto** e **5,12 V con il sensore collegato** — valori che non coincidono del tutto con la documentazione (che parla di alimentazione a 3,3 V). I 5,12 V rientrano comunque nel range del sensore (5–24 V) e da me tutto ha sempre funzionato correttamente — ma **verificate le vostre misure** e prendete questa parte "così com'è", senza garanzie. I dettagli nella [sezione sull'onestà tecnica](/tre-shelly-pompa-60-metri/#7-sicurezza-anonimizzazione-e-onestà-tecnica) del racconto.
+> ⚠️ **Nota sulla tensione di alimentazione.** Nel mio impianto, sul morsetto VREF OUT ho misurato **~9,92 V a vuoto** e **5,12 V con il sensore collegato** — valori che non coincidono del tutto con la documentazione (che parla di alimentazione a 3,3 V). I 5,12 V rientrano comunque nel range del sensore (5–24 V) e da me tutto ha sempre funzionato correttamente — ma **verificate le vostre misure** e prendete questa parte "così com'è", senza garanzie. I dettagli nella [sezione sull'onestà tecnica]({{ site.baseurl }}/tre-shelly-pompa-60-metri/#7-sicurezza-anonimizzazione-e-onestà-tecnica) del racconto.
 
 ### Passo 3 — Configurare lo Shelly del deposito (l'azione HTTP)
 
@@ -118,8 +118,8 @@ http://192.168.1.xxx/rpc/Switch.SetConfig?id=0&config={"in_mode":"detached"}
 
 Gli script completi (prima versione funzionante **v2** e definitiva **v7**) sono nell'[Appendice tecnica](#appendice) e scaricabili qui:
 
-- ⬇️ [Script 1T — v2](scripts/pompa/1T_v2.js) · ⬇️ [Script 1R — v2](scripts/pompa/1R_v2.js)
-- ⬇️ [Script 1T — v7 definitivo](scripts/pompa/1T_v7.js) · ⬇️ [Script 1R — v7 definitivo](scripts/pompa/1R_v7.js)
+- ⬇️ [Script 1T — v2]({{ site.baseurl }}/scripts/pompa/1T_v2.js) · ⬇️ [Script 1R — v2]({{ site.baseurl }}/scripts/pompa/1R_v2.js)
+- ⬇️ [Script 1T — v7 definitivo]({{ site.baseurl }}/scripts/pompa/1T_v7.js) · ⬇️ [Script 1R — v7 definitivo]({{ site.baseurl }}/scripts/pompa/1R_v7.js)
 
 Procedura: Web UI del dispositivo → *Scripts* → *Create new script* → incollare → *Save* → *Start* → attivare **Run on boot**.
 
@@ -210,7 +210,7 @@ Questa è la prima versione che ha funzionato dall'inizio alla fine. Fa già le 
 
 **Cosa NON fa ancora la v2** (e sarà il motivo delle versioni successive): non c'è conferma di avvenuta accensione (ACK), quindi 1T "spara" il comando e *spera* che sia arrivato. Se il messaggio si perde, la pompa non parte e nessuno se ne accorge.
 
-⬇️ Download: [1T_v2.js](scripts/pompa/1T_v2.js) · [1R_v2.js](scripts/pompa/1R_v2.js)
+⬇️ Download: [1T_v2.js]({{ site.baseurl }}/scripts/pompa/1T_v2.js) · [1R_v2.js]({{ site.baseurl }}/scripts/pompa/1R_v2.js)
 
 <details>
 <summary><strong>📜 Script 1T — Trasmittente (v2)</strong> (clicca per espandere)</summary>
@@ -506,7 +506,7 @@ La soluzione, nella v7, è un **lock di sicurezza più lungo (30 secondi)** appl
 
 Questa è la versione attualmente in funzione. Rispetto alla v2 è più lunga e più "difensiva": ogni riga in più esiste per gestire un caso in cui qualcosa potrebbe andare storto. È il concetto dei **"due cervelli"** portato all'estremo: 1T (accessibile, in casa) concentra tutta l'intelligenza; 1R (isolato, lontano) resta volutamente semplice — riceve, esegue, conferma.
 
-⬇️ Download: [1T_v7.js](scripts/pompa/1T_v7.js) · [1R_v7.js](scripts/pompa/1R_v7.js)
+⬇️ Download: [1T_v7.js]({{ site.baseurl }}/scripts/pompa/1T_v7.js) · [1R_v7.js]({{ site.baseurl }}/scripts/pompa/1R_v7.js)
 
 <details>
 <summary><strong>📜 Script 1T — Trasmittente (v7, definitivo)</strong> (clicca per espandere)</summary>
@@ -949,28 +949,28 @@ Per chi volesse orientarsi, ecco le funzioni dell'API Shelly che compaiono negli
 
 <!-- ELENCO IMMAGINI — DEFINIZIONI DEI RIFERIMENTI -->
 
-[Shelly_Plus_1PM.webp]: immagini/pompa/Shelly_Plus_1PM.webp
-[shelly-1pm-gen4_con_fili.webp]: immagini/pompa/shelly-1pm-gen4_con_fili.webp
-[shelly-lora-add-on-accoppiato.webp]: immagini/pompa/shelly-lora-add-on-accoppiato.webp
-[Quadro_con_prese.webp]: immagini/pompa/Quadro_con_prese.webp
-[Morsettiere.webp]: immagini/pompa/Morsettiere.webp
-[Abat-jour_Lampadina.webp]: immagini/pompa/Abat-jour_Lampadina.webp
-[Cavi_prolunghe_per_prove.webp]: immagini/pompa/Cavi_prolunghe_per_prove.webp
-[Prolunga-elettrica_con_puntalini.webp]: immagini/pompa/Prolunga-elettrica_con_puntalini.webp
-[Sensore_con_puntalini_e_Addon.webp]: immagini/pompa/Sensore_con_puntalini_e_Addon.webp
-[Addon_sensore_collegamenti.webp]: immagini/pompa/Addon_sensore_collegamenti.webp
-[shelly-plus-addon_con_fili.webp]: immagini/pompa/shelly-plus-addon_con_fili.webp
-[Shelly_Addon_sensore_livello.webp]: immagini/pompa/Shelly_Addon_sensore_livello.webp
-[Sensore_su_deposito.webp]: immagini/pompa/Sensore_su_deposito.webp
-[1T_collegato.webp]: immagini/pompa/1T_collegato.webp
-[1R_collegamenti.webp]: immagini/pompa/1R_collegamenti.webp
-[1T_LoRa_AddON.webp]: immagini/pompa/1T_LoRa_AddON.webp
-[shelly-lora-add-on-pin-evidenti.webp]: immagini/pompa/shelly-lora-add-on-pin-evidenti.webp
-[Scatola_esterna_1T.webp]: immagini/pompa/Scatola_esterna_1T.webp
-[Distanza_1T_1R.webp]: immagini/pompa/Distanza_1T_1R.webp
-[collage_tre_dispositivi.webp]: immagini/pompa/collage_tre_dispositivi.webp
-[Snubber.webp]: immagini/pompa/Snubber.webp
-[Caratteristiche_pompa.webp]: immagini/pompa/Caratteristiche_pompa.webp
-[notifiche.webp]: immagini/pompa/notifiche.webp
+[Shelly_Plus_1PM.webp]: {{ site.baseurl }}/immagini/pompa/Shelly_Plus_1PM.webp
+[shelly-1pm-gen4_con_fili.webp]: {{ site.baseurl }}/immagini/pompa/shelly-1pm-gen4_con_fili.webp
+[shelly-lora-add-on-accoppiato.webp]: {{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-accoppiato.webp
+[Quadro_con_prese.webp]: {{ site.baseurl }}/immagini/pompa/Quadro_con_prese.webp
+[Morsettiere.webp]: {{ site.baseurl }}/immagini/pompa/Morsettiere.webp
+[Abat-jour_Lampadina.webp]: {{ site.baseurl }}/immagini/pompa/Abat-jour_Lampadina.webp
+[Cavi_prolunghe_per_prove.webp]: {{ site.baseurl }}/immagini/pompa/Cavi_prolunghe_per_prove.webp
+[Prolunga-elettrica_con_puntalini.webp]: {{ site.baseurl }}/immagini/pompa/Prolunga-elettrica_con_puntalini.webp
+[Sensore_con_puntalini_e_Addon.webp]: {{ site.baseurl }}/immagini/pompa/Sensore_con_puntalini_e_Addon.webp
+[Addon_sensore_collegamenti.webp]: {{ site.baseurl }}/immagini/pompa/Addon_sensore_collegamenti.webp
+[shelly-plus-addon_con_fili.webp]: {{ site.baseurl }}/immagini/pompa/shelly-plus-addon_con_fili.webp
+[Shelly_Addon_sensore_livello.webp]: {{ site.baseurl }}/immagini/pompa/Shelly_Addon_sensore_livello.webp
+[Sensore_su_deposito.webp]: {{ site.baseurl }}/immagini/pompa/Sensore_su_deposito.webp
+[1T_collegato.webp]: {{ site.baseurl }}/immagini/pompa/1T_collegato.webp
+[1R_collegamenti.webp]: {{ site.baseurl }}/immagini/pompa/1R_collegamenti.webp
+[1T_LoRa_AddON.webp]: {{ site.baseurl }}/immagini/pompa/1T_LoRa_AddON.webp
+[shelly-lora-add-on-pin-evidenti.webp]: {{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-pin-evidenti.webp
+[Scatola_esterna_1T.webp]: {{ site.baseurl }}/immagini/pompa/Scatola_esterna_1T.webp
+[Distanza_1T_1R.webp]: {{ site.baseurl }}/immagini/pompa/Distanza_1T_1R.webp
+[collage_tre_dispositivi.webp]: {{ site.baseurl }}/immagini/pompa/collage_tre_dispositivi.webp
+[Snubber.webp]: {{ site.baseurl }}/immagini/pompa/Snubber.webp
+[Caratteristiche_pompa.webp]: {{ site.baseurl }}/immagini/pompa/Caratteristiche_pompa.webp
+[notifiche.webp]: {{ site.baseurl }}/immagini/pompa/notifiche.webp
 
 <!-- FINE ELENCO IMMAGINI -->

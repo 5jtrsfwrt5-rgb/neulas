@@ -15,7 +15,7 @@ permalink: /tre-shelly-pompa-60-metri/
 
 *Un racconto onesto: fatto di entusiasmi, vicoli ciechi, piccole vittorie — e di una sorgente scoperta per caso.*
 
-> 🔧 **Sei qui per replicare il progetto?** Questo articolo è prima di tutto un racconto. Se cerchi subito la parte operativa — schemi, cablaggi, foto, script scaricabili — vai direttamente alla **[Guida tecnica passo-passo](/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**. La incontrerai comunque richiamata, con l'icona 🔧, nei punti giusti della storia.
+> 🔧 **Sei qui per replicare il progetto?** Questo articolo è prima di tutto un racconto. Se cerchi subito la parte operativa — schemi, cablaggi, foto, script scaricabili — vai direttamente alla **[Guida tecnica passo-passo]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**. La incontrerai comunque richiamata, con l'icona 🔧, nei punti giusti della storia.
 
 ---
 
@@ -46,7 +46,7 @@ Il flusso, in sintesi:
 ![Schema generale del sistema][schema_sistema.webp]
 *Lo schema del sistema: tre Shelly, due tecnologie radio (WiFi + LoRa), un solo obiettivo.*
 
-> 🔧 *Lista materiali completa, foto dei collegamenti e istruzioni replicabili:* **[Guida tecnica → Passo 0](/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
+> 🔧 *Lista materiali completa, foto dei collegamenti e istruzioni replicabili:* **[Guida tecnica → Passo 0]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
 Ma prima di arrivarci, c'è un antefatto che comincia molto più indietro nel tempo.
 
@@ -119,7 +119,7 @@ Fu anche qui che si presentò il primo mistero tecnico che ancora oggi non so sp
 
 Con l'automatismo di base funzionante, il problema vero restava però un altro: come far parlare i dispositivi a 60 metri di distanza, con uno di essi senza WiFi. Ed è qui che ho cominciato a chiedere aiuto all'intelligenza artificiale — per gradi, e per tentativi.
 
-> 🔧 *Cablaggio del sensore, colori dei fili, foto e configurazione dell'Add-on:* **[Guida tecnica → Passo 2](/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
+> 🔧 *Cablaggio del sensore, colori dei fili, foto e configurazione dell'Add-on:* **[Guida tecnica → Passo 2]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
 ---
 
@@ -182,7 +182,7 @@ Il primo traguardo concreto è stato riuscire a mandare *fisicamente* un pacchet
 
 Funzionava. I due dispositivi si *parlavano*, senza WiFi, attraverso 60 metri d'aria.
 
-> 🔧 *Le prove al tavolo, con una lampada al posto della pompa (fatelo anche voi!):* **[Guida tecnica → Passo 1](/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
+> 🔧 *Le prove al tavolo, con una lampada al posto della pompa (fatelo anche voi!):* **[Guida tecnica → Passo 1]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
 ### Il nemico invisibile: l'acqua che "balla"
 
@@ -316,7 +316,7 @@ Per questo, su consiglio dell'AI, ho aggiunto uno **Shelly RC Snubber** montato 
 
 </details>
 
-> 🔧 *Posizionamento dei dispositivi, orientamento delle antenne, snubber e accorgimenti radio:* **[Guida tecnica → Passi 7 e 8](/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
+> 🔧 *Posizionamento dei dispositivi, orientamento delle antenne, snubber e accorgimenti radio:* **[Guida tecnica → Passi 7 e 8]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
 ### Perché proprio Claude, e una doverosa premessa di onestà
 
@@ -525,11 +525,11 @@ Buona costruzione. E, come si diceva un tempo tra radioamatori: **buon collegame
 
 <!-- ELENCO IMMAGINI — DEFINIZIONI DEI RIFERIMENTI -->
 
-[schema_sistema.webp]: immagini/pompa/schema_sistema.webp
-[notifiche.webp]: immagini/pompa/notifiche.webp
-[Snubber.webp]: immagini/pompa/Snubber.webp
-[TesterSensore.webp]: immagini/pompa/TesterSensore.webp
-[TesterMisura.webp]: immagini/pompa/TesterMisura.webp
-[TesterMisuraConfronto.webp]: immagini/pompa/TesterMisuraConfronto.webp
+[schema_sistema.webp]: {{ site.baseurl }}/immagini/pompa/schema_sistema.webp
+[notifiche.webp]: {{ site.baseurl }}/immagini/pompa/notifiche.webp
+[Snubber.webp]: {{ site.baseurl }}/immagini/pompa/Snubber.webp
+[TesterSensore.webp]: {{ site.baseurl }}/immagini/pompa/TesterSensore.webp
+[TesterMisura.webp]: {{ site.baseurl }}/immagini/pompa/TesterMisura.webp
+[TesterMisuraConfronto.webp]: {{ site.baseurl }}/immagini/pompa/TesterMisuraConfronto.webp
 
 <!-- FINE ELENCO IMMAGINI -->
