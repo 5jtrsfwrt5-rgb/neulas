@@ -1,0 +1,27 @@
+title: neulas
+description: >-
+  Una persona non esperta, un'AI al fianco, un problema alla volta.
+  Blog personale di Roberto — racconti onesti di progetti realizzati
+  con l'affiancamento di una o più AI.
+url: "https://neulas.it"          # decommentare dopo aver collegato il dominio
+baseurl: ""                        # lasciare vuoto per dominio root
+theme: minima
+lang: it-IT
+author:
+  name: "Roberto"
+
+minima:
+  skin: classic
+
+show_excerpts: true
+
+header_pages:
+  - about.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - LICENSE
