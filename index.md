@@ -3,7 +3,7 @@ layout: home
 title: neulas
 ---
 
-> *Una persona non esperta, un'AI al fianco, un problema alla volta.*
+> *Una persona non esperta, un'AI, per volta, al fianco, un problema alla volta.*
 
 Benvenuto su **neulas**, il blog in cui racconto — onestamente, senza filtri —
 progetti realizzati con l'aiuto delle intelligenze artificiali.
