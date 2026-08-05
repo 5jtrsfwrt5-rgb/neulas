@@ -6,7 +6,8 @@ description: >-
 # url: "https://neulas.it"          # decommentare dopo aver collegato il dominio
 baseurl: "/neulas"                        # lasciare vuoto per dominio root
 # theme: minima
-theme: architect
+theme: jekyll-theme-architect
+
 lang: it-IT
 author:
   name: "Roberto"
@@ -16,8 +17,8 @@ author:
 
 show_excerpts: true
 
-header_pages:
-  - about.md
+#header_pages:
+#  - about.md
 
 plugins:
   - jekyll-feed
