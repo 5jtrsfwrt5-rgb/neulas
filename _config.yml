@@ -1,29 +1,67 @@
-title: neulas
-description: >-
-  Una persona non esperta, un'AI al fianco, un problema alla volta.
-  Blog personale di Roberto — racconti onesti di progetti realizzati
-  con l'affiancamento di una o più AI.
-# url: "https://neulas.it"          # decommentare dopo aver collegato il dominio
-baseurl: "/neulas"                        # lasciare vuoto per dominio root
-# theme: minima
-theme: jekyll-theme-architect
+# ==========================================
+# CONFIGURAZIONE TEMA (Minimal Mistakes Remote)
+# ==========================================
+remote_theme            : "mmistakes/minimal-mistakes@master"
+minimal_mistakes_skin   : "default" # Opzioni: "air", "aqua", "contrast", "dark", "neon", "mint", "plum", "sunrise"
 
-lang: it-IT
+# ==========================================
+# IMPOSTAZIONI SITO
+# ==========================================
+title                   : "neulas"
+description             : "Una persona non esperta, un'AI al fianco, un problema alla volta. Blog personale di Roberto — racconti onesti di progetti realizzati con l'affiancamento di una o più AI."
+# url                   : "https://neulas.it" # Rimuovi il # quando collegherai il dominio definitivo
+baseurl                 : "/neulas"           # Lascia così se l'indirizzo attuale è utente.github.io/neulas
+locale                  : "it-IT"
+
+# ==========================================
+# NAVIGAZIONE (Attiva il menu superiore)
+# ==========================================
+site_navigation         : main
+
+# ==========================================
+# BIOGRAFIA / AUTORE (Mostrata nella barra laterale)
+# ==========================================
 author:
-  name: "Roberto"
+  name                  : "Roberto"
+  bio                   : "Racconti onesti di progetti realizzati al fianco dell'Intelligenza Artificiale."
+  avatar                : "/assets/images/avatar.jpg" # Puoi aggiungere una tua foto in questa cartella
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com" # Inserisci il tuo link effettivo
 
-#minima:
-#  skin: classic
-
-show_excerpts: true
-
-#header_pages:
-#  - about.md
-
+# ==========================================
+# PLUGIN E COMPILAZIONE
+# ==========================================
 plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-feed
   - jekyll-seo-tag
 
 exclude:
   - README.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# ==========================================
+# IMPOSTAZIONI DI DEFAULT PER PAGINE E POST
+# ==========================================
+defaults:
+  # Impostazioni per tutti i Post del blog
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true # Mostra la biografia a sinistra dell'articolo
+      read_time: true      # Mostra il tempo di lettura stimato
+      comments: false
+  # Impostazioni per le Pagine statiche (es. about.md)
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true

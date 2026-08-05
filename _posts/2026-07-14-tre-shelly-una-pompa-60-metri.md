@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tre Shelly, una pompa e 60 metri d'aria"
+title: "Tre Shelly, una pompa e 60 metri ddi distanza"
 date: 2026-07-14
 categories: domotica shelly AI
 tags: [Shelly, LoRa, domotica, AI, Claude, Gemini, Mistral, pompa, acqua]
@@ -10,7 +10,7 @@ description: >-
 permalink: /tre-shelly-pompa-60-metri/
 ---
 
-# Tre Shelly, una pompa e 60 metri d'aria
+# Tre Shelly, una pompa e 60 metri di distanza
 ### Come una persona non esperta ha automatizzato il pompaggio dell'acqua con l'aiuto dell'AI
 
 *Un racconto onesto: fatto di entusiasmi, vicoli ciechi, piccole vittorie — e di una sorgente scoperta per caso.*
