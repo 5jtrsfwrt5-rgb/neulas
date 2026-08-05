@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Guida tecnica — Tre Shelly, una pompa, 60 metri"
 date: 2026-07-15
 categories: domotica shelly AI

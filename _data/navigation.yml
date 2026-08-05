@@ -1,6 +1,4 @@
 # Menu di navigazione superiore per Minimal Mistakes
 main:
-  - title: "Home"
-    url: /
   - title: "Chi Sono"
     url: /about/

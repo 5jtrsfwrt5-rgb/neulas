@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Chi sono
-permalink: /chi-sono/
+layout: single
+title: Chi Sono
+permalink: /about/
 ---
 
 # Chi sono
