@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Tre Shelly per una pompa a 60 metri di distanza"
+title: "Tre Shelly per una pompa che si trova a 60 metri di distanza"
 date: 2026-07-14
 categories: domotica shelly AI
 tags: [Shelly, LoRa, domotica, AI, Claude, Gemini, Mistral, pompa, acqua]
