@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Guida tecnica — Tre Shelly, una pompa distante 60 metri"
+title: "Guida tecnica — Tre Shelly per una pompa distante 60 metri"
 date: 2026-07-15
 categories: domotica shelly AI
 tags: [Shelly, LoRa, domotica, tutorial, replica, script]
