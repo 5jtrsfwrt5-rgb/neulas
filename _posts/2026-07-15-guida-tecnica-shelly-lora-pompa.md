@@ -43,7 +43,7 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 ![Il quadro con le due prese e il magnetotermico][Quadro_con_prese.webp]
 ![Le morsettiere utilizzate][Morsettiere.webp]
 
-**Solo per le prove al tavolo** (Passo 1, a seguire): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
+**Solo per le prove al tavolo** (Passo 1, qui di seguito): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
 
 ![Prolunghe, fili, morsettiere ed Abat-jour][Prolunghe_AbatJour_Fili_Morsettiere.webp]
 
@@ -959,6 +959,7 @@ Per chi volesse orientarsi, ecco le funzioni dell'API Shelly che compaiono negli
 [Abat-jour_Lampadina.webp]: {{ site.baseurl }}/immagini/pompa/Abat-jour_Lampadina.webp
 [Cavi_prolunghe_per_prove.webp]: {{ site.baseurl }}/immagini/pompa/Cavi_prolunghe_per_prove.webp
 [Prolunga-elettrica_con_puntalini.webp]: {{ site.baseurl }}/immagini/pompa/Prolunga-elettrica_con_puntalini.webp
+[Prolunghe_AbatJour_Fili_Morsettiere.webp]: {{ site.baseurl }}/immagini/pompa/Prolunghe_AbatJour_Fili_Morsettiere.webp
 [Sensore_con_puntalini_e_Addon.webp]: {{ site.baseurl }}/immagini/pompa/Sensore_con_puntalini_e_Addon.webp
 [Addon_sensore_collegamenti.webp]: {{ site.baseurl }}/immagini/pompa/Addon_sensore_collegamenti.webp
 [shelly-plus-addon_con_fili.webp]: {{ site.baseurl }}/immagini/pompa/shelly-plus-addon_con_fili.webp
