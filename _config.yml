@@ -8,7 +8,7 @@ minimal_mistakes_skin   : "default" # Opzioni: "air", "aqua", "contrast", "dark"
 # IMPOSTAZIONI SITO
 # ==========================================
 title                   : "neulas"
-description             : "Una persona non esperta, un'AI al fianco, un problema alla volta. Blog personale di Roberto — racconti onesti di progetti realizzati con l'affiancamento di una o più AI."
+description             : "Una persona non esperta, un'AI al fianco, un problema alla volta. Un blog con racconti su progetti realizzati sperimentando l'affiancamento di una o più AI."
 # url                   : "https://neulas.it" # Rimuovi il # quando collegherai il dominio definitivo
 baseurl                 : "/neulas"           # Lascia così se l'indirizzo attuale è utente.github.io/neulas
 locale                  : "it-IT"
