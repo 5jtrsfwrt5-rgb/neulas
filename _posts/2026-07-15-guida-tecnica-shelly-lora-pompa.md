@@ -17,7 +17,7 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 > ⚠️ **Prima di tutto: sicurezza.** Si lavora a 230 V. Ogni collegamento va fatto a impianto sezionato e tensione verificata assente. Nel dubbio, un elettricista. (Io l'ho chiamato, quando serviva. Nessuna vergogna.)
 
-> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
+> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
 
 ### Passo 0 — Cosa serve
 
@@ -43,7 +43,9 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 ![Il quadro con le due prese e il magnetotermico][Quadro_con_prese.webp]
 ![Le morsettiere utilizzate][Morsettiere.webp]
 
-**Solo per le prove al tavolo** (Passo 1): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
+**Solo per le prove al tavolo** (Passo 1, a seguire): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
+
+![Prolunghe, fili, morsettiere ed Abat-jour][Prolunghe_AbatJour_Fili_Morsettiere.webp]
 
 **Strumenti:** cacciaviti isolati da elettricista, forbici da elettricista, crimpatrice per puntalini, spelafili, saldatore e stagno, trapano a percussione con punte da muro, un multimetro.
 
