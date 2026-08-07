@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Guida tecnica — Tre Shelly per una pompa distante 60 metri"
+title: "Guida tecnica — Tre Shelly per gestirenuna pompa distante 60 metri"
 date: 2026-07-15
 categories: [domotica, shelly, AI]
 tags: [Shelly, LoRa, domotica, tutorial, replica, script]
@@ -10,9 +10,9 @@ description: >-
 ---
 
 <a id="guida-tecnica"></a>
-## 🔧 Guida tecnica passo-passo — per chi vuole replicare (o adattare) il progetto
+## 🔧 Istruzioni passo-passo — per chi vuole replicare (o adattare) il progetto
 
-Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire il sistema: materiali, foto, cablaggi, configurazioni e collaudo. È pensata per chi parte più o meno dal mio stesso livello: **nessuna competenza avanzata richiesta**. Fate attenzione e abbiate un po' di pazienza e, soprattutto, rispetto assoluto per la sicurezza elettrica.
+Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire il sistema: materiali, foto, cablaggi, configurazioni e collaudo. È pensata per chi parte più o meno dal mio stesso livello: **nessuna competenza avanzata richiesta**. Un esperto potrebbe adottare soluzioni diverse. Io riporto la mia esperienza. Siate cauti e abbiate un po' di pazienza e, soprattutto, rispetto assoluto per la sicurezza elettrica.
 
 > ⚠️ **Prima di tutto: sicurezza.** Si lavora a 230 V. Ogni collegamento va fatto a impianto sezionato e tensione verificata assente. Nel dubbio, un elettricista. (Io l'ho chiamato, quando serviva. Nessuna vergogna.)
 
@@ -54,7 +54,7 @@ Non collegate mai la pompa al primo colpo. Ho fatto tutte le prove **in casa, su
 
 ### Passo 2 — Il sensore di livello e l'Add-on
 
-Il sensore XKC-Y25-NPN che ho utilizzato è capacitivo e **senza contatto**: si applica all'esterno della parete del deposito (plastica o vetro, non metallo) e rileva l'acqua attraverso di essa. Ha quattro fili; questo il cablaggio verso lo Shelly Plus Add-on:
+Il sensore XKC-Y25-NPN che ho utilizzato è capacitivo e **senza contatto**: si applica all'esterno della parete del deposito (plastica o vetro, non metallo) e rileva l'acqua attraverso di essa. Ha quattro fili; nella tabella qui sotto e nelle foto trovate il cablaggio verso lo Shelly Plus Add-on:
 
 | Filo sensore | Funzione | Morsetto Add-on |
 |---|---|---|
@@ -67,7 +67,9 @@ Il sensore XKC-Y25-NPN che ho utilizzato è capacitivo e **senza contatto**: si 
 
 **La logica di funzionamento:** il LED del sensore è **acceso** quando rileva il liquido. Quando il livello scende sotto la soglia, il LED **si spegne** — ed è proprio questo spegnimento l'evento che fa partire tutta la catena. In altre parole: *la pompa parte quando l'acqua manca, non quando c'è.* La sensibilità si regola con la piccola vite sul retro del sensore.
 
-> ⚠️ **Nota sulla tensione di alimentazione.** Nel mio impianto, sul morsetto VREF OUT ho misurato **~9,92 V a vuoto** e **5,12 V con il sensore collegato** — valori che non coincidono del tutto con la documentazione (che parla di alimentazione a 3,3 V). I 5,12 V rientrano comunque nel range del sensore (5–24 V) e da me tutto ha sempre funzionato correttamente — ma **verificate le vostre misure** e prendete questa parte "così com'è", senza garanzie. I dettagli nella [sezione sull'onestà tecnica]({{ site.baseurl }}/tre-shelly-pompa-60-metri/#7-sicurezza-anonimizzazione-e-onestà-tecnica) del racconto.
+> ⚠️ **Nota sulla tensione di alimentazione.** Nel mio impianto, sul morsetto VREF OUT ho misurato **~9,92 V a vuoto** e **5,12 V con il sensore collegato** — valori che non coincidono del tutto con la documentazione (che parla di alimentazione a 3,3 V). I 5,12 V rientrano comunque nel range del sensore (5–24 V) e da me tutto ha sempre funzionato correttamente — ma **verificate le vostre misure** e prendete questa parte "così com'è", senza garanzie. I dettagli [qui]({{ site.baseurl }}/tre-shelly-pompa-60-metri/#7-sicurezza-anonimizzazione-e-onestà-tecnica) del racconto.
+
+![Misure con il multimetro sull'Addon]({{ site.baseurl }}/immagini/pompa/Multimetro.webp)
 
 ### Passo 3 — Configurare lo Shelly del deposito (l'azione HTTP)
 
@@ -83,6 +85,8 @@ Due accorgimenti **fondamentali**, imparati a mie spese:
 
 1. **Una sola azione**, non duplicata (attenzione: l'interfaccia può mostrare come distinte un'azione nativa e una URL che in realtà sono raggruppate).
 2. Impostate **"Ripeti quando" a 420 secondi** (poco più della durata del ciclo pompa): così, anche se il sensore oscilla più volte durante il riempimento, parte un solo comando ogni 420 secondi.
+
+![Misure con il multimetro sull'Addon]({{ site.baseurl }}/immagini/pompa/URL_Addon.webp)
 
 > 💡 **Consiglio: IP statici.** Assegnate ai tre Shelly indirizzi IP fissi (prenotazione DHCP dal router, basata sul MAC). Se l'IP di 1T cambiasse, l'azione HTTP fallirebbe *in silenzio*.
 
