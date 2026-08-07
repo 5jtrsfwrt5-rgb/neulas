@@ -2,12 +2,11 @@
 layout: single
 title: "Guida tecnica — Tre Shelly per una pompa distante 60 metri"
 date: 2026-07-15
-categories: domotica shelly AI
+categories: [domotica, shelly, AI]
 tags: [Shelly, LoRa, domotica, tutorial, replica, script]
 description: >-
   Guida operativa passo-passo per replicare il progetto della pompa comandata
   via LoRa tra due Shelly 1PM Gen4. Materiali, cablaggi, script scaricabili.
-permalink: /guida-tecnica-pompa-shelly-lora/
 ---
 
 <a id="guida-tecnica"></a>
@@ -37,15 +36,15 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 *Dove trovarli:* gli Shelly sul [sito ufficiale](https://www.shelly.com/it/collections/smart-switches-dimmers); il sensore XKC-Y25-NPN si reperisce facilmente online.
 
-![Lo Shelly Plus 1PM][Shelly_Plus_1PM.webp]
-![Lo Shelly 1PM Gen4 con i fili collegati][shelly-1pm-gen4_con_fili.webp]
-![Il LoRa Add-on accoppiato allo Shelly][shelly-lora-add-on-accoppiato.webp]
-![Il quadro con le due prese e il magnetotermico][Quadro_con_prese.webp]
-![Le morsettiere utilizzate][Morsettiere.webp]
+![Lo Shelly Plus 1PM]({{ site.baseurl }}/immagini/pompa/Shelly_Plus_1PM.webp)
+![Lo Shelly 1PM Gen4 con i fili collegati]({{ site.baseurl }}/immagini/pompa/shelly-1pm-gen4_con_fili.webp)
+![Il LoRa Add-on accoppiato allo Shelly]({{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-accoppiato.webp)
+![Il quadro con le due prese e il magnetotermico]({{ site.baseurl }}/immagini/pompa/Quadro_con_prese.webp)
+![Le morsettiere utilizzate]({{ site.baseurl }}/immagini/pompa/Morsettiere.webp)
 
 **Solo per le prove al tavolo** (Passo 1, qui di seguito): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
 
-![Prolunghe, fili, morsettiere ed Abat-jour][Prolunghe_AbatJour_Fili_Morsettiere.webp]
+![Prolunghe, fili, morsettiere ed Abat-jour]({{ site.baseurl }}/immagini/pompa/Prolunghe_AbatJour_Fili_Morsettiere.webp)
 
 **Strumenti:** cacciaviti isolati da elettricista, forbici da elettricista, crimpatrice per puntalini, spelafili, saldatore e stagno, trapano a percussione con punte da muro, un multimetro.
 
@@ -53,9 +52,9 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 Non collegate mai la pompa al primo colpo. Ho fatto tutte le prove **in casa, su un tavolo**, usando un'abat-jour con lampadina a incandescenza come "pompa finta": un riscontro visivo immediato e innocuo.
 
-![L'abat-jour con lampada a incandescenza usata come carico di prova][Abat-jour_Lampadina.webp]
-![Le prolunghe tagliate e preparate per le prove][Cavi_prolunghe_per_prove.webp]
-![Prolunga elettrica intestata con puntalini][Prolunga-elettrica_con_puntalini.webp]
+![L'abat-jour con lampada a incandescenza usata come carico di prova]({{ site.baseurl }}/immagini/pompa/Abat-jour_Lampadina.webp)
+![Le prolunghe tagliate e preparate per le prove]({{ site.baseurl }}/immagini/pompa/Cavi_prolunghe_per_prove.webp)
+![Prolunga elettrica intestata con puntalini]({{ site.baseurl }}/immagini/pompa/Prolunga-elettrica_con_puntalini.webp)
 
 > ⚠️ **Perché proprio una lampadina a incandescenza?** Perché è un carico **resistivo** "vero": assorbe abbastanza corrente da far lavorare il relè in modo realistico. Il mio primo tentativo con un **faretto LED** fallì: i LED assorbono pochissimo e la loro elettronica di controllo può dare comportamenti anomali con i relè. E ricordate: la lampadina valida la *logica* del sistema, ma la pompa è un carico **induttivo** — il comportamento elettrico reale (spunti, disturbi) lo vedrete solo sul campo. Per questo, alla fine, c'è lo snubber.
 
@@ -70,11 +69,11 @@ Il sensore XKC-Y25-NPN è capacitivo e **senza contatto**: si applica all'estern
 | **Giallo** | Segnale di uscita | **DIGITAL IN** |
 | **Nero** | Selezione modalità (NO/NC) | **GND** |
 
-![Il sensore con i puntalini e l'Add-on][Sensore_con_puntalini_e_Addon.webp]
-![I collegamenti del sensore all'Add-on][Addon_sensore_collegamenti.webp]
-![Lo Shelly Plus Add-on cablato][shelly-plus-addon_con_fili.webp]
-![L'insieme Shelly + Add-on + sensore di livello][Shelly_Addon_sensore_livello.webp]
-![Il sensore nella sua posizione definitiva sulla parete del deposito][Sensore_su_deposito.webp]
+![Il sensore con i puntalini e l'Add-on]({{ site.baseurl }}/immagini/pompa/Sensore_con_puntalini_e_Addon.webp)
+![I collegamenti del sensore all'Add-on]({{ site.baseurl }}/immagini/pompa/Addon_sensore_collegamenti.webp)
+![Lo Shelly Plus Add-on cablato]({{ site.baseurl }}/immagini/pompa/shelly-plus-addon_con_fili.webp)
+![L'insieme Shelly + Add-on + sensore di livello]({{ site.baseurl }}/immagini/pompa/Shelly_Addon_sensore_livello.webp)
+![Il sensore nella sua posizione definitiva sulla parete del deposito]({{ site.baseurl }}/immagini/pompa/Sensore_su_deposito.webp)
 
 **La logica di funzionamento:** il LED del sensore è **acceso** quando rileva il liquido. Quando il livello scende sotto la soglia, il LED **si spegne** — ed è proprio questo spegnimento l'evento che fa partire tutta la catena. In altre parole: *la pompa parte quando l'acqua manca, non quando c'è.* La sensibilità si regola con la piccola vite sul retro del sensore.
 
@@ -111,10 +110,10 @@ http://192.168.1.xxx/rpc/Switch.SetConfig?id=0&config={"in_mode":"detached"}
 5. Su **entrambi**, comportamento post-blackout: **spento** alla riaccensione (*Power On Default → OFF*). Con la pompa di mezzo, è una scelta di sicurezza.
 6. Su **1T**, create un **componente virtuale Boolean** (otterrà l'id `boolean:200`): lo script lo userà come "spia" dello stato d'allarme.
 
-![1T cablato e pronto][1T_collegato.webp]
-![I collegamenti di 1R][1R_collegamenti.webp]
-![Il LoRa Add-on montato su 1T][1T_LoRa_AddON.webp]
-![Il LoRa Add-on con i pin in evidenza][shelly-lora-add-on-pin-evidenti.webp]
+![1T cablato e pronto]({{ site.baseurl }}/immagini/pompa/1T_collegato.webp)
+![I collegamenti di 1R]({{ site.baseurl }}/immagini/pompa/1R_collegamenti.webp)
+![Il LoRa Add-on montato su 1T]({{ site.baseurl }}/immagini/pompa/1T_LoRa_AddON.webp)
+![Il LoRa Add-on con i pin in evidenza]({{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-pin-evidenti.webp)
 
 ### Passo 5 — Caricare gli script
 
@@ -146,12 +145,12 @@ Qui si gioca gran parte dell'affidabilità del collegamento. Le regole che ho im
 - **Lontano da metalli e cavi di potenza**: la mia peggior fase di instabilità (messaggi corrotti come `PONE`, `QONG`, `PO^`) era dovuta al sovraffollamento di fili, interruttore e presa nella scatola dove avevo infilato 1T. Spostato in una **scatola di derivazione da esterno, dedicata**, il problema è sparito: 57 PONG puliti consecutivi al primo log.
 - **In alto è meglio**: pochi metri di elevazione riducono gli ostacoli nel percorso radio.
 
-![La scatola di derivazione esterna, sede definitiva di 1T][Scatola_esterna_1T.webp]
-![I 60,75 metri tra 1T e 1R, misurati su ortofoto][Distanza_1T_1R.webp]
+![La scatola di derivazione esterna, sede definitiva di 1T]({{ site.baseurl }}/immagini/pompa/Scatola_esterna_1T.webp)
+![I 60,75 metri tra 1T e 1R, misurati su ortofoto]({{ site.baseurl }}/immagini/pompa/Distanza_1T_1R.webp)
 
 *I tre dispositivi nelle loro sedi definitive:*
 
-![Collage: il sensore sul deposito, 1T sulla parete esterna, 1R alla cisterna][collage_tre_dispositivi.webp]
+![Collage: il sensore sul deposito, 1T sulla parete esterna, 1R alla cisterna]({{ site.baseurl }}/immagini/pompa/collage_tre_dispositivi.webp)
 
 ### Passo 8 — Snubber e sicurezza elettrica
 
@@ -159,14 +158,14 @@ Qui si gioca gran parte dell'affidabilità del collegamento. Le regole che ho im
 - Verificate che il **magnetotermico** dedicato sia correttamente dimensionato: nel mio caso è stato lui a salvare la situazione quando la pompa ha ceduto.
 - Controllate i dati di targa della pompa rispetto ai limiti dello Shelly (il mio Gen4 gestisce fino a 16 A; la mia pompa ne assorbe 5,88 — ampio margine, ma è un controllo da fare sempre).
 
-![Lo snubber RC montato in prossimità dell'elettropompa][Snubber.webp]
-![La targhetta con le caratteristiche dell'elettropompa][Caratteristiche_pompa.webp]
+![Lo snubber RC montato in prossimità dell'elettropompa]({{ site.baseurl }}/immagini/pompa/Snubber.webp)
+![La targhetta con le caratteristiche dell'elettropompa]({{ site.baseurl }}/immagini/pompa/Caratteristiche_pompa.webp)
 
 ### Il risultato
 
 Se tutto è andato bene, il vostro log sarà un lungo, monotono, meraviglioso susseguirsi di `PING`/`PONG` — e sul telefono arriverà **una** notifica per ogni accensione reale della pompa, non una raffica:
 
-![Una notifica ntfy contro diciannove attivazioni grezze del sensore][notifiche.webp]
+![Una notifica ntfy contro diciannove attivazioni grezze del sensore]({{ site.baseurl }}/immagini/pompa/notifiche.webp)
 
 ### Una parola prima di salutarci
 
@@ -214,7 +213,7 @@ Questa è la prima versione che ha funzionato dall'inizio alla fine. Fa già le 
 
 ⬇️ Download: [1T_v2.js]({{ site.baseurl }}/scripts/pompa/1T_v2.js) · [1R_v2.js]({{ site.baseurl }}/scripts/pompa/1R_v2.js)
 
-<details>
+<details markdown="1">
 <summary><strong>📜 Script 1T — Trasmittente (v2)</strong> (clicca per espandere)</summary>
 
 ```javascript
@@ -398,7 +397,7 @@ Shelly.addStatusHandler(function(event) {
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>📜 Script 1R — Ricevente (v2)</strong> (clicca per espandere)</summary>
 
 ```javascript
@@ -484,7 +483,7 @@ Tra la prima versione e quella definitiva ci sono state alcune tappe intermedie 
 
 E poi c'è **l'ultima correzione**, quella che ha dato origine alla v7 — e che è nata direttamente **dalla lettura dei log reali.**
 
-<details>
+<details markdown="1">
 <summary><strong>🐛 Il bug che i log hanno rivelato (v6 → v7)</strong> (clicca)</summary>
 
 <br>
@@ -510,7 +509,7 @@ Questa è la versione attualmente in funzione. Rispetto alla v2 è più lunga e 
 
 ⬇️ Download: [1T_v7.js]({{ site.baseurl }}/scripts/pompa/1T_v7.js) · [1R_v7.js]({{ site.baseurl }}/scripts/pompa/1R_v7.js)
 
-<details>
+<details markdown="1">
 <summary><strong>📜 Script 1T — Trasmittente (v7, definitivo)</strong> (clicca per espandere)</summary>
 
 ```javascript
@@ -824,7 +823,7 @@ Shelly.addStatusHandler(function(event) {
 
 </details>
 
-<details>
+<details markdown="1">
 <summary><strong>📜 Script 1R — Ricevente (v7, definitivo)</strong> (clicca per espandere)</summary>
 
 ```javascript
@@ -948,32 +947,3 @@ Per chi volesse orientarsi, ecco le funzioni dell'API Shelly che compaiono negli
 > ⚙️ **Nota:** i messaggi LoRa viaggiano codificati in base64 (`btoa` in invio, `atob` in ricezione). È il motivo per cui, quando un pacchetto arriva corrotto, nel log può comparire una stringa illeggibile come `PO^`.
 
 ---
-
-<!-- ELENCO IMMAGINI — DEFINIZIONI DEI RIFERIMENTI -->
-
-[Shelly_Plus_1PM.webp]: {{ site.baseurl }}/immagini/pompa/Shelly_Plus_1PM.webp
-[shelly-1pm-gen4_con_fili.webp]: {{ site.baseurl }}/immagini/pompa/shelly-1pm-gen4_con_fili.webp
-[shelly-lora-add-on-accoppiato.webp]: {{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-accoppiato.webp
-[Quadro_con_prese.webp]: {{ site.baseurl }}/immagini/pompa/Quadro_con_prese.webp
-[Morsettiere.webp]: {{ site.baseurl }}/immagini/pompa/Morsettiere.webp
-[Abat-jour_Lampadina.webp]: {{ site.baseurl }}/immagini/pompa/Abat-jour_Lampadina.webp
-[Cavi_prolunghe_per_prove.webp]: {{ site.baseurl }}/immagini/pompa/Cavi_prolunghe_per_prove.webp
-[Prolunga-elettrica_con_puntalini.webp]: {{ site.baseurl }}/immagini/pompa/Prolunga-elettrica_con_puntalini.webp
-[Prolunghe_AbatJour_Fili_Morsettiere.webp]: {{ site.baseurl }}/immagini/pompa/Prolunghe_AbatJour_Fili_Morsettiere.webp
-[Sensore_con_puntalini_e_Addon.webp]: {{ site.baseurl }}/immagini/pompa/Sensore_con_puntalini_e_Addon.webp
-[Addon_sensore_collegamenti.webp]: {{ site.baseurl }}/immagini/pompa/Addon_sensore_collegamenti.webp
-[shelly-plus-addon_con_fili.webp]: {{ site.baseurl }}/immagini/pompa/shelly-plus-addon_con_fili.webp
-[Shelly_Addon_sensore_livello.webp]: {{ site.baseurl }}/immagini/pompa/Shelly_Addon_sensore_livello.webp
-[Sensore_su_deposito.webp]: {{ site.baseurl }}/immagini/pompa/Sensore_su_deposito.webp
-[1T_collegato.webp]: {{ site.baseurl }}/immagini/pompa/1T_collegato.webp
-[1R_collegamenti.webp]: {{ site.baseurl }}/immagini/pompa/1R_collegamenti.webp
-[1T_LoRa_AddON.webp]: {{ site.baseurl }}/immagini/pompa/1T_LoRa_AddON.webp
-[shelly-lora-add-on-pin-evidenti.webp]: {{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-pin-evidenti.webp
-[Scatola_esterna_1T.webp]: {{ site.baseurl }}/immagini/pompa/Scatola_esterna_1T.webp
-[Distanza_1T_1R.webp]: {{ site.baseurl }}/immagini/pompa/Distanza_1T_1R.webp
-[collage_tre_dispositivi.webp]: {{ site.baseurl }}/immagini/pompa/collage_tre_dispositivi.webp
-[Snubber.webp]: {{ site.baseurl }}/immagini/pompa/Snubber.webp
-[Caratteristiche_pompa.webp]: {{ site.baseurl }}/immagini/pompa/Caratteristiche_pompa.webp
-[notifiche.webp]: {{ site.baseurl }}/immagini/pompa/notifiche.webp
-
-<!-- FINE ELENCO IMMAGINI -->
