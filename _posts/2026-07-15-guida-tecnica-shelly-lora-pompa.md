@@ -6,17 +6,17 @@ categories: [domotica, shelly, AI]
 tags: [Shelly, LoRa, domotica, tutorial, replica, script]
 description: >-
   Guida operativa passo-passo per replicare il progetto della pompa comandata
-  via LoRa tra due Shelly 1PM Gen4. Materiali, cablaggi, script scaricabili.
+  via LoRa da due Shelly 1PM Gen4. Materiali, cablaggi, script scaricabili.
 ---
 
 <a id="guida-tecnica"></a>
 ## 🔧 Guida tecnica passo-passo — per chi vuole replicare (o adattare) il progetto
 
-Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire il sistema: materiali, foto, cablaggi, configurazioni e collaudo. È pensata per chi parte più o meno dal mio stesso livello: **nessuna competenza avanzata richiesta**, ma attenzione, pazienza e rispetto assoluto per la sicurezza elettrica.
+Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire il sistema: materiali, foto, cablaggi, configurazioni e collaudo. È pensata per chi parte più o meno dal mio stesso livello: **nessuna competenza avanzata richiesta**. Fate attenzione e abbiate un po' di pazienza e, soprattutto, rispetto assoluto per la sicurezza elettrica.
 
 > ⚠️ **Prima di tutto: sicurezza.** Si lavora a 230 V. Ogni collegamento va fatto a impianto sezionato e tensione verificata assente. Nel dubbio, un elettricista. (Io l'ho chiamato, quando serviva. Nessuna vergogna.)
 
-> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
+> 📖 **Vuoi capire prima il "perché" di certe scelte?** Questa guida è il complemento operativo del **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**: lì trovi la narrazione estesa (le quattro evoluzioni, il ruolo delle AI, la prova sul campo), qui trovi come costruirlo passo per passo.
 
 ### Passo 0 — Cosa serve
 
@@ -36,11 +36,8 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 *Dove trovarli:* gli Shelly sul [sito ufficiale](https://www.shelly.com/it/collections/smart-switches-dimmers); il sensore XKC-Y25-NPN si reperisce facilmente online.
 
-![Lo Shelly Plus 1PM]({{ site.baseurl }}/immagini/pompa/Shelly_Plus_1PM.webp)
-![Lo Shelly 1PM Gen4 con i fili collegati]({{ site.baseurl }}/immagini/pompa/shelly-1pm-gen4_con_fili.webp)
-![Il LoRa Add-on accoppiato allo Shelly]({{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-accoppiato.webp)
-![Il quadro con le due prese e il magnetotermico]({{ site.baseurl }}/immagini/pompa/Quadro_con_prese.webp)
-![Le morsettiere utilizzate]({{ site.baseurl }}/immagini/pompa/Morsettiere.webp)
+![I vari Shelly, lo snubber e il sensore di livello]({{ site.baseurl }}/immagini/pompa/Vari_Shelly_Sensore_Snubber.webp)
+
 
 **Solo per le prove al tavolo** (Passo 1, qui di seguito): due prolunghe tripolari con presa bipasso (da tagliare), spezzoni di cavo 1,5 mm² con puntalini, e un'abat-jour con **lampada a incandescenza**.
 
@@ -50,17 +47,14 @@ Questa guida raccoglie, in ordine operativo, tutto ciò che serve per costruire 
 
 ### Passo 1 — Le prove al tavolo (prima di toccare la pompa!)
 
-Non collegate mai la pompa al primo colpo. Ho fatto tutte le prove **in casa, su un tavolo**, usando un'abat-jour con lampadina a incandescenza come "pompa finta": un riscontro visivo immediato e innocuo.
+Non collegate mai la pompa al primo colpo. Ho fatto tutte le prove **in casa, su un tavolo da lavoro**, usando un'abat-jour con lampadina a incandescenza come "pompa finta": mi ha fornito un riscontro visivo immediato e innocuo.
 
-![L'abat-jour con lampada a incandescenza usata come carico di prova]({{ site.baseurl }}/immagini/pompa/Abat-jour_Lampadina.webp)
-![Le prolunghe tagliate e preparate per le prove]({{ site.baseurl }}/immagini/pompa/Cavi_prolunghe_per_prove.webp)
-![Prolunga elettrica intestata con puntalini]({{ site.baseurl }}/immagini/pompa/Prolunga-elettrica_con_puntalini.webp)
 
-> ⚠️ **Perché proprio una lampadina a incandescenza?** Perché è un carico **resistivo** "vero": assorbe abbastanza corrente da far lavorare il relè in modo realistico. Il mio primo tentativo con un **faretto LED** fallì: i LED assorbono pochissimo e la loro elettronica di controllo può dare comportamenti anomali con i relè. E ricordate: la lampadina valida la *logica* del sistema, ma la pompa è un carico **induttivo** — il comportamento elettrico reale (spunti, disturbi) lo vedrete solo sul campo. Per questo, alla fine, c'è lo snubber.
+> ⚠️ **Perché proprio una lampadina a incandescenza?** Perché è un carico **resistivo** "vero": assorbe abbastanza corrente da far lavorare il relè in modo realistico. Il mio primo tentativo con un **faretto LED** fallì: i LED assorbono pochissimo e la loro elettronica di controllo può dare comportamenti anomali con i relè. A me succedeva. E ricordate: la lampadina valida la *logica* del sistema, ma la pompa è un carico **induttivo** — il comportamento elettrico reale (spunti, disturbi) lo vedrete solo sul campo. Per questo, alla fine del mio percorso, entra in campo lo snubber.
 
 ### Passo 2 — Il sensore di livello e l'Add-on
 
-Il sensore XKC-Y25-NPN è capacitivo e **senza contatto**: si applica all'esterno della parete del deposito (plastica o vetro, non metallo) e rileva l'acqua attraverso di essa. Ha quattro fili; questo il cablaggio verso lo Shelly Plus Add-on:
+Il sensore XKC-Y25-NPN che ho utilizzato è capacitivo e **senza contatto**: si applica all'esterno della parete del deposito (plastica o vetro, non metallo) e rileva l'acqua attraverso di essa. Ha quattro fili; questo il cablaggio verso lo Shelly Plus Add-on:
 
 | Filo sensore | Funzione | Morsetto Add-on |
 |---|---|---|
@@ -69,11 +63,7 @@ Il sensore XKC-Y25-NPN è capacitivo e **senza contatto**: si applica all'estern
 | **Giallo** | Segnale di uscita | **DIGITAL IN** |
 | **Nero** | Selezione modalità (NO/NC) | **GND** |
 
-![Il sensore con i puntalini e l'Add-on]({{ site.baseurl }}/immagini/pompa/Sensore_con_puntalini_e_Addon.webp)
-![I collegamenti del sensore all'Add-on]({{ site.baseurl }}/immagini/pompa/Addon_sensore_collegamenti.webp)
-![Lo Shelly Plus Add-on cablato]({{ site.baseurl }}/immagini/pompa/shelly-plus-addon_con_fili.webp)
-![L'insieme Shelly + Add-on + sensore di livello]({{ site.baseurl }}/immagini/pompa/Shelly_Addon_sensore_livello.webp)
-![Il sensore nella sua posizione definitiva sulla parete del deposito]({{ site.baseurl }}/immagini/pompa/Sensore_su_deposito.webp)
+![Il sensore, i collegamenti, lo Shelly Plus 1PM e l'Add-on]({{ site.baseurl }}/immagini/pompa/Sensore_Addon_1PM.webp)
 
 **La logica di funzionamento:** il LED del sensore è **acceso** quando rileva il liquido. Quando il livello scende sotto la soglia, il LED **si spegne** — ed è proprio questo spegnimento l'evento che fa partire tutta la catena. In altre parole: *la pompa parte quando l'acqua manca, non quando c'è.* La sensibilità si regola con la piccola vite sul retro del sensore.
 
