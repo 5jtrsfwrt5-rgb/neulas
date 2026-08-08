@@ -166,7 +166,7 @@ E se replicando il progetto scopri qualcosa — un miglioramento, un errore, una
 <a id="appendice"></a>
 ## Appendice tecnica — Gli script, dal "funziona, in qualche modo" al "mi posso fidare"
 
-Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON mostrarti solo la versione finale, ma di metterti sotto gli occhi **due tappe** del percorso — la prima versione completa e quella definitiva — perché il confronto tra le due è il racconto di questo progetto: mostra come, correzione dopo correzione, un sistema che "in qualche modo funziona" diventa un sistema di cui "ci si può fidare". Ed entrambe, ripeto, sono **liberamente scaricabili**: è una scelta deliberata.
+Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON mostrarti solo la versione finale, ma di metterti sotto gli occhi **due tappe** del percorso — la prima versione completa e quella definitiva — perché il confronto tra le due è il racconto di questo progetto: mostra come, correzione dopo correzione, un sistema che "*in qualche modo funziona*" diventa un sistema di cui "*ci si può fidare*". Ed entrambe, ripeto, sono **liberamente scaricabili e modificabili**: è una scelta deliberata, come ho già detto.
 
 > 🔒 **Nota sull'anonimizzazione.** Tutti gli script qui sotto sono stati ripuliti dai dati sensibili. In particolare:
 > - l'indirizzo del servizio di notifica è sostituito con `IL_TUO_TOPIC_SEGRETO`;
