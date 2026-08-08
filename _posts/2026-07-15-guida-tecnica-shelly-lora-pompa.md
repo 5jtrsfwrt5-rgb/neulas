@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Guida tecnica — Tre Shelly per gestirenuna pompa distante 60 metri"
+title: "Guida tecnica — Tre Shelly per gestire una pompa distante 60 metri"
 date: 2026-07-15
 categories: [domotica, shelly, AI]
 tags: [Shelly, LoRa, domotica, tutorial, replica, script]
@@ -79,16 +79,16 @@ Sullo Shelly Plus 1PM del deposito va creata un'**Azione** che, quando l'ingress
 http://192.168.1.xxx/rpc/Switch.Set?id=0&on=true
 ```
 
-*(sostituite `192.168.1.xxx` con l'IP reale di 1T nella vostra rete)*
+*(Sostituite `192.168.1.xxx` con l'IP reale di 1T nella vostra rete. In questo modo il comando verrà trasmesso dal sensore a 1T anche in assenza di collegamento internet al cloud di Shelly)*
 
-Due accorgimenti **fondamentali**, imparati a mie spese:
+Due accorgimenti **fondamentali**, imparati durante i vari tentativi:
 
 1. **Una sola azione**, non duplicata (attenzione: l'interfaccia può mostrare come distinte un'azione nativa e una URL che in realtà sono raggruppate).
 2. Impostate **"Ripeti quando" a 420 secondi** (poco più della durata del ciclo pompa): così, anche se il sensore oscilla più volte durante il riempimento, parte un solo comando ogni 420 secondi.
 
 ![Misure con il multimetro sull'Addon]({{ site.baseurl }}/immagini/pompa/URL_Addon.webp)
 
-> 💡 **Consiglio: IP statici.** Assegnate ai tre Shelly indirizzi IP fissi (prenotazione DHCP dal router, basata sul MAC). Se l'IP di 1T cambiasse, l'azione HTTP fallirebbe *in silenzio*.
+> 💡 **Consiglio: impostate degli IP statici.** Assegnate ai tre Shelly indirizzi IP fissi (prenotazione DHCP dal router, basata sul MAC). Se l'IP di 1T cambiasse, l'azione HTTP fallirebbe *in silenzio*.
 
 ### Passo 4 — Preparare 1T e 1R
 
@@ -104,10 +104,6 @@ http://192.168.1.xxx/rpc/Switch.SetConfig?id=0&config={"in_mode":"detached"}
 5. Su **entrambi**, comportamento post-blackout: **spento** alla riaccensione (*Power On Default → OFF*). Con la pompa di mezzo, è una scelta di sicurezza.
 6. Su **1T**, create un **componente virtuale Boolean** (otterrà l'id `boolean:200`): lo script lo userà come "spia" dello stato d'allarme.
 
-![1T cablato e pronto]({{ site.baseurl }}/immagini/pompa/1T_collegato.webp)
-![I collegamenti di 1R]({{ site.baseurl }}/immagini/pompa/1R_collegamenti.webp)
-![Il LoRa Add-on montato su 1T]({{ site.baseurl }}/immagini/pompa/1T_LoRa_AddON.webp)
-![Il LoRa Add-on con i pin in evidenza]({{ site.baseurl }}/immagini/pompa/shelly-lora-add-on-pin-evidenti.webp)
 
 ### Passo 5 — Caricare gli script
 
@@ -139,12 +135,10 @@ Qui si gioca gran parte dell'affidabilità del collegamento. Le regole che ho im
 - **Lontano da metalli e cavi di potenza**: la mia peggior fase di instabilità (messaggi corrotti come `PONE`, `QONG`, `PO^`) era dovuta al sovraffollamento di fili, interruttore e presa nella scatola dove avevo infilato 1T. Spostato in una **scatola di derivazione da esterno, dedicata**, il problema è sparito: 57 PONG puliti consecutivi al primo log.
 - **In alto è meglio**: pochi metri di elevazione riducono gli ostacoli nel percorso radio.
 
-![La scatola di derivazione esterna, sede definitiva di 1T]({{ site.baseurl }}/immagini/pompa/Scatola_esterna_1T.webp)
-![I 60,75 metri tra 1T e 1R, misurati su ortofoto]({{ site.baseurl }}/immagini/pompa/Distanza_1T_1R.webp)
+![Collage: L'addon del sensore, 1T sulla parete esterna, I 60,75 metri tra 1T e 1R misurati su ortofoto, 1R alla cisterna]({{ site.baseurl }}/immagini/pompa/Definitivi.webp)
 
 *I tre dispositivi nelle loro sedi definitive:*
 
-![Collage: il sensore sul deposito, 1T sulla parete esterna, 1R alla cisterna]({{ site.baseurl }}/immagini/pompa/collage_tre_dispositivi.webp)
 
 ### Passo 8 — Snubber e sicurezza elettrica
 
@@ -152,14 +146,13 @@ Qui si gioca gran parte dell'affidabilità del collegamento. Le regole che ho im
 - Verificate che il **magnetotermico** dedicato sia correttamente dimensionato: nel mio caso è stato lui a salvare la situazione quando la pompa ha ceduto.
 - Controllate i dati di targa della pompa rispetto ai limiti dello Shelly (il mio Gen4 gestisce fino a 16 A; la mia pompa ne assorbe 5,88 — ampio margine, ma è un controllo da fare sempre).
 
-![Lo snubber RC montato in prossimità dell'elettropompa]({{ site.baseurl }}/immagini/pompa/Snubber.webp)
-![La targhetta con le caratteristiche dell'elettropompa]({{ site.baseurl }}/immagini/pompa/Caratteristiche_pompa.webp)
+![Collage: Le caratteristiche dell'elettropompa, lo snubber RC montato in prossimità dell'elettropompa, il quadro con le due prese chiuso]({{ site.baseurl }}/immagini/pompa/TargaSnubberQuadro.webp)
 
-### Il risultato
+## Il risultato
 
 Se tutto è andato bene, il vostro log sarà un lungo, monotono, meraviglioso susseguirsi di `PING`/`PONG` — e sul telefono arriverà **una** notifica per ogni accensione reale della pompa, non una raffica:
 
-![Una notifica ntfy contro diciannove attivazioni grezze del sensore]({{ site.baseurl }}/immagini/pompa/notifiche.webp)
+![Una notifica ntfy contro ventisette (!) attivazioni grezze del sensore]({{ site.baseurl }}/immagini/pompa/Notifiche_Shelly_vs_ntfy.webp)
 
 ### Una parola prima di salutarci
 
