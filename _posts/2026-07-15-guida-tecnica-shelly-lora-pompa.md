@@ -905,15 +905,15 @@ Shelly.addEventHandler(function(event) {
 
 ---
 
-### L'esperimento del tubo trasparente (e i vasi comunicanti)
-
-Un dettaglio che vale la pena raccontare, perché spiega perché nelle versioni intermedie il timer della pompa era salito da 400 a **410 secondi**.
-
-A un certo punto avevo provato a **spostare il sensore** dalla parete del deposito al **tubo trasparente esterno** che serve a controllare a vista il livello dell'acqua — quello che funziona secondo il vecchio, validissimo principio dei **vasi comunicanti**. Con il sensore in quella posizione era stato necessario allungare il timer di 10 secondi (da 400 a 410) per compensare i tempi.
-
-Ma si erano verificati alcuni malfunzionamenti, dovuti forse al **diametro ridotto del tubo** (circa 3 cm), a **eventuali residui** al suo interno, o alla necessità di **regolare ulteriormente la sensibilità** del sensore. Così ho preferito **riportare il sensore alla sua vecchia posizione**, sulla parete del deposito, dove aveva sempre funzionato — e continua a funzionare — bene. Con il ritorno alla posizione originale, il timer è tornato al suo valore collaudato di **400 secondi**.
-
-Un piccolo esempio di come, a volte, la soluzione migliore non è la più "ingegnosa", ma quella che la realtà ha già dimostrato affidabile.
+> ### L'esperimento del tubo trasparente (e i vasi comunicanti)
+> 
+> Un dettaglio che vale la pena raccontare, perché spiega perché nelle versioni intermedie il timer della pompa era salito da 400 a **410 secondi**.
+> 
+> A un certo punto avevo provato a **spostare il sensore** dalla parete del deposito al **tubo trasparente esterno** che serve a controllare a vista il livello dell'acqua — quello che funziona secondo il vecchio, validissimo principio dei **vasi comunicanti**. Con il sensore in quella posizione era stato necessario allungare il timer di 10 secondi (da 400 a 410) per compensare i tempi.
+> 
+> Ma si erano verificati alcuni malfunzionamenti, dovuti forse al **diametro ridotto del tubo** (circa 3 cm), a **eventuali residui** al suo interno, o alla necessità di **regolare ulteriormente la sensibilità** del sensore. Così ho preferito **riportare il sensore alla sua vecchia posizione**, sulla parete del deposito, dove aveva sempre funzionato — e continua a funzionare — bene. Con il ritorno alla posizione originale, il timer è tornato al suo valore collaudato di **400 secondi**.
+> 
+> Ho voluto riportare questo piccolo esempio che spiega come, a volte, la soluzione migliore non è la più "ingegnosa", ma quella che la realtà ha già dimostrato affidabile.
 
 ---
 
