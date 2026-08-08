@@ -117,7 +117,7 @@ Procedura: Web UI del dispositivo → *Scripts* → *Create new script* → inco
 Prima di avviare gli script, o anche prima di crearli, va messo a punto il sistema per ricevere sul proprio smartphone la varie noifiche previste:
 
 1. **Creare il proprio topic ntfy**: l'app ntfy va installata sul telefono, è reperibile nei vari store. Occorre quindi inventare una stringa lunga e casuale, (preferibilmente una trentina o più di caratteri) ed iscriversi a quel canale. La stessa stringa **va inserita nello script al posto di `IL_TUO_TOPIC_SEGRETO`**. Il topic è, di fatto, una password: non pubblicatelo mai.
-2. Il mio consiglio è di partire dalla **v2** (più semplice da capire), verificarne il funzionamento, e passare poi alla **v7**.
+2. Per quanto concerne gli script, il mio consiglio è di partire dalla **v2** (più semplice da capire per chi non ha tanta dimestichezza con la programmazione), verificarne il funzionamento, e passare poi alla **v7**.
 
 ### Passo 6 — Collaudo: prima in casa, poi sul campo
 
@@ -166,7 +166,7 @@ E se replicando il progetto scopri qualcosa — un miglioramento, un errore, una
 <a id="appendice"></a>
 ## Appendice tecnica — Gli script, dal "funziona, in qualche modo" al "mi posso fidare"
 
-Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON mostrarti solo la versione finale, ma di metterti sotto gli occhi **due tappe** del percorso — la prima versione completa e quella definitiva — perché il confronto tra le due è il racconto di questo progetto: mostra come, correzione dopo correzione, un sistema che "funziona" diventa un sistema di cui ci si "fida". Ed entrambe, ripeto, sono **liberamente scaricabili**: è una scelta deliberata.
+Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON mostrarti solo la versione finale, ma di metterti sotto gli occhi **due tappe** del percorso — la prima versione completa e quella definitiva — perché il confronto tra le due è il racconto di questo progetto: mostra come, correzione dopo correzione, un sistema che "in qualche modo funziona" diventa un sistema di cui "ci si può fidare". Ed entrambe, ripeto, sono **liberamente scaricabili**: è una scelta deliberata.
 
 > 🔒 **Nota sull'anonimizzazione.** Tutti gli script qui sotto sono stati ripuliti dai dati sensibili. In particolare:
 > - l'indirizzo del servizio di notifica è sostituito con `IL_TUO_TOPIC_SEGRETO`;
@@ -459,10 +459,9 @@ Shelly.addEventHandler(function(event) {
 </details>
 
 ---
-
 ### Il percorso tra la v2 e la v7 (le versioni intermedie mancanti)
 
-Tra la prima versione e quella definitiva ci sono state alcune tappe intermedie (le v3, v4, v5, v6), che non riporto per intero per non appesantire questa guida, già lunga. Ma vale la pena riassumere **cosa** è cambiato, perché ogni modifica è nata da un problema reale, piccolo o grande, che è stato affrontato, e risolto, man mano che si presentava:
+Tra la prima versione funzionante e quella definitiva ci sono state alcune tappe intermedie (le v3, v4, v5, v6), che non riporto qui per intero per non appesantire questa guida, già lunga. Ma vale la pena riassumere **cosa** è cambiato, perché ogni modifica è nata da un problema reale, piccolo o grande, che è stato affrontato, e risolto, man mano che si presentava:
 
 - **Introduzione dell'ACK (conferma).** 1R, quando accende la pompa, risponde `POMPA_ON`; quando la spegne, `POMPA_OFF`. Finalmente 1T *sa* se il comando è andato a buon fine, invece di sperarlo.
 - **Retry automatici.** Se `POMPA_ON` non arriva entro 5 secondi, 1T **ritenta** (fino a 10 volte).
