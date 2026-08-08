@@ -79,7 +79,7 @@ Sullo Shelly Plus 1PM del deposito va creata un'**Azione** che, quando l'ingress
 http://192.168.1.xxx/rpc/Switch.Set?id=0&on=true
 ```
 
-*(Sostituite `192.168.1.xxx` con l'IP reale di 1T nella vostra rete. In questo modo il comando verrà trasmesso dal sensore a 1T anche in assenza di collegamento internet al cloud di Shelly)*
+*(Sostituisci `192.168.1.xxx` con l'IP reale di 1T nella vostra rete. In questo modo il comando verrà trasmesso dal sensore a 1T tramite il router anche in assenza di collegamento internet al cloud di Shelly)*
 
 Due accorgimenti **fondamentali**, imparati durante i vari tentativi:
 
@@ -88,21 +88,21 @@ Due accorgimenti **fondamentali**, imparati durante i vari tentativi:
 
 ![Misure con il multimetro sull'Addon]({{ site.baseurl }}/immagini/pompa/URL_Addon.webp)
 
-> 💡 **Consiglio: impostate degli IP statici.** Assegnate ai tre Shelly indirizzi IP fissi (prenotazione DHCP dal router, basata sul MAC). Se l'IP di 1T cambiasse, l'azione HTTP fallirebbe *in silenzio*.
+> 💡 **Consiglio: impostare degli IP statici.** È preferibile assegnare ai tre Shelly indirizzi IP fissi (prenotazione DHCP dal router, basata sul MAC). Se l'IP di 1T cambiasse, l'azione HTTP fallirebbe *in silenzio*.
 
 ### Passo 4 — Preparare 1T e 1R
 
 1. **Firmware aggiornato** su entrambi i Gen4.
 2. **LoRa Add-on installato** su ciascuno, con la ricezione abilitata (*"Allow the LoRa Add-on to receive packets"*).
 3. **Parametri radio** (uguali sui due dispositivi — sono quelli di fabbrica): frequenza **868 MHz** (Europa), bandwidth 125 kHz, **SF12** (portata massima), potenza **14 dBm** — che è già il limite legale europeo: non si può "alzare il volume", si può solo migliorare posizione e orientamento delle antenne.
-4. Su **1T**, impostate l'ingresso in modalità **detached** — indispensabile, altrimenti il relè "segue" l'input fisico e genera comandi doppi:
+4. Su **1T**, impostare l'ingresso in modalità **detached** — indispensabile, altrimenti il relè "segue" l'input fisico e genera comandi doppi:
 
 ```
 http://192.168.1.xxx/rpc/Switch.SetConfig?id=0&config={"in_mode":"detached"}
 ```
 
 5. Su **entrambi**, comportamento post-blackout: **spento** alla riaccensione (*Power On Default → OFF*). Con la pompa di mezzo, è una scelta di sicurezza.
-6. Su **1T**, create un **componente virtuale Boolean** (otterrà l'id `boolean:200`): lo script lo userà come "spia" dello stato d'allarme.
+6. Su **1T**, creare un **componente virtuale Boolean** (otterrà presumibilmente l'id `boolean:200`): lo script lo userà come "spia" dello stato d'allarme.
 
 
 ### Passo 5 — Caricare gli script
@@ -114,49 +114,48 @@ Gli script completi (prima versione funzionante **v2** e definitiva **v7**) sono
 
 Procedura: Web UI del dispositivo → *Scripts* → *Create new script* → incollare → *Save* → *Start* → attivare **Run on boot**.
 
-Prima di avviare:
+Prima di avviare gli script, o anche prima di crearli, va messo a punto il sistema per ricevere sul proprio smartphone la varie noifiche previste:
 
-1. **Create il vostro topic ntfy**: installate l'app ntfy sul telefono, inventate una stringa lunga e casuale, iscrivetevi a quel canale e **inseritela nello script al posto di `IL_TUO_TOPIC_SEGRETO`**. Il topic è, di fatto, una password: non pubblicatelo mai.
+1. **Creare il proprio topic ntfy**: l'app ntfy va installata sul telefono, è reperibile nei vari store. Occorre quindi inventare una stringa lunga e casuale, (preferibilmente una trentina o più di caratteri) ed iscriversi a quel canale. La stessa stringa **va inserita nello script al posto di `IL_TUO_TOPIC_SEGRETO`**. Il topic è, di fatto, una password: non pubblicatelo mai.
 2. Il mio consiglio è di partire dalla **v2** (più semplice da capire), verificarne il funzionamento, e passare poi alla **v7**.
 
 ### Passo 6 — Collaudo: prima in casa, poi sul campo
 
-1. **In casa**, con 1R vicino e la lampadina come carico: riducete temporaneamente i timer in cima allo script di 1T (es. `CFG_DURATA_POMPA = 10`, `CFG_PING_NORMALE = 18`) per non aspettare mezz'ora tra le prove.
-2. Verificate nel log di 1T il ciclo completo: `PING → PONG` e `ACCENDI_POMPA → POMPA_ON → notifica ntfy → spegnimento a tempo`.
-3. Provate anche i casi d'errore: togliete alimentazione a 1R e osservate i tentativi, l'allarme, la notifica "Controllo corrente" e — alla riaccensione — il ripristino automatico.
-4. Solo a quel punto, **ripristinate i valori definitivi** dei timer e spostate 1R nella posizione reale.
+1. **In casa**, con 1R vicino e la lampadina come carico: si possono ridurre temporaneamente i timer in cima allo script di 1T (es. `CFG_DURATA_POMPA = 10`, `CFG_PING_NORMALE = 18`) per non aspettare mezz'ora tra le prove.
+2. Con vari tentativi si può procedere a verificare nel log di 1T il ciclo completo: `PING → PONG` e `ACCENDI_POMPA → POMPA_ON → notifica ntfy → spegnimento a tempo`.
+3. Vanno provati anche i casi d'errore: interrompendo l'alimentazione a 1R si osserva la sequenza di tentativi, l'allarme, la notifica "Controllo corrente" e — alla riaccensione — il ripristino automatico.
+4. Solo a quel punto, **vanno ripristinati i valori definitivi** dei timer dato che 1R nella posizione reale risulterà fuori dalla copertura wifi, indispensabile per la modifica degli script.
 
 ### Passo 7 — Posizionamento definitivo e accorgimenti radio
 
 Qui si gioca gran parte dell'affidabilità del collegamento. Le regole che ho imparato (a mie spese):
 
 - **Antenne parallele tra loro**: entrambe verticali o entrambe nello stesso orientamento. Un'antenna verticale e una orizzontale possono costare gran parte del segnale.
-- Il filo dell'antenna **non deve puntare verso l'altro dispositivo** (lungo il suo asse la radiazione è minima): meglio perpendicolare alla linea che unisce 1T e 1R.
-- **Lontano da metalli e cavi di potenza**: la mia peggior fase di instabilità (messaggi corrotti come `PONE`, `QONG`, `PO^`) era dovuta al sovraffollamento di fili, interruttore e presa nella scatola dove avevo infilato 1T. Spostato in una **scatola di derivazione da esterno, dedicata**, il problema è sparito: 57 PONG puliti consecutivi al primo log.
-- **In alto è meglio**: pochi metri di elevazione riducono gli ostacoli nel percorso radio.
+- Il filo dell'antenna **non deve puntare verso l'altro dispositivo** (lungo il suo asse la radiazione è minima): l'ideale sarebbe disporlo perpendicolare alla linea che unisce 1T e 1R.
+- **Lontano da metalli e cavi di potenza**: la mia peggior fase di instabilità (messaggi corrotti come `PONE`, `QONG`, `PO^`) era dovuta al sovraffollamento di fili, interruttore e presa nella scatola dove avevo infilato 1T. Spostatolo in una **scatola di derivazione da esterno, dedicata**, il problema è sparito: 57 PONG puliti consecutivi al primo log.
+- **In alto è meglio**: pochi metri di elevazione riducono gli ostacoli nel percorso del segnale radio.
 
 ![Collage: L'addon del sensore, 1T sulla parete esterna, I 60,75 metri tra 1T e 1R misurati su ortofoto, 1R alla cisterna]({{ site.baseurl }}/immagini/pompa/Definitivi.webp)
-
-*I tre dispositivi nelle loro sedi definitive:*
+*I tre dispositivi pronti ad essere sistemati nelle loro sedi definitive:*
 
 
 ### Passo 8 — Snubber e sicurezza elettrica
 
-- Montate lo **Shelly RC Snubber in parallelo alla pompa, il più vicino possibile ad essa** (non vicino allo Shelly!). Assorbe i picchi di tensione alla commutazione, protegge il relè e riduce i disturbi — anche radio.
-- Verificate che il **magnetotermico** dedicato sia correttamente dimensionato: nel mio caso è stato lui a salvare la situazione quando la pompa ha ceduto.
-- Controllate i dati di targa della pompa rispetto ai limiti dello Shelly (il mio Gen4 gestisce fino a 16 A; la mia pompa ne assorbe 5,88 — ampio margine, ma è un controllo da fare sempre).
+- Montare lo **Shelly RC Snubber in parallelo alla pompa, il più vicino possibile ad essa**. Assorbe i picchi di tensione alla commutazione, protegge il relè e riduce i disturbi — anche radio.
+- Verificare che il **magnetotermico** dedicato sia correttamente dimensionato: nel mio caso è stato lui a salvare la situazione quando la pompa ha ceduto.
+- Controllare i dati di targa della pompa rispetto ai limiti dello Shelly (il mio Gen4 gestisce fino a 16 A; la mia pompa ne assorbe 5,88 — ampio margine, ma è un controllo da fare sempre).
 
 ![Collage: Le caratteristiche dell'elettropompa, lo snubber RC montato in prossimità dell'elettropompa, il quadro con le due prese chiuso]({{ site.baseurl }}/immagini/pompa/TargaSnubberQuadro.webp)
 
 ## Il risultato
 
-Se tutto è andato bene, il vostro log sarà un lungo, monotono, meraviglioso susseguirsi di `PING`/`PONG` — e sul telefono arriverà **una** notifica per ogni accensione reale della pompa, non una raffica:
+Se tutto è andato bene, il log di 1T sarà un lungo, monotono, meraviglioso susseguirsi di `PING`/`PONG` — e sul telefono arriverà **una** notifica per ogni accensione reale della pompa, non una raffica:
 
 ![Una notifica ntfy contro ventisette (!) attivazioni grezze del sensore]({{ site.baseurl }}/immagini/pompa/Notifiche_Shelly_vs_ntfy.webp)
 
 ### Una parola prima di salutarci
 
-Questa guida — come tutto il progetto, script definitivi compresi — è **gratuita e lo resterà**: è una scelta fatta con convinzione, per restituire quello che a mia volta ho ricevuto da chi condivide le proprie esperienze in rete. Se ti è stata utile e vuoi contribuire, **su base del tutto volontaria**, al prossimo progetto (Raspberry Pi / Arduino), puoi farlo qui:
+Questa guida — come tutto il progetto, script definitivi compresi — è **gratuita e lo resterà per sempre**: è una scelta fatta con convinzione, per restituire quello che a mia volta ho ricevuto da chi condivide le proprie esperienze in rete. Se ti è stata utile e vuoi contribuire, **su base del tutto volontaria**, al prossimo progetto (Raspberry Pi / Arduino), puoi farlo qui:
 
 > ☕ **[Offrimi un caffè per il prossimo progetto](LINK_DONAZIONI)**
 
@@ -165,7 +164,7 @@ E se replicando il progetto scopri qualcosa — un miglioramento, un errore, una
 ---
 
 <a id="appendice"></a>
-## Appendice tecnica — Gli script, dal "funziona" al "mi fido"
+## Appendice tecnica — Gli script, dal "funziona, in qualche modo" al "mi posso fidare"
 
 Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON mostrarti solo la versione finale, ma di metterti sotto gli occhi **due tappe** del percorso — la prima versione completa e quella definitiva — perché il confronto tra le due è il racconto di questo progetto: mostra come, correzione dopo correzione, un sistema che "funziona" diventa un sistema di cui ci si "fida". Ed entrambe, ripeto, sono **liberamente scaricabili**: è una scelta deliberata.
 
@@ -175,7 +174,7 @@ Questa appendice raccoglie il cuore software del progetto. Ho scelto di NON most
 >
 > ⚠️ **Se replichi il progetto:** il "topic" di ntfy.sh funziona di fatto come una password. **Non condividerlo mai in chiaro** (né in un blog, né altrove): chi lo conosce può leggere e inviare le tue notifiche. Usa una stringa lunga e casuale, e trattala come una credenziale.
 
-### Premessa comune: la configurazione dell'Add-on sensore
+### Premessa comune: la configurazione dell'Add-on per il sensore
 
 In entrambe le versioni, oltre agli script, serve **un'azione** configurata sull'Add-on a cui è collegata la sonda di livello. Quando il sensore cambia stato, l'Add-on chiama questo indirizzo locale, che "preme" virtualmente l'ingresso dello Shelly 1T:
 
@@ -187,9 +186,11 @@ http://192.168.1.xxx/rpc/Switch.Set?id=0&on=true
 
 ---
 
-### PARTE A — La prima versione funzionante (v2)
+### GLI SCRIPT (PARTE A) — La prima versione funzionante (v2)
 
-Questa è la prima versione che ha funzionato dall'inizio alla fine. Fa già le cose essenziali, ed è la più facile da leggere per capire l'impianto generale:
+> ⚠️ **ATTENZIONE**: di seguito, in alcuni punti, il testo è preceduto da un **triangolino nero**. Cliccando su di esso ne viene visualizzato dell'altro, inizialmente nascosto.
+
+Questa (v2) è la prima versione che ha funzionato dall'inizio alla fine. Fa già le cose essenziali, ed è la più facile da leggere per capire l'impianto generale:
 
 - **1T** invia `PING` ogni 30 minuti e attende `PONG`; se 1R tace per 10 tentativi, manda l'allarme "Controllo corrente";
 - il **sensore** fa scattare l'invio di `ACCENDI_POMPA:400` (o `SPEGNI_POMPA`);
@@ -459,9 +460,9 @@ Shelly.addEventHandler(function(event) {
 
 ---
 
-### Il percorso tra la v2 e la v7 (le versioni intermedie)
+### Il percorso tra la v2 e la v7 (le versioni intermedie mancanti)
 
-Tra la prima versione e quella definitiva ci sono state alcune tappe intermedie (le v4, v5, v6), che non riporto per intero per non appesantire. Ma vale la pena riassumere **cosa** è cambiato, perché ogni modifica nasce da un problema reale:
+Tra la prima versione e quella definitiva ci sono state alcune tappe intermedie (le v3, v4, v5, v6), che non riporto per intero per non appesantire questa guida, già lunga. Ma vale la pena riassumere **cosa** è cambiato, perché ogni modifica è nata da un problema reale, piccolo o grande, che è stato affrontato, e risolto, man mano che si presentava:
 
 - **Introduzione dell'ACK (conferma).** 1R, quando accende la pompa, risponde `POMPA_ON`; quando la spegne, `POMPA_OFF`. Finalmente 1T *sa* se il comando è andato a buon fine, invece di sperarlo.
 - **Retry automatici.** Se `POMPA_ON` non arriva entro 5 secondi, 1T **ritenta** (fino a 10 volte).
@@ -484,15 +485,15 @@ La soluzione, nella v7, è un **lock di sicurezza più lungo (30 secondi)** appl
 // (previene SPEGNI spurii sia dal path pendente che da doppi trigger app)
 ```
 
-È un piccolo esempio, ma per me significativo: **non l'ho trovato ragionando a tavolino, l'ho trovato leggendo cosa faceva davvero il sistema.** La realtà è sempre il miglior collaudatore.
+È un piccolo esempio, ma per me significativo: **non l'ho trovato ragionando a tavolino, l'ho trovato leggendo i log per capire cosa faceva davvero il sistema.** La realtà è sempre il miglior collaudatore.
 
 </details>
 
 ---
 
-### PARTE B — La versione definitiva, in uso (v7)
+### GLI SCRIPT (PARTE B) — La versione definitiva, in uso (v7)
 
-Questa è la versione attualmente in funzione. Rispetto alla v2 è più lunga e più "difensiva": ogni riga in più esiste per gestire un caso in cui qualcosa potrebbe andare storto. È il concetto dei **"due cervelli"** portato all'estremo: 1T (accessibile, in casa) concentra tutta l'intelligenza; 1R (isolato, lontano) resta volutamente semplice — riceve, esegue, conferma.
+Questa (v7) è la versione attualmente in funzione. Rispetto alla v2 è più lunga e più "difensiva": ogni riga in più esiste per gestire un caso in cui qualcosa potrebbe andare storto. È il concetto dei **"due cervelli"** portato all'estremo: 1T (accessibile, in casa) concentra tutta l'intelligenza; 1R (isolato dal wifi, lontano e meno accessibile) resta volutamente semplice — riceve, esegue, conferma.
 
 ⬇️ Download: [1T_v7.js]({{ site.baseurl }}/scripts/pompa/1T_v7.js) · [1R_v7.js]({{ site.baseurl }}/scripts/pompa/1R_v7.js)
 
@@ -919,7 +920,7 @@ Shelly.addEventHandler(function(event) {
 
 ### Nota sulle funzioni Shelly usate
 
-Per chi volesse orientarsi, ecco le funzioni dell'API Shelly che compaiono negli script:
+Per chi volesse orientarsi nel codice degli script, ecco le funzioni dell'API Shelly che vi compaiono:
 
 | Funzione | A cosa serve |
 |---|---|
