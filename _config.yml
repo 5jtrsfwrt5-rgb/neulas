@@ -24,7 +24,7 @@ site_navigation         : main
 author:
   name                  : "Roberto"
   bio                   : "Racconti di piccoli progetti realizzati al fianco dell'Intelligenza Artificiale."
-  avatar                : "/assets/images/IMG_1.webp" # Puoi aggiungere una tua foto in questa cartella
+  avatar                : "/immagini/profilo/IMG_1.webp" # Puoi aggiungere una tua foto in questa cartella
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
