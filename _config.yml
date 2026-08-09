@@ -8,7 +8,7 @@ minimal_mistakes_skin   : "default" # Opzioni: "air", "aqua", "contrast", "dark"
 # IMPOSTAZIONI SITO
 # ==========================================
 title                   : "neulas"
-description             : "Una persona non esperta, un'AI al fianco, un problema alla volta. Un blog con racconti su progetti realizzati sperimentando l'affiancamento di una o più AI."
+description             : "Una persona non esperta, un'AI, a turno, al fianco e un problema alla volta. Un blog con racconti su piccoli progetti realizzati sperimentando l'affiancamento di una o più AI."
 # url                   : "https://neulas.it" # Rimuovi il # quando collegherai il dominio definitivo
 baseurl                 : "/neulas"           # Lascia così se l'indirizzo attuale è utente.github.io/neulas
 locale                  : "it-IT"
@@ -23,8 +23,8 @@ site_navigation         : main
 # ==========================================
 author:
   name                  : "Roberto"
-  bio                   : "Racconti onesti di progetti realizzati al fianco dell'Intelligenza Artificiale."
-  avatar                : "/assets/images/avatar.jpg" # Puoi aggiungere una tua foto in questa cartella
+  bio                   : "Racconti di piccoli progetti realizzati al fianco dell'Intelligenza Artificiale."
+  avatar                : "/assets/images/IMG_1.webp" # Puoi aggiungere una tua foto in questa cartella
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
@@ -56,7 +56,7 @@ defaults:
     values:
       layout: single
       author_profile: true # Mostra la biografia a sinistra dell'articolo
-      read_time: true      # Mostra il tempo di lettura stimato
+      read_time: false      # true = Mostra il tempo di lettura stimato
       comments: false
   # Impostazioni per le Pagine statiche (es. about.md)
   - scope:

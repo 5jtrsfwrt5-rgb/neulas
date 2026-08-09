@@ -9,10 +9,9 @@ permalink: /about/
 Mi chiamo **Roberto**. Sono stato insegnante per quasi quarant'anni.
 
 Non sono un tecnico, non sono un programmatore, non sono un elettricista.
-Sono una persona curiosa che ha scoperto di poter realizzare cose — con l'aiuto delle AI — che fino a poco tempo fa rimanevano fuori portata.
+Sono una persona curiosa con una buona manualità che ha scoperto di poter realizzare cose — con l'aiuto delle AI — che fino a poco tempo fa rimanevano fuori portata.
 
-Questo blog è allo stesso tempo una tappa e il racconto di un percorso fatto di entusiasmi, vicoli ciechi, piccole vittorie e, soprattutto, della disciplina di
-**verificare sempre**.
+Questo blog è allo stesso tempo una tappa e il racconto di un percorso di esplorazione delle potenzialità raggiunte sinora dalle AI fatto di entusiasmi, vicoli ciechi, piccole vittorie e, soprattutto, della disciplina di **verificare sempre**.
 
 ---
 
