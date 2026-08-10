@@ -1,6 +1,9 @@
 ---
 layout: home
 title: neulas
+header:
+  overlay_image: "{{ site.baseurl }}/profilo/Neulas_cop_01.webp"
+  overlay_filter: 0.3
 ---
 
 > *Una persona non esperta, un'AI, a turno, al fianco, un problema alla volta.*

@@ -1,16 +1,16 @@
 ---
 layout: single
-title: "Tre Shelly per una pompa che si trova a circa 60 metri di distanza"
+title: "Tre Shelly, una pompa e 60 metri di distanza dalla casa"
 date: 2026-07-14
 categories: domotica shelly AI
 tags: [Shelly, LoRa, domotica, AI, Claude, Gemini, Mistral, pompa, acqua]
 description: >-
   Come una persona non esperta ha automatizzato il pompaggio dell'acqua
-  a 60 metri di distanza, con l'aiuto di tre assistenti AI.
+  da 60 metri di distanza, con l'aiuto di tre assistenti AI.
 permalink: /tre-shelly-pompa-60-metri/
 ---
 
-# Tre Shelly, una pompa e 60 metri di distanza
+
 ### Come una persona non esperta ha automatizzato il pompaggio dell'acqua con l'aiuto dell'AI
 
 *Un racconto fatto di entusiasmi, vicoli ciechi, piccole vittorie — e di una sorgente scoperta per caso.*
@@ -43,7 +43,7 @@ Il flusso, in sintesi:
 
 > 💧 **Acqua bassa** → il sensore (via Shelly Plus 1PM) avvisa **1T** via WiFi → **1T** trasmette via **LoRa** attraverso 60 metri d'aria → **1R** accende la **pompa** per il tempo stabilito, poi la spegne — e conferma a 1T che tutto è andato a buon fine.
 
-![Schema generale del sistema][schema_sistema.webp]
+![Schema generale del sistema]({{ site.baseurl }}/immagini/pompa/schema_sistema.webp)
 *Lo schema del sistema: tre Shelly, due tecnologie radio (WiFi + LoRa), un solo obiettivo.*
 
 > 🔧 *Lista materiali completa, foto dei collegamenti e istruzioni replicabili:* **[Guida tecnica → Passo 0]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
@@ -113,7 +113,7 @@ Ho una prova visiva perfetta di quanto fosse reale il problema:
 
 La soluzione — un **filtro temporale** (una sorta di *debounce*) — l'ho costruita più avanti, ma il problema è nato qui.
 
-> 📐 *Il dettaglio dei 60 metri di distanza e degli 8 metri di dislivello* l'abbiamo visti nello [schema iniziale ↑](#1-il-problema-in-due-righe): sono il motivo per cui non bastava un cavo, e serviva la radio.
+> 📐 *Il dettaglio dei 60 metri di distanza e degli 8 metri di dislivello* l'abbiamo visti nello [schema iniziale ↑](#1-il-problema-in-poche-righe): sono il motivo per cui non bastava un cavo, e serviva la radio.
 
 Fu qui che si presentò um (per me) mistero tecnico che ancora oggi non so spiegarmi del tutto: la **tensione anomala sul sensore**. Ne parlo apertamente più avanti, nella sezione dedicata alla correttezza sugli aspetti tecnici, perché merita chiarezza.
 
@@ -303,7 +303,7 @@ Ricevuto via LoRa: PO^
 Un `PONG` **arrivato corrotto**: la radio ha ricevuto qualcosa, ma il messaggio era danneggiato — probabilmente per interferenza elettrica. Ecco perché la logica dei tentativi ripetuti è essenziale: un singolo messaggio sporco non deve mandare in crisi il sistema. 1T lo scarta, riprova al battito successivo, e quasi sempre il `PONG` seguente arriva pulito.
 
 <details>
-<summary><strong>⚡ Interferenze e disturbi: perché lo *snubber*</strong> (clicca)</summary>
+<summary><strong>⚡ Interferenze e disturbi: perché lo snubber</strong> (clicca)</summary>
 
 <br>
 
@@ -311,7 +311,7 @@ Una pompa è un **carico induttivo**: quando il relè la stacca, l'energia accum
 
 Per questo, su consiglio dell'AI, ho aggiunto uno **Shelly RC Snubber** montato **il più vicino possibile alla pompa**. Lo snubber (un gruppo resistenza + condensatore) "assorbe" quel picco, proteggendo il relè dello Shelly e riducendo i disturbi. È un piccolo componente da pochi euro che allunga la vita dell'impianto.
 
-![Lo Shelly RC Snubber vicino alla pompa][Snubber.webp]
+![Lo Shelly RC Snubber vicino alla pompa]({{ site.baseurl }}/immagini/pompa/Snubber.webp)
 *Lo snubber RC montato in prossimità dell'elettropompa.*
 
 </details>
@@ -503,7 +503,7 @@ Già che raccontavo il progetto, ho fatto un passo in più: ho registrato un **d
 <a id="sostieni"></a>
 ### Sostieni il prossimo progetto (Raspberry Pi / Arduino) ☕
 
-Una cosa voglio dirla chiaramente: **tutto ciò che trovate in queste pagine, soprattutto nella ***Guida tecnica*** è, e resterà, liberamente disponibile.** È stata una scelta ponderata, basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il fatto stesso che questo progetto sia nato grazie a strumenti in gran parte gratuiti. Per questo ho deciso di pubblicare **sia la prima versione funzionante degli script (v2) sia quella definitiva attualmente in uso (v7)**, complete, commentate e scaricabili, nonché modificabili sulla base delle proprie esigenze, senza contenuti a pagamento e senza registrazioni.
+Una cosa voglio dirla chiaramente: **tutto ciò che trovate in queste pagine, soprattutto nella *Guida tecnica*** ** **è, e resterà, liberamente disponibile.** È stata una scelta ponderata, basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il fatto stesso che questo progetto sia nato grazie a strumenti in gran parte gratuiti. Per questo ho deciso di pubblicare **sia la prima versione funzionante degli script (v2) sia quella definitiva attualmente in uso (v7)**, complete, commentate e scaricabili, nonché modificabili sulla base delle proprie esigenze, senza contenuti a pagamento e senza registrazioni.
 
 Detto questo: il prossimo progetto è già nella mia testa, e avrà come protagonisti un **Raspberry Pi e/o un Arduino** — con, naturalmente, un nuovo racconto su questo blog. Se questo articolo o la guida tecnica ti sono stati utili e vuoi darmi una mano a finanziarlo, puoi offrirmi un caffè: si tratta di un contributo **su base strettamente volontaria**, che non sblocca nulla di "premium" — perché non c'è nulla di bloccato — ma che sarà per me un incoraggiamento concreto (e apprezzatissimo) a continuare.
 

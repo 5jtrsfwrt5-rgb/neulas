@@ -7,6 +7,7 @@ tags: [Shelly, LoRa, domotica, tutorial, replica, script]
 description: >-
   Guida operativa passo-passo per replicare il progetto della pompa comandata
   via LoRa da due Shelly 1PM Gen4. Materiali, cablaggi, script scaricabili.
+permalink: /guida-tecnica-pompa-shelly-lora/
 ---
 
 <a id="guida-tecnica"></a>
