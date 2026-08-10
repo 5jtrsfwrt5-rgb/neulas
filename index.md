@@ -2,7 +2,7 @@
 layout: home
 title: neulas
 header:
-  overlay_image: "{{ site.baseurl }}/immagini/profilo/Neulas_cop_01.webp"
+  overlay_image: "/immagini/profilo/Neulas_cop_01.webp"
   overlay_filter: 0.3
 ---
 
