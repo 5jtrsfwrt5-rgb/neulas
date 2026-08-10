@@ -1,6 +1,5 @@
 ---
 layout: home
-title: neulas
 header:
   overlay_image: "/immagini/profilo/Neulas_cop_01.webp"
   overlay_filter: 0.3
@@ -13,5 +12,4 @@ Benvenuto su **neulas**, il blog in cui racconto piccoli progetti realizzati col
 Dal bisogno alla soluzione, un passo alla volta, passando per vicoli ciechi, piccole vittorie e tanto apprendimento.
 
 ### Ultimi articoli
-
 *(automaticamente popolato da Jekyll)*
