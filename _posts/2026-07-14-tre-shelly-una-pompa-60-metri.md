@@ -145,7 +145,7 @@ Il guaio è arrivato con i dettagli. Mistral scriveva codice con grande sicurezz
 
 Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "questa cosa non esiste". All'inizio pensavo di aver sbagliato *io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Il comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "buon senso" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
 
-<details>
+<details markdown="1">
 <summary><strong>🧭 Cosa stava succedendo, in realtà</strong> (clicca)</summary>
 
 <br>
@@ -188,7 +188,7 @@ Il primo traguardo concreto è stato riuscire a mandare *fisicamente* un pacchet
 
 Risolto il "come parlare", è arrivato il momento di affrontare il problema dell'**oscillazione dell'acqua** e dei segnali ridondanti del sensore già incontrato nell'Evoluzione 1. La soluzione, anche questa costruita con Gemini, è stata un **filtro temporale** (un *debounce*): dopo che un comando valido viene accettato, il sistema **ignora per un certo tempo** ogni nuovo impulso del sensore. In pratica dice: "ho appena ricevuto l'ordine di accendere la pompa, adesso lavoro; non sto a sentire ogni schizzo d'acqua per i prossimi secondi". È diventato uno dei pilastri più robusti del sistema.
 
-<details>
+<details markdown="1">
 <summary><strong>⚙️ Il concetto di "*debounce*", spiegato in modo semplice</strong> (clicca)</summary>
 
 <br>
@@ -219,7 +219,7 @@ Il mio modello di LoRa Add-on **non ha alcun connettore SMA**: l'antenna è un f
 
 Per fortuna, la lezione di Mistral aveva già fatto scuola: prima di mettere le mani sull'hardware, sono andato a **verificare sulla documentazione ufficiale**. Ed è lì che ho scoperto la differenza tra il modello standard (il mio) e il Pro.
 
-<details>
+<details markdown="1">
 <summary><strong>📡 Standard vs Pro: la differenza che conta</strong> (clicca)</summary>
 
 <br>
@@ -302,7 +302,7 @@ Ricevuto via LoRa: PO^
 
 Un `PONG` **arrivato corrotto**: la radio ha ricevuto qualcosa, ma il messaggio era danneggiato — probabilmente per interferenza elettrica. Ecco perché la logica dei tentativi ripetuti è essenziale: un singolo messaggio sporco non deve mandare in crisi il sistema. 1T lo scarta, riprova al battito successivo, e quasi sempre il `PONG` seguente arriva pulito.
 
-<details>
+<details markdown="1">
 <summary><strong>⚡ Interferenze e disturbi: perché lo snubber</strong> (clicca)</summary>
 
 <br>
@@ -401,7 +401,7 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 
 2. **La robustezza costruita con Claude non era teoria.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
-<details>
+<details markdown="1">
 <summary><strong>🔍 Una piccola imperfezione che ho scelto di non "aggiustare"</strong> (clicca)</summary>
 
 <br>
@@ -457,9 +457,9 @@ Ho misurato la tensione sul morsetto **VREF OUT "puro"** (quello diretto, non qu
 - **~9,92 V a vuoto** (senza sensore collegato);
 - **5,12 V con il sensore collegato.**
 
-![La misurazione con il tester sul sensore collegato][TesterSensore.webp]
-![Il valore rilevato: 5,12 V sotto carico][TesterMisura.webp]
-![Il confronto a vuoto su un secondo Add-on: 9,92 V][TesterMisuraConfronto.webp]
+![La misurazione con il tester sul sensore collegato]({{ site.baseurl }}/immagini/pompa/TesterSensore.webp)
+![Il valore rilevato: 5,12 V sotto carico]({{ site.baseurl }}/immagini/pompa/TesterMisura.webp)
+![Il confronto a vuoto su un secondo Add-on: 9,92 V]({{ site.baseurl }}/immagini/pompa/TesterMisuraConfronto.webp)
 
 **E qui c'è qualcosa che non mi torna del tutto.** Non ho comunque la competenza di un professionista per poter approfondire meglio. Un'uscita descritta come riferimento a partire da un'alimentazione di 3,3 V non dovrebbe, a rigor di logica, presentare a vuoto una tensione di quasi 10 V — un valore **triplo** rispetto all'alimentazione. Le spiegazioni possibili sono diverse (il circuito di riferimento potrebbe essere costruito attorno alla scala 0–10 V del voltmetro interno; oppure il comportamento reale differisce dal dato nominale; oppure c'entra il modo in cui lo strumento legge una tensione poco caricata), ma **nessuna di queste è una certezza documentata**, e non voglio spacciarla per tale.
 
