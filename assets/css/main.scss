@@ -1,6 +1,7 @@
-/* ==================================================
-   DIMENSIONI E SPAZIATURA TESTI
-   ================================================== */
+---
+---
+
+@import "minimal-mistakes";
 
 .page__title {
   font-size: 1.8em;
@@ -23,10 +24,6 @@
   line-height: 1.7;
   margin-bottom: 1.2em;
 }
-
-/* ==================================================
-   STILE ACCORDION (triangolini neri)
-   ================================================== */
 
 details {
   margin-bottom: 1.5em;
@@ -53,12 +50,11 @@ details pre {
   margin-top: 0.8em;
 }
 
-/* ==================================================
-   FIX SAFARI: sidebar sticky in flex container
-   ================================================== */
-
-.sidebar {
-  position: -webkit-sticky;
-  position: sticky;
-  align-self: flex-start;
+@media (min-width: 64em) {
+  .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 2em;
+    align-self: flex-start;
+  }
 }
