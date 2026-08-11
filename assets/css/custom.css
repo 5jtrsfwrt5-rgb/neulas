@@ -1,11 +1,6 @@
----
----
-
-@import "minimal-mistakes";
-
-// ==================================================
-// DIMENSIONI E SPAZIATURA TESTI
-// ==================================================
+/* ==================================================
+   DIMENSIONI E SPAZIATURA TESTI
+   ================================================== */
 
 .page__title {
   font-size: 1.8em;
@@ -29,9 +24,9 @@
   margin-bottom: 1.2em;
 }
 
-// ==================================================
-// STILE ACCORDION (triangolini neri)
-// ==================================================
+/* ==================================================
+   STILE ACCORDION (triangolini neri)
+   ================================================== */
 
 details {
   margin-bottom: 1.5em;
@@ -58,22 +53,13 @@ details pre {
   margin-top: 0.8em;
 }
 
-// ==================================================
-// SIDEBAR FISSA A SINISTRA SU DESKTOP
-// ==================================================
+/* ==================================================
+   SIDEBAR FISSA A SINISTRA SU DESKTOP
+   ================================================== */
 
 @media (min-width: 1024px) {
-  .page {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 2em;
-    align-items: start;
-  }
-
   .sidebar {
-    position: sticky;
-    top: 2em;
-    align-self: start;
-    order: -1;
+    position: sticky !important;
+    top: 2em !important;
   }
 }
