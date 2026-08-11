@@ -1,0 +1,87 @@
+---
+---
+
+@import "minimal-mistakes";
+
+/* ==================================================
+   DIMENSIONI E SPAZIATURA TESTI
+   ================================================== */
+
+/* Titolo principale dell'articolo */
+.page__title {
+  font-size: 1.8em;
+  margin-bottom: 0.3em;
+}
+
+/* Sottotitoli H2 */
+.page__content h2 {
+  font-size: 1.4em;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+/* Sottotitoli H3 */
+.page__content h3 {
+  font-size: 1.2em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Paragrafi normali */
+.page__content p {
+  line-height: 1.7;
+  margin-bottom: 1.2em;
+}
+
+/* ==================================================
+   STILE ACCORDION (triangolini neri)
+   ================================================== */
+
+/* Il riquadro dell'accordion */
+details {
+  margin-bottom: 1.5em;
+  padding: 0.8em 1em;
+  background-color: #f8f9fa;
+  border-left: 4px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Il titolo cliccabile del triangolino */
+summary {
+  font-weight: bold;
+  font-size: 1.05em;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Il testo che si espande */
+details > p {
+  margin-top: 0.8em;
+  margin-bottom: 0.4em;
+  line-height: 1.6;
+}
+
+/* Riquadri di codice dentro l'accordion */
+details pre {
+  margin-top: 0.8em;
+}
+
+/* ==================================================
+   SIDEBAR FISSA A SINISTRA SU DESKTOP
+   ================================================== */
+
+@media (min-width: 1024px) {
+  .page {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2em;
+    align-items: start;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 2em;
+    align-self: start;
+    order: -1;
+  }
+}
