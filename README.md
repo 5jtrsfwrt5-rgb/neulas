@@ -2,7 +2,7 @@
 
 > *Una persona non esperta, il supporto di un'AI, un problema alla volta.*
 
-Blog personale di Roberto — racconti di piccoli progetti e del percorso nel realizzarli con l'affiancamento di una o più AI.
+Racconti di piccoli progetti e tanta curiosità
 
 ## Stack
 - **Hosting**: GitHub Pages (gratuito, HTTPS incluso)

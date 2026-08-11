@@ -54,12 +54,11 @@ details pre {
 }
 
 /* ==================================================
-   SIDEBAR FISSA A SINISTRA SU DESKTOP
+   FIX SAFARI: sidebar sticky in flex container
    ================================================== */
 
-@media (min-width: 1024px) {
-  .sidebar {
-    position: sticky !important;
-    top: 2em !important;
-  }
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  align-self: flex-start;
 }
