@@ -14,9 +14,9 @@ Dal bisogno alla soluzione, con passo fermo, tra sorpresa, vicoli ciechi, piccol
 
 **neulas** = ***nuvole*** che vanno e vengono, crescono e si dissolvono come le idee. *Nuvole* come *cloud*, il luogo/non luogo in cui abitano le AI.
 
-*Realizzato con l'aiuto di Vibe (Mistral), Gemini (Google), Claude (Anthropic), GLM (Z.ai) — ma ogni scelta è personale. Verifica e responsabilità su quanto scritto restano dell'autore.*
+<em style="font-size: 0.85em; color: #888;">*Realizzato da una persona non esperta con l'aiuto, a turno, di Vibe (Mistral), Gemini (Google), Claude (Anthropic), GLM (Z.ai), Kimi (Moonshot AI), Qwen (Alibaba) — ma ogni scelta è personale. Verifica e responsabilità su quanto scritto restano dell'autore.*</em>
 
 ---
-
+ 
 ### Ultimi articoli
-_(automaticamente popolato da Jekyll)_
+<em style="font-size: 0.85em; color: #888;">automaticamente popolato da Jekyll</em>
