@@ -55,8 +55,8 @@ defaults:
       type: posts
     values:
       layout: single
-      author_profile: true # Mostra la biografia a sinistra dell'articolo
-      read_time: false      # true = Mostra il tempo di lettura stimato
+      author_profile: true
+      read_time: false
       comments: false
   # Impostazioni per le Pagine statiche (es. about.md)
   - scope:
