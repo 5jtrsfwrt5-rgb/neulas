@@ -22,14 +22,11 @@ site_navigation         : main
 # BIOGRAFIA / AUTORE (Mostrata nella barra laterale)
 # ==========================================
 author:
-  name                  : "Roberto"
-  bio                   : "Orizzonti in avvicinamento"
+  name                  : ""
+  bio                   : "un passo dopo l'altro, per vedere cose che noi umani..."
   avatar                : "/immagini/profilo/IMG_3.webp" # Puoi aggiungere una tua foto in questa cartella
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/5jtrsfwrt5-rgb" # Il tuo profilo GitHub
-
+  links: []
+ 
 # ==========================================
 # PLUGIN E COMPILAZIONE
 # ==========================================
