@@ -22,10 +22,10 @@ site_navigation         : main
 # BIOGRAFIA / AUTORE (Mostrata nella barra laterale)
 # ==========================================
 author:
-  name                  : "Roberto"
-  bio                   : "Racconti di piccoli progetti realizzati al fianco dell'Intelligenza Artificiale."
+  name                  : ""
+  bio                   : "Orizzonti più vicini"
   avatar                : "/immagini/profilo/IMG_3.webp" # Puoi aggiungere una tua foto in questa cartella
-  links:
+  #links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/5jtrsfwrt5-rgb" # Il tuo profilo GitHub

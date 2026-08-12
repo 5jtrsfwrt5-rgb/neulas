@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Chi sono
+#title: Chi sono
 permalink: /about/
 ---
 
