@@ -22,7 +22,7 @@ site_navigation         : main
 # BIOGRAFIA / AUTORE (Mostrata nella barra laterale)
 # ==========================================
 author:
-  name                  : ""
+  #name                  : ""
   bio                   : "Orizzonti più vicini"
   avatar                : "/immagini/profilo/IMG_3.webp" # Puoi aggiungere una tua foto in questa cartella
   #links:
