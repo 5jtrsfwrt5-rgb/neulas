@@ -1,0 +1,12 @@
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var avatarLink = document.querySelector('.author__avatar a');
+  var nameLink = document.querySelector('.author__name a');
+  if (avatarLink) {
+    avatarLink.setAttribute('href', '{{ site.baseurl }}/about/');
+  }
+  if (nameLink) {
+    nameLink.setAttribute('href', '{{ site.baseurl }}/about/');
+  }
+});
+</script>

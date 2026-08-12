@@ -23,7 +23,7 @@ site_navigation         : main
 # ==========================================
 author:
   name                  : ""
-  bio                   : "un passo dopo l'altro, per vedere cose che noi umani..."
+  bio                   : "un passo dopo l'altro, per fare cose che noi umani..."
   avatar                : "/immagini/profilo/IMG_3.webp" # Puoi aggiungere una tua foto in questa cartella
   links: []
  
@@ -54,7 +54,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: false
-      comments: false
+      comments: true
   # Impostazioni per le Pagine statiche (es. about.md)
   - scope:
       path: ""
