@@ -113,7 +113,7 @@ Ho una prova visiva perfetta di quanto fosse reale il problema:
 
 La soluzione — un **filtro temporale** (una sorta di *debounce*) — l'ho implementata più avanti, ma il problema è nato qui.
 
-> 📐 *Il dettaglio dei 60 metri di distanza e degli 8 metri di dislivello* l'abbiamo visti nello [schema iniziale ↑](#1-il-problema-in-poche-righe): sono il motivo per cui non bastava un cavo, e serviva la radio.
+> 📐 *Il dettaglio dei 60 metri di distanza e degli 8 metri di dislivello* l'abbiamo visto nello [schema iniziale ↑](#1-il-problema-in-poche-righe): sono il motivo per cui non bastava un cavo, serviva la radio.
 
 Fu qui che si presentò un (per me) mistero tecnico che ancora oggi non so spiegarmi del tutto: la **tensione anomala sul sensore**. Ne parlo apertamente più avanti, nella sezione dedicata alla correttezza sugli aspetti tecnici, perché merita chiarezza.
 
@@ -143,7 +143,7 @@ Fin qui, una bussola perfetta. Mi ha dato la fiducia per cominciare, e non è po
 
 Il guaio è arrivato con i dettagli. Mistral scriveva codice con grande sicurezza, usando comandi dal nome plausibile, elegante, convincente… ma talvolta, purtroppo per me, **inventato**. Funzioni che non esistevano nell'API degli Shelly, chiamate a metodi dai nomi verosimili ma senza alcun riscontro nella documentazione reale.
 
-Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "*questa cosa non esiste*". All'inizio pensavo di aver sbagliato *io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Il comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "buon senso" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
+Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "*questa cosa non esiste*". All'inizio pensavo di aver *sbagliato io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Quel comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "*buon senso*" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
 
 <details markdown="1">
 <summary><strong>🧭 Cosa stava succedendo, in realtà</strong> (clicca)</summary>
@@ -152,10 +152,9 @@ Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicaz
 
 Quello che ho sperimentato ha un nome: le AI generative possono produrre **"allucinazioni"** — informazioni presentate con sicurezza ma non corrispondenti alla realtà. Con il codice questo si manifesta in modo particolarmente insidioso: il nome di una funzione *sembra* giusto, la sintassi è perfetta, tutto è plausibile… ma quel comando non è mai esistito nell'API di quel dispositivo.
 
-Non è "colpa" del modello nel senso che intendiamo noi: un'AI linguistica completa il testo in base a ciò che è *più probabile*, non a ciò che ha *verificato*. Se in migliaia di esempi di codice esiste una certa funzione, il modello tenderà a proporla anche per un dispositivo che, magari, usa per essa un nome del tutto diverso.
+Non è "colpa" del modello nel senso che intendiamo noi: un'AI linguistica completa il testo in base a ciò che è *più probabile*, non a ciò che ha *verificato*. Se in migliaia di esempi di codice esiste una certa funzione, il modello tenderà a proporla anche per un dispositivo che, magari, usa per essa un comando del tutto diverso.
 
 **La lezione, quella vera:** l'AI è uno strumento straordinario per *iniziare*, per avere una direzione, per non sentirsi persi. Ma **la verifica sulla documentazione ufficiale spetta sempre all'essere umano.** La bussola indica il nord; sta a te controllare se davanti c'è un ponte o un burrone.
-
 </details>
 
 ### Cosa mi ha lasciato Mistral
@@ -163,7 +162,7 @@ Non è "colpa" del modello nel senso che intendiamo noi: un'AI linguistica compl
 Sarebbe ingiusto liquidare questa fase come "tempo perso". Non lo è stata affatto:
 
 - mi ha dato **l'architettura mentale** del progetto (trasmittente / ricevente / script) che si è rivelata corretta e mi ha accompagnato fino alla fine;
-- mi ha insegnato, a mie spese, la **lezione più importante di tutte**: fidarsi della direzione, ma **verificare ogni singolo comando** sulla documentazione reale;
+- mi ha insegnato, a mie spese, la **lezione più importante di tutte**: fidarsi della direzione, ma, nei casi dubbi, **verificare di persona ogni singolo comando** sulla documentazione ufficiale;
 - mi ha tolto la paura di cominciare.
 
 > 🧭 *Morale della tappa:* **l'AI ti dice dove andare, non sempre come arrivarci. Il "come" va verificato, passo per passo, sul campo**.
@@ -180,7 +179,7 @@ Questa è stata la fase più lunga e, a tratti, più frustrante. Molti tentativi
 
 Il primo traguardo concreto è stato riuscire a mandare *fisicamente* un pacchetto di byte da 1T a 1R attraverso l'Add-on LoRa. Non un comando immaginario, ma la funzione reale che gli Shelly mettono a disposizione per scrivere sul modulo radio. Quando nel log di 1R è comparso il primo messaggio arrivato via radio da 1T, ho avuto la prima, autentica grande soddisfazione dall'avvio del progetto.
 
-**Funzionava!** I due dispositivi si *parlavano*, senza WiFi, attraverso 60 metri d'aria.
+**Funzionava!** I due dispositivi *si parlavano*, senza WiFi, attraverso 60 metri d'aria.
 
 > 🔧 *Le prove al tavolo, con una lampada al posto della pompa (fatelo anche voi!):* **[Guida tecnica → Passo 1]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
@@ -196,7 +195,6 @@ Risolto il "come parlare", è arrivato il momento di affrontare il problema dell
 Il termine ***debounce*** ("anti-rimbalzo") viene dall'elettronica dei pulsanti: quando premi un tasto, i contatti metallici "*rimbalzano*" per pochi millisecondi, generando decine di aperture/chiusure invece di una sola. La soluzione classica è **ignorare i cambiamenti troppo ravvicinati nel tempo**, considerando valido solo il primo di una raffica.
 
 Nel nostro caso il "*rimbalzo*" non è meccanico ma **idraulico**: è l'acqua che oscilla. Ma il principio è identico: *un evento vero, non tanti falsi*.
-
 </details>
 
 ### I vicoli ciechi: strade imboccate e abbandonate
@@ -213,7 +211,7 @@ Ogni vicolo cieco ha lasciato un insegnamento: mi ha costretto a chiarire, un re
 
 C'è un episodio che merita un posto d'onore, perché è il momento in cui ho toccato con mano che **anche il muratore può sbagliare nel tirare su i muri**.
 
-A un certo punto, discutendo di come poter migliorare la portata del segnale, Gemini mi aveva spiegato con dovizia di particolari come **svitare l'antenna** del LoRa Add-on per sostituirla con una esterna più performante, montata su connettore SMA. Indicazioni precise, sicure, dettagliate, *completamente sbagliate*!
+A un certo punto, indagando su come poter migliorare la portata del segnale, Gemini mi aveva spiegato con dovizia di particolari come **svitare l'antenna** del LoRa Add-on per sostituirla con una esterna più performante, montata su connettore SMA. Indicazioni precise, sicure, dettagliate, *completamente sbagliate*!
 
 Il mio modello di LoRa Add-on **non ha alcun connettore SMA**: l'antenna è un filo **integrato e non rimovibile**, con tanto di avvertenza stampata *"Do not remove the antenna tip"*. Solo la versione **Pro** ha il connettore per l'antenna esterna. Se avessi seguito alla lettera quelle istruzioni con la stessa disinvoltura ingenua dei primi tempi, avrei rischiato di **danneggiare irreparabilmente** il dispositivo.
 
@@ -231,26 +229,25 @@ Per fortuna, la lezione di Mistral aveva già fatto scuola: prima di mettere le 
 | Portata | Adeguata a distanze medie (come i miei 60 m) | Estendibile con antenne dedicate |
 
 **Morale:** quando un'AI ti dà istruzioni che comportano un intervento fisico e potenzialmente distruttivo sull'hardware, la verifica sulla documentazione ufficiale non è un optional, è **obbligatoria**! Un conto è un comando software sbagliato (dà errore e via), un altro è svitare e rimuovere un componente integrato nel dispositivo.
-
 </details>
 
 ### Cosa mi ha lasciato Gemini
 
 Con l'utilizzo di Gemini il sistema ha "imparato" a **trasmettere davvero** via LoRa, è nato il **filtro anti-oscillazione**, ho ripulito il progetto da tre **vicoli ciechi** (Cloud, Scene, Telegram) e ho ricevuto una conferma bruciante della lezione di fondo: **verificare sempre**, soprattutto quando c'è di mezzo l'hardware.
 
-> 🧱 *Morale della tappa:* **costruire significa anche sbagliare e rifare. I vicoli ciechi non sono tempo perso: sono il modo in cui capisci davvero cosa ti serve — e cosa no.**
+> 🧱 *Morale della tappa:* **costruire significa anche sbagliare e rifare.** *I vicoli ciechi non sono tempo perso: sono il modo in cui capisci davvero cosa ti serve — e cosa no.*
 
 ---
 
 ## 5. Claude, il rifinitore: dalla cosa che "funziona" alla cosa di cui ti fidi
 
-Ero arrivato a Claude per gradi — quasi per tentativi successivi — ed era una scelta ormai consapevole. Dopo Mistral e Gemini, avevo capito che non stavo solo cercando di risolvere un problema idraulico: stavo *esplorando un metodo*. La domanda vera, ormai, era diventata questa: **fino a dove può arrivare una persona non esperta come me, se si fa affiancare bene dall'AI?**
+Ero arrivato a Claude per gradi — per tentativi successivi con altre AI per valutarne le caratteristiche — ed era diventata una scelta ormai consapevole. Dopo il lavoro portato avanti con Mistral e Gemini, avevo capito che non stavo più solo cercando di risolvere un problema idraulico: stavo *esplorando un metodo*. La domanda vera, ormai, era diventata questa: **fino a dove può arrivare una persona non esperta come me, se si fa affiancare bene dall'AI?**
 
-A quel punto il sistema, grazie a Gemini, *funzionava*. Ma tra "*funziona sul banco*" e "*funziona con la pompa a 60 metri mentre fuori c'è un temporale e mi posso fidare*" c'è un abisso. Colmarlo è stato il lavoro di rifinitura — ed è la parte in cui il sistema è diventato **adulto**.
+A quel punto il sistema, grazie a Gemini, *funzionava*. Ma tra "*funziona sul banco*" e "*funziona con la pompa a 60 metri mentre fuori c'è un temporale e mi posso fidare*" c'è un abisso. Colmarlo è stato il lavoro di rifinitura — ed è la parte in cui il sistema con Claude è diventato **adulto**.
 
 ### Il problema della fiducia al buio
 
-Il punto debole era chiaro: 1T mandava il comando "accendi la pompa" a 1R… e poi? Come faceva 1T a *sapere* che la pompa si era davvero accesa? Il segnale radio poteva perdersi, degradarsi, arrivare corrotto. Un comando "sparato nel buio" senza conferma non è un sistema affidabile: è una speranza.
+Il punto debole era chiaro: 1T mandava il comando "accendi la pompa" a 1R… e poi? Come faceva 1T a *sapere* che la pompa si era davvero accesa? Il segnale radio poteva perdersi, degradarsi, arrivare corrotto. Un comando "sparato nel buio" senza conferma non è un sistema affidabile: è solo una speranza.
 
 ### 1) Il battito cardiaco: PING / PONG
 
@@ -290,9 +287,9 @@ Per sapere cosa succede senza guardare i log, il sistema mi "parla" sul telefono
 - 💧 **"Elettropompa accesa per 400 secondi!"** — tutto bene.
 - ⚠️ **"Controllo corrente"** — qualcosa non va: 1R non risponde più.
 
-Il bello è che questa "voce" **non dipende dal WiFi del dispositivo lontano**: è 1T (che il WiFi ce l'ha) a parlare, riportando ciò che accade a 1R.
+Il bello è che questa "voce" **non dipende dal WiFi del dispositivo lontano**: è 1T (che il WiFi ce l'ha) a parlare, riportando ciò che accade a 1R (che non ha WiFi).
 
-### 5) Il fantasma nella radio: il glitch e le interferenze
+### 5) Il fantasma nella radio: il *glitch* e le interferenze
 
 In mezzo a migliaia di `PONG` puliti, ogni tanto nel log compare qualcosa del genere:
 
@@ -310,20 +307,19 @@ Un `PONG` **arrivato corrotto**: la radio ha ricevuto qualcosa, ma il messaggio 
 Una pompa è un **carico induttivo**: quando il relè la stacca, l'energia accumulata nell'avvolgimento genera un picco di tensione (una scintilla sui contatti) che disturba l'elettronica vicina e, potenzialmente, anche le comunicazioni radio.
 
 Per questo, su consiglio dell'AI, ho aggiunto uno **Shelly RC Snubber** montato **il più vicino possibile alla pompa**. Lo snubber (un gruppo resistenza + condensatore) "assorbe" quel picco, proteggendo il relè dello Shelly e riducendo i disturbi. È un piccolo componente da pochi euro che allunga la vita dell'impianto.
-
 </details>
 
 > 🔧 *Posizionamento dei dispositivi, orientamento delle antenne, snubber e accorgimenti radio:* **[Guida tecnica → Passi 7 e 8]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
 ### Perché il passaggio a Claude, e un doveroso chiarimento
 
-Sono arrivato a Claude alla fine di un percorso, sulla base dei risultati ottenuti. Man mano che il progetto diventava più articolato le risposte delle varie AI si dimostravano più o meno adeguate alle mie esigenze. È probabile che anche altre AI — dato il livello che ormai hanno raggiunto — avrebbero fornito ottimi risultati. Personalmente ho trovato Claude il più confacente alle mie esigenze ed al mio modo di ragionare. Altri potrebbero sia dissentire che trovare altre strade, ovviamente. Io ho fatto questa scelta e aggiungo ancora due cose.
+Come ho già detto, sono arrivato a Claude alla fine di un percorso, sulla base dei risultati ottenuti. Man mano che il progetto diventava più articolato le risposte delle varie AI si dimostravano più o meno adeguate alle mie esigenze. È probabile che anche altre AI — dato il livello che ormai hanno raggiunto — avrebbero fornito ottimi risultati. Personalmente ho trovato Claude il più confacente alle mie esigenze ed al mio modo di ragionare. Altri potrebbero sia dissentire che trovare altre strade, ovviamente. Io ho fatto questa scelta e aggiungo ancora due cose.
 
 **Primo: quasi tutto il progetto è stato realizzato con le versioni gratuite.** Mistral, Gemini e Claude li ho usati, per la maggior parte del lavoro, senza pagare nulla. È un punto che mi sta a cuore, perché sfata un mito: **per un progetto come questo non serve per forza spendere**. Le versioni gratuite mi hanno portato lontanissimo. Si paga con un po' di pazienza in quanto vi sono limiti alla quantità di dati (in invio come in ricezione) dei quali si può usufruire in una giornata.
 
-**Secondo: l'unico investimento — poche decine di euro — l'ho fatto solo per la revisione e l'affinamento degli script e per la preparazione e messa online di questo blog**, scegliendo **Claude Opus 4.8**. È stata una scelta del tutto personale, forse persino eccessiva per la mole di lavoro: ma l'ho trovato, *a mio insindacabile e personalissimo giudizio*, il modello più performante e più in sintonia con il mio stile di scrittura e le mie esigenze di racconto. Mi sono persuaso che, sapendo porre le domande giuste ed esponendo con chiarezza e dettagli adeguati le proprie necessità, Opus 4.8 e ancor più Fable (che ho provato brevemente) mi avrebbero aiutato a raggiungere il mio obiettivo molto più efficacemente delle altre AI. Non è una classifica né una pubblicità: è solo il racconto della mia esperienza, con tutti i suoi limiti.
+**Secondo: l'unico investimento — poche decine di euro — l'ho fatto solo per la revisione e l'affinamento degli script e per la preparazione e messa online di questo blog**, scegliendo **Claude Opus 4.8**. È stata una scelta del tutto personale, forse persino eccessiva per la mole di lavoro: ma l'ho trovato, *a mio insindacabile e personalissimo giudizio*, il modello più performante e più in sintonia con il mio stile di scrittura e le mie esigenze di racconto. Mi sono persuaso che, sapendo porre le domande giuste ed esponendo con chiarezza e dettagli adeguati le proprie necessità, Opus 4.8 e ancor più Fable (che ho provato brevemente appena uscito, con grande curiosità) mi avrebbero aiutato a raggiungere il mio obiettivo molto più efficacemente delle altre AI sperimentate sino ad allora. Non è una classifica né una pubblicità: è solo il racconto della mia esperienza, con tutti i suoi limiti.
 
-### Un'osservazione che vale tutto il progetto
+### Un'osservazione che per me vale tutto il progetto
 
 Devo dire una cosa che mi ha piacevolmente sorpreso. I miei **primi tentativi** di usare l'AI risalgono a quasi **due anni fa**, e all'epoca ne ero uscito piuttosto deluso: le risposte erano vaghe, il codice raramente stava in piedi, vi era ancora poca capacità di seguire un *ragionamento* lungo. Avevo quasi rinunciato all'idea che potessero essermi davvero utili e per un certo periodo non ero andato oltre.
 
@@ -331,7 +327,7 @@ Riprendere in mano questi strumenti oggi è stata una rivelazione. **Il migliora
 
 Ed è anche il motivo per cui ho voluto scrivere questo racconto: perché **l'accoppiata "persona non esperta + AI di supporto" è oggi realmente percorribile**, in un modo che fino a poco tempo fa non lo era affatto.
 
-> 🧩 *Morale della tappa:* **un sistema affidabile non è quello che non sbaglia mai, ma quello che sa accorgersi di aver sbagliato e sa reagire. Conferme, tentativi e allarmi non sono complicazioni: sono la differenza tra "funziona" e "mi fido".**
+> 🧩 *Morale della tappa:* **un sistema affidabile non è quello che non sbaglia mai, ma quello strutturato per accorgersi dell'errore e reagire. Conferme, tentativi e allarmi non sono complicazioni: sono la differenza tra "funziona" e "mi fido".**
 
 ---
 
@@ -339,7 +335,7 @@ Ed è anche il motivo per cui ho voluto scrivere questo racconto: perché **l'ac
 
 Una AI può anche scrivere il codice più elegante del mondo, ma è solo **la realtà** a dirti se un sistema funziona. E la realtà, come spesso accade, è arrivata senza preavviso, sotto forma di un temporale.
 
-Racconto questo episodio perché è il momento in cui il sistema ha affrontato un guasto - vero, imprevisto, serio e prolungato — e si è comportato **esattamente** come avevo ipotizzato dovesse funzionare. Non perché non sia successo nulla di male: al contrario, si è rotta la pompa. Ma perché il sistema **se n'è accorto, ha avvisato tramite notifiche sul cellulare, e non ha fatto danni**.
+Racconto questo episodio perché è il momento in cui il sistema ha affrontato un guasto - vero, imprevisto, serio e prolungato — e si è comportato **esattamente** come avevo ipotizzato dovesse funzionare. Non perché non sia successo nulla di male: al contrario, si è rotta la pompa. Ma perché il sistema **se n'è accorto, ha avvisato tramite notifiche sul cellulare, e ha evitato danni maggiori**.
 
 ### La quiete prima
 
@@ -349,7 +345,7 @@ Per giorni, il log scorre tranquillo. Ogni 30 minuti, il battito. Ogni tanto una
 
 Poi, probabilmente in concomitanza con un temporale, **l'elettropompa subisce un guasto** e comincia a disperdere corrente. Il **magnetotermico** della linea — che serve proprio a questo — scatta e toglie alimentazione alla pompa *e* a 1R.
 
-Da un istante all'altro, 1R è muto! Il sistema, puntuale, se ne accorge:
+Da un istante all'altro, 1R è muto! Il sistema, puntuale, registra:
 
 ```
 HEARTBEAT: invio PING a 1R...
@@ -394,9 +390,9 @@ Il sistema **si ricorda del comando che aveva messo in attesa** e lo esegue. Da 
 
 Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell'acqua. E la lezione è doppia:
 
-1. **Un buon sistema non impedisce i guasti** (la pompa si è rotta comunque), ma trasforma un guasto silenzioso e potenzialmente ancora più dannoso in un evento **visibile e gestibile**. Senza il sistema di notifiche, avrei comunque scoperto il problema magari restando senza acqua in casa, chissà quando ma sicuramente nel momento peggiore: avete presente *sotto la doccia e insaponati*?. Con il sistema, l'ho saputo subito, con una notifica sul telefono.
+1. **Un buon sistema non impedisce i guasti** (la pompa si è rotta comunque), ma trasforma un guasto silenzioso e potenzialmente ancora più dannoso in un evento **visibile e gestibile**. Senza il sistema di notifiche, avrei comunque scoperto il problema, magari restando senza acqua in casa, chissà quando ma sicuramente nel momento peggiore: avete presente *sotto la doccia e insaponati*?. Con il sistema, l'ho saputo subito, con una notifica sul telefono.
 
-2. **La robustezza costruita con Claude non era teorica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
+2. **La robustezza costruita con Claude non era ipotetica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
 <details markdown="1">
 <summary><strong>🔍 Una piccola *imperfezione* che ho scelto di non "aggiustare"</strong> (clicca)</summary>
@@ -413,10 +409,9 @@ Ho ragionato su due possibili miglioramenti:
 **Ho deciso, per ora, di non implementare né l'una né l'altra.** Il motivo è semplice e, credo, saggio: il sistema, di fronte a un guasto vero e prolungato, si è comportato correttamente. Ha allarmato, non ha fatto danni, ha messo in attesa i comandi che non poteva eseguire, è ripartito da solo. La piccola imperfezione della prima ripartenza è un caso limite raro, dovuto a un evento del tutto particolare. **Considero il sistema sufficientemente robusto e affidabile così com'è**, e preferisco non aggiungere complessità che non serve. Le due idee restano "in cassaforte": le tirerò fuori solo se un caso analogo dovesse ripetersi.
 
 *(È anche un principio di buona ingegneria: non risolvere problemi che non hai davvero.)*
-
 </details>
 
-> 🔥 *Morale della tappa*: **il collaudo vero non lo decidi tu, lo decide la realtà**. E il momento in cui qualcosa si rompe è il momento in cui scopri se il tuo sistema è un guardiano affidabile o solo *un giocattolo che funziona col bel tempo*.
+> 🔥 *Morale della tappa*: **il collaudo vero non lo decidi tu, lo decide la realtà**. E il momento in cui qualcosa si rompe è il momento in cui *scopri se il tuo sistema è un guardiano affidabile o solo un giocattolo che funziona col bel tempo*.
 
 ---
 
@@ -462,9 +457,9 @@ Quello che posso dire con sicurezza è il risultato pratico:
 - nel **mio** impianto, il sensore **ha sempre funzionato correttamente**;
 - questo comportamento **non dipende dalla tensione di rete** (che nel mio caso è 240–245 V): l'Add-on è alimentato a bassa tensione e galvanicamente isolato.
 
-> ⚠️ **Avviso al lettore.** Il funzionamento del sensore, nel mio caso, è sempre risultato corretto — ma va preso **"così com'è", senza alcuna garanzia** che si comporti allo stesso modo in ogni configurazione. I valori di tensione che ho misurato non coincidono del tutto con ciò che ci si aspetterebbe dalla documentazione, e non ho una spiegazione definitiva. Se replicate il progetto, **verificate le vostre misure** e, nel dubbio, consultate la documentazione ufficiale aggiornata di Shelly.
+> ⚠️ **Avviso al lettore.** Il funzionamento del sensore, nel mio caso, è sempre risultato corretto — ma **va preso "così com'è", senza alcuna garanzia** che si comporti allo stesso modo in ogni configurazione. I valori di tensione che ho misurato non coincidono del tutto con ciò che ci si aspetterebbe dalla documentazione, e non ho una spiegazione definitiva. Se replicate il progetto, **verificate le vostre misure** e, nel dubbio, consultate la documentazione ufficiale aggiornata di Shelly.
 
-Preferisco chiudere questa sezione con un punto interrogativo piuttosto che con un punto fermo inventato. È, in fondo, la stessa lezione che l'AI mi ha insegnato fin dall'inizio: **meglio un** "***non lo so con certezza***" **verificabile che una sicurezza che non poggia su nulla**.
+Preferisco chiudere questa sezione con un punto interrogativo piuttosto che con un punto fermo inventato. È, in fondo, la stessa lezione che l'AI mi ha insegnato fin dall'inizio: **meglio un** "***non lo so con certezza***" **verificabile che una sicurezza che poggia sul nulla**.
 
 ---
 
