@@ -48,30 +48,30 @@ Il flusso, in sintesi:
 
 > 🔧 *Lista materiali completa, foto dei collegamenti e istruzioni replicabili:* **[Guida tecnica → Passo 0]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
-Ma prima di arrivarci, c'è un antefatto che comincia molto più indietro nel tempo.
+Ma prima di arrivarci, c'è un antefatto che ha origine molto più indietro nel tempo.
 
 ---
 
 ## Antefatto — Prima delle quattro evoluzioni
 
-La storia di questo progetto si divide in quattro "evoluzioni" che hanno portato il sistema alla configurazione attuale. Ma la vera partenza è avvenuta molto prima con la scoperta di una sorgente e si appoggia a una tecnologia quasi dimenticata che, dal **1772**, ha avuto un ruolo tutt'altro che secondario.
+Il racconto di questo progetto è diviso in quattro "evoluzioni" che hanno portato il sistema alla configurazione attuale. Ma la vera partenza è avvenuta molto prima con la scoperta di una sorgente e si appoggia a una tecnologia quasi dimenticata che, dal **1772**, ha avuto un ruolo tutt'altro che secondario.
 
 ### La sorgente scoperta per caso (2005)
 
-Nel 2005 entrai in possesso di un terreno molto ampio, dove poter anche costruire la mia abitazione. Per raggiungere l'obiettivo servivano lavori importanti: recinzioni, l'impianto di un frutteto, movimenti di terra. Durante uno di questi scavi, ormai in conclusione, un escavatore intercettò uno sperone roccioso che fece perdere alla benna il materiale già raccolto. L'operatore diede più potenza e, frantumato il masso, accadde l'inaspettato: **sgorgò una grande quantità d'acqua.**
+Nel 2005 entrai in possesso di un terreno, molto ampio, dove poter anche costruire la mia abitazione. Per raggiungere l'obiettivo servivano lavori importanti: recinzioni, l'impianto di un frutteto, movimenti di terra. Durante uno di questi scavi, ormai in conclusione, un escavatore intercettò uno sperone roccioso che fece perdere alla benna il materiale già raccolto. L'operatore diede più potenza e, frantumato il masso, accadde l'inaspettato: **sgorgò una grande quantità d'acqua.**
 
 Non era una condotta rotta. Era — cosa per me molto più interessante — **una sorgente.**
 
-La faccio breve: eravamo al culmine di un periodo pluriennale di siccità gravissima, e mi ritrovavo tra le mani una sorgente sotterranea con una portata di **decine di migliaia di litri al giorno**. Un'occasione imperdibile. Cambiai i piani: attorno alla sorgente, ripulita, feci costruire una grande **cisterna interrata**, per avere una riserva d'acqua importante per gli sviluppi futuri.
+La faccio breve: eravamo al culmine di un periodo pluriennale di siccità gravissima, e mi ritrovavo tra le mani una sorgente sotterranea con una portata di **decine di migliaia di litri al giorno**. Un'occasione imperdibile. Cambiai i piani: attorno alla sorgente, ripulita, fu costruita una grande **cisterna interrata**, per avere una riserva d'acqua importante per gli sviluppi futuri.
 
-### L'ariete idraulico: pompare senza elettricità
+### L'ariete idraulico: pompare acqua senza elettricità
 
-Nel frattempo mi interessavo a soluzioni il più possibile rispettose dell'ambiente, e mi imbattei in alcuni siti (forse americani, di cui ho perso traccia) che parlavano di ***ram pump*** — in italiano **pompa ad ariete idraulico**. Approfondii, e scoprii che era qualcosa che potevo costruire da solo, con facilità.
+Nel frattempo mi interessavo a soluzioni il più possibile rispettose dell'ambiente, e mi imbattei in alcuni siti (forse americani, di cui ho perso traccia) che parlavano di ***ram pump*** — in italiano **pompa ad ariete idraulico**. Approfondii, e scoprii che era qualcosa che mi sarebbe stato utile e che potevo costruire da solo, con facilità.
 
 > 💧 **Cos'è un ariete idraulico.**
 > È una pompa che non usa elettricità: sfrutta l'energia di una piccola caduta d'acqua (un dislivello) per spingerne una frazione molto più in alto. L'acqua che si "auto-pompa", la macchina più vicina al moto perpetuo. Un'idea antica — appunto, del 1772 — e geniale nella sua semplicità.
 
-Sfruttando un dislivello di circa **un metro** tra l'uscita del troppo-pieno della cisterna e il punto, più in basso, dove avevo collocato l'ariete, riuscivo a far arrivare fino all'edificio — allora in costruzione, **distante 70 metri e 8 metri più in alto** rispetto all'ariete — oltre **mille litri d'acqua nelle 24 ore**. Meno di un decimo di quanto erogava la sorgente, ma più che sufficiente per il fabbisogno domestico. E tutto questo **senza consumare un watt.**
+Sfruttando un dislivello di circa **un metro** tra l'uscita del troppo-pieno della cisterna e il punto, più in basso, dove avevo collocato l'ariete, riuscivo a far arrivare fino all'edificio — allora in costruzione, **distante 70 metri e 8 metri più in alto** rispetto all'ariete — oltre **mille litri d'acqua nelle 24 ore**. Meno di un decimo di quanto erogava la sorgente, ma più che sufficiente per il fabbisogno domestico. E tutto questo **senza consumare neppure un watt.**
 
 Questo sistema è andato avanti, 24 ore su 24, fino al **2019-2020**.
 
@@ -94,7 +94,7 @@ Durante una nostra conversazione — era il **2019**, se la memoria non m'ingann
 
 Le prime chiacchierate rimasero tali; poi arrivò la pandemia e, come per tante cose, tutto rimase in sospeso. Fu **dopo il COVID, nel 2021**, che passai alla pratica: iniziai con **un solo Shelly, per comandare una presa**. A quello ne sono seguiti una decina, per automazioni via via meno banali. Fino a questo progetto — che è, ad oggi, il più complesso e articolato che abbia affrontato, per ragioni che vanno oltre gli aspetti puramente tecnici.
 
-Se c'è una morale in questo box, è questa: **le cose migliori possono iniziare da una conversazione casuale con una persona curiosa.** A quel tecnico, che forse un giorno leggerà queste righe, va il mio grazie.
+Se c'è una morale in questo episodio, è questa: **le cose migliori possono iniziare da una conversazione casuale con una persona curiosa.** A quel tecnico, che forse un giorno leggerà queste righe, va il mio **grazie**.
 
 ---
 
@@ -127,7 +127,7 @@ Con l'automatismo di base funzionante, **il mio problema vero** restava però un
 
 Ogni viaggio comincia con qualcuno che ti indica la direzione. Nel mio caso, la prima "voce" a cui ho chiesto la strada è stata **Mistral**. E la scelta non fu affatto casuale: tra i tanti assistenti disponibili, Mistral è **l'unica AI europea** di un certo livello e per me questo aveva — e continua ad avere — importanza. Mi sembrava giusto dare fiducia, per primo, a un progetto nato e cresciuto nel nostro continente, con le nostre regole e la nostra sensibilità sui dati. È un criterio che non riguarda gli aspetti tecnici: è una scelta di campo, e la dichiaro volentieri.
 
-E devo essere corretto: Mistral mi ha dato *la direzione giusta*. Il problema è che, lungo il cammino, mi indicava anche svolte per strade che non esistevano.
+E devo essere corretto: Mistral mi ha dato *la direzione giusta*. Il problema è che, lungo il cammino, mi indicava anche svolte per strade che *non esistevano*.
 
 ### La direzione giusta
 
@@ -143,7 +143,7 @@ Fin qui, una bussola perfetta. Mi ha dato la fiducia per cominciare, e non è po
 
 Il guaio è arrivato con i dettagli. Mistral scriveva codice con grande sicurezza, usando comandi dal nome plausibile, elegante, convincente… ma talvolta, purtroppo per me, **inventato**. Funzioni che non esistevano nell'API degli Shelly, chiamate a metodi dai nomi verosimili ma senza alcun riscontro nella documentazione reale.
 
-Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "questa cosa non esiste". All'inizio pensavo di aver sbagliato *io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Il comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "buon senso" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
+Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "*questa cosa non esiste*". All'inizio pensavo di aver sbagliato *io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Il comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "buon senso" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
 
 <details markdown="1">
 <summary><strong>🧭 Cosa stava succedendo, in realtà</strong> (clicca)</summary>
@@ -152,7 +152,7 @@ Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicaz
 
 Quello che ho sperimentato ha un nome: le AI generative possono produrre **"allucinazioni"** — informazioni presentate con sicurezza ma non corrispondenti alla realtà. Con il codice questo si manifesta in modo particolarmente insidioso: il nome di una funzione *sembra* giusto, la sintassi è perfetta, tutto è plausibile… ma quel comando non è mai esistito nell'API di quel dispositivo.
 
-Non è "colpa" del modello nel senso che intendiamo noi: un'AI linguistica completa il testo in base a ciò che è *probabile*, non a ciò che ha *verificato*. Se in migliaia di esempi di codice esiste una certa funzione, il modello tenderà a proporla anche per un dispositivo che, magari, usa un nome del tutto diverso.
+Non è "colpa" del modello nel senso che intendiamo noi: un'AI linguistica completa il testo in base a ciò che è *più probabile*, non a ciò che ha *verificato*. Se in migliaia di esempi di codice esiste una certa funzione, il modello tenderà a proporla anche per un dispositivo che, magari, usa per essa un nome del tutto diverso.
 
 **La lezione, quella vera:** l'AI è uno strumento straordinario per *iniziare*, per avere una direzione, per non sentirsi persi. Ma **la verifica sulla documentazione ufficiale spetta sempre all'essere umano.** La bussola indica il nord; sta a te controllare se davanti c'è un ponte o un burrone.
 
@@ -166,13 +166,13 @@ Sarebbe ingiusto liquidare questa fase come "tempo perso". Non lo è stata affat
 - mi ha insegnato, a mie spese, la **lezione più importante di tutte**: fidarsi della direzione, ma **verificare ogni singolo comando** sulla documentazione reale;
 - mi ha tolto la paura di cominciare.
 
-> 🧭 *Morale della tappa:* **l'AI ti dice dove andare, non sempre come arrivarci. Il "come" va verificato, passo per passo, sul campo.**
+> 🧭 *Morale della tappa:* **l'AI ti dice dove andare, non sempre come arrivarci. Il "come" va verificato, passo per passo, sul campo**.
 
 ---
 
 ## 4. Gemini, il muratore: dove si costruisce davvero (e si sbaglia davvero)
 
-Se Mistral era stato la bussola, **Gemini** è stato il muratore: quello con cui ho tirato su i muri, mattone dopo mattone. È con Gemini che il progetto ha smesso di essere un'idea ed è diventato codice che *girava* — con tutta la fatica, i vicoli ciechi e le ripartenze che *"costruire davvero"* comporta.
+Se Mistral era stato la bussola, **Gemini** è stato il muratore: quello con cui ho tirato su i muri, mattone dopo mattone. È con Gemini che il progetto ha smesso di essere un'idea ed è diventato codice che *girava* — con tutta la fatica, i vicoli ciechi e le ripartenze che "*costruire davvero*" comporta.
 
 Questa è stata la fase più lunga e, a tratti, più frustrante. Molti tentativi sono stati imprecisi o infruttuosi. Ma è con la perseveranza nel rifinire ogni passaggio che ho imparato di più.
 
@@ -186,7 +186,7 @@ Il primo traguardo concreto è stato riuscire a mandare *fisicamente* un pacchet
 
 ### Il nemico invisibile: l'acqua che "balla"
 
-Risolto il "come parlare", è arrivato il momento di affrontare il problema dell'**oscillazione dell'acqua** e dei segnali ridondanti del sensore già incontrato nell'Evoluzione 1. La soluzione, anche questa messa a punto con Gemini, è stata un **filtro temporale** (un *debounce*): dopo che un comando valido viene accettato, il sistema **ignora per un certo tempo** ogni nuovo impulso del sensore. In pratica dice: *"ho appena ricevuto l'ordine di accendere la pompa, adesso lavoro; non sto a sentire ogni schizzo d'acqua per i prossimi secondi"*. È diventato uno dei pilastri più robusti del sistema.
+Risolto il "come parlare", è arrivato il momento di affrontare il problema dell'**oscillazione dell'acqua** e dei segnali ridondanti del sensore già incontrato nell'Evoluzione 1. La soluzione, anche questa messa a punto con Gemini, è stata un **filtro temporale** (un *debounce*): dopo che un comando valido viene accettato, il sistema **ignora per un certo tempo** ogni nuovo impulso del sensore. In pratica dice: "*ho appena ricevuto l'ordine di accendere la pompa, adesso lavoro; non sto a sentire ogni schizzo d'acqua per i prossimi secondi*". È diventato uno dei pilastri più robusti del sistema.
 
 <details markdown="1">
 <summary><strong>⚙️ Il concetto di "debounce", spiegato in modo semplice</strong> (clicca)</summary>
@@ -211,9 +211,9 @@ Ogni vicolo cieco ha lasciato un insegnamento: mi ha costretto a chiarire, un re
 
 ### L'abbaglio dell'antenna
 
-C'è un episodio che merita un posto d'onore, perché è il momento in cui ho toccato con mano che **anche il muratore può sbagliare nel tirare su i muri.**
+C'è un episodio che merita un posto d'onore, perché è il momento in cui ho toccato con mano che **anche il muratore può sbagliare nel tirare su i muri**.
 
-A un certo punto, discutendo di come poter migliorare la portata del segnale, Gemini mi aveva spiegato con dovizia di particolari come **svitare l'antenna** del LoRa Add-on per sostituirla con una esterna più performante, montata su connettore SMA. Indicazioni precise, sicure, dettagliate, completamente sbagliate!
+A un certo punto, discutendo di come poter migliorare la portata del segnale, Gemini mi aveva spiegato con dovizia di particolari come **svitare l'antenna** del LoRa Add-on per sostituirla con una esterna più performante, montata su connettore SMA. Indicazioni precise, sicure, dettagliate, *completamente sbagliate*!
 
 Il mio modello di LoRa Add-on **non ha alcun connettore SMA**: l'antenna è un filo **integrato e non rimovibile**, con tanto di avvertenza stampata *"Do not remove the antenna tip"*. Solo la versione **Pro** ha il connettore per l'antenna esterna. Se avessi seguito alla lettera quelle istruzioni con la stessa disinvoltura ingenua dei primi tempi, avrei rischiato di **danneggiare irreparabilmente** il dispositivo.
 
@@ -315,7 +315,7 @@ Per questo, su consiglio dell'AI, ho aggiunto uno **Shelly RC Snubber** montato 
 
 > 🔧 *Posizionamento dei dispositivi, orientamento delle antenne, snubber e accorgimenti radio:* **[Guida tecnica → Passi 7 e 8]({{ site.baseurl }}/guida-tecnica-pompa-shelly-lora/#guida-tecnica)**
 
-### Perché proprio Claude, e un doveroso chiarimento
+### Perché il passaggio a Claude, e un doveroso chiarimento
 
 Sono arrivato a Claude alla fine di un percorso, sulla base dei risultati ottenuti. Man mano che il progetto diventava più articolato le risposte delle varie AI si dimostravano più o meno adeguate alle mie esigenze. È probabile che anche altre AI — dato il livello che ormai hanno raggiunto — avrebbero fornito ottimi risultati. Personalmente ho trovato Claude il più confacente alle mie esigenze ed al mio modo di ragionare. Altri potrebbero sia dissentire che trovare altre strade, ovviamente. Io ho fatto questa scelta e aggiungo ancora due cose.
 
@@ -329,7 +329,7 @@ Devo dire una cosa che mi ha piacevolmente sorpreso. I miei **primi tentativi** 
 
 Riprendere in mano questi strumenti oggi è stata una rivelazione. **Il miglioramento, in tutti i modelli che ho usato, è enorme.** Non parlo di sfumature: parlo di una differenza di categoria. Inquadrano meglio il contesto, mantengono il filo di conversazioni lunghe e complesse, producono codice che — verificato! — funziona davvero. È stato proprio questo salto a rendere possibile un progetto che, due anni fa, avrei abbandonato dopo la prima settimana.
 
-Ed è anche il motivo per cui ho voluto scrivere questo racconto: perché **l'accoppiata "persona non esperta + AI di supporto" è oggi realmente percorribile**, in un modo che fino a poco tempo fa non lo era.
+Ed è anche il motivo per cui ho voluto scrivere questo racconto: perché **l'accoppiata "persona non esperta + AI di supporto" è oggi realmente percorribile**, in un modo che fino a poco tempo fa non lo era affatto.
 
 > 🧩 *Morale della tappa:* **un sistema affidabile non è quello che non sbaglia mai, ma quello che sa accorgersi di aver sbagliato e sa reagire. Conferme, tentativi e allarmi non sono complicazioni: sono la differenza tra "funziona" e "mi fido".**
 
@@ -345,7 +345,7 @@ Racconto questo episodio perché è il momento in cui il sistema ha affrontato u
 
 Per giorni, il log scorre tranquillo. Ogni 30 minuti, il battito. Ogni tanto una pompata regolare, confermata e notificata. Tutto normale. Il sistema respira, il deposito viene riempito all'occorrenza.
 
-### Il guasto
+### L'imprevisto
 
 Poi, probabilmente in concomitanza con un temporale, **l'elettropompa subisce un guasto** e comincia a disperdere corrente. Il **magnetotermico** della linea — che serve proprio a questo — scatta e toglie alimentazione alla pompa *e* a 1R.
 
@@ -365,7 +365,7 @@ Notifica ntfy inviata: [..] ⚠️ Controllo corrente ⚠️
 
 ### Le ore difficili
 
-Non ho potuto sostituire la pompa immediatamente — serviva un elettricista e il pezzo di ricambio. E qui si vede il carattere del sistema: **per quasi un'intera giornata**, ogni 30 minuti, con pazienza ostinata, 1T ha continuato a cercare 1R, a fallire dieci volte, e a rilanciare l'allarme. Non si è "stancato", non è andato in tilt, non ha fatto scelte avventate. Ha solo continuato a fare il suo dovere: **cercare, verificare, avvisare.**
+Non ho potuto sostituire la pompa immediatamente — serviva un elettricista e il pezzo di ricambio. E qui si vede il carattere del sistema: **per quasi un'intera giornata**, ogni 30 minuti, con pazienza ostinata, 1T ha continuato a cercare 1R, a fallire dieci volte, e a rilanciare l'allarme. Non si è "stancato", non è andato in tilt, non ha fatto scelte avventate. Ha solo continuato a fare il suo dovere: **cercare, verificare, avvisare*.*
 
 C'è anche un altro dettaglio che ha dimostrato l'efficienza del sistema. A un certo punto arriva a 1T una richiesta di accensione mentre 1R è ancora offline, e il sistema **non spara il comando nel vuoto**:
 
@@ -376,7 +376,7 @@ Notifica ntfy inviata: [..] ⏳ Avvio pompa in attesa: 1R non raggiungibile.
 
 Mette il comando **in attesa**, invece di perderlo. Se ne ricorderà quando 1R tornerà vivo.
 
-### Il ritorno alla vita
+### Il ritorno alla "vita"
 
 Finalmente la pompa viene sostituita (ne ho approfittato per aggiungere lo snubber) e il magnetotermico riarmato. Nel giro di pochi minuti, il log torna a respirare — e succede una cosa bellissima:
 
@@ -388,18 +388,18 @@ PONG ricevuto: 1R operativo.
 Esecuzione comando pendente: ACCENDI_POMPA.
 ```
 
-Il sistema **si ricorda del comando che aveva messo in attesa** e lo esegue. Da solo. Senza che io abbia dovuto toccare nulla.
+Il sistema **si ricorda del comando che aveva messo in attesa** e lo esegue. Da solo. Senza che io sia dovuto intervenire in alcun modo. La programmazione si è dimostrata corretta.
 
 ### Cosa mi ha insegnato questo episodio
 
 Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell'acqua. E la lezione è doppia:
 
-1. **Un buon sistema non impedisce i guasti** (la pompa si è rotta comunque), ma trasforma un guasto silenzioso e potenzialmente ancora più dannoso in un evento **visibile e gestibile**. Senza il sistema di notifiche, avrei scoperto il problema solo restando senza acqua in casa, chissà quando ma sicuramente nel momento peggiore: avete presente *sotto la doccia e insaponati*?. Con il sistema, l'ho saputo subito, dal telefono.
+1. **Un buon sistema non impedisce i guasti** (la pompa si è rotta comunque), ma trasforma un guasto silenzioso e potenzialmente ancora più dannoso in un evento **visibile e gestibile**. Senza il sistema di notifiche, avrei comunque scoperto il problema magari restando senza acqua in casa, chissà quando ma sicuramente nel momento peggiore: avete presente *sotto la doccia e insaponati*?. Con il sistema, l'ho saputo subito, con una notifica sul telefono.
 
 2. **La robustezza costruita con Claude non era teorica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
 <details markdown="1">
-<summary><strong>🔍 Una piccola imperfezione che ho scelto di non "aggiustare"</strong> (clicca)</summary>
+<summary><strong>🔍 Una piccola *imperfezione* che ho scelto di non "aggiustare"</strong> (clicca)</summary>
 
 <br>
 
@@ -410,46 +410,46 @@ Ho ragionato su due possibili miglioramenti:
 - **A) Un timer dinamico**: dopo un blackout prolungato, allungare automaticamente il tempo di "sicurezza" del filtro anti-oscillazione. Soluzione a costo zero, solo software.
 - **B) Un secondo sensore di "minima assoluta"**, più in basso nel deposito, che imponga un riempimento più lungo. Più robusta perché reagisce alla realtà fisica dell'acqua, non a una stima.
 
-**Ho deciso, per ora, di non implementare né l'una né l'altra.** Il motivo è semplice e, credo, saggio: il sistema, di fronte a un guasto vero e prolungato, si è comportato correttamente. Ha allarmato, non ha fatto danni, è ripartito da solo. La piccola imperfezione della prima ripartenza è un caso limite raro, dovuto a un evento eccezionale. **Considero il sistema sufficientemente robusto e affidabile così com'è**, e preferisco non aggiungere complessità che non serve. Le due idee restano "in cassaforte": le tirerò fuori solo se un caso analogo dovesse ripetersi.
+**Ho deciso, per ora, di non implementare né l'una né l'altra.** Il motivo è semplice e, credo, saggio: il sistema, di fronte a un guasto vero e prolungato, si è comportato correttamente. Ha allarmato, non ha fatto danni, ha messo in attesa i comandi che non poteva eseguire, è ripartito da solo. La piccola imperfezione della prima ripartenza è un caso limite raro, dovuto a un evento del tutto particolare. **Considero il sistema sufficientemente robusto e affidabile così com'è**, e preferisco non aggiungere complessità che non serve. Le due idee restano "in cassaforte": le tirerò fuori solo se un caso analogo dovesse ripetersi.
 
 *(È anche un principio di buona ingegneria: non risolvere problemi che non hai davvero.)*
 
 </details>
 
-> 🔥 *Morale della tappa:* **il collaudo vero non lo decidi tu, lo decide la realtà. E il momento in cui qualcosa si rompe è il momento in cui scopri se il tuo sistema è un guardiano affidabile o solo un giocattolo che funziona col bel tempo.**
+> 🔥 *Morale della tappa*: **il collaudo vero non lo decidi tu, lo decide la realtà**. E il momento in cui qualcosa si rompe è il momento in cui scopri se il tuo sistema è un guardiano affidabile o solo *un giocattolo che funziona col bel tempo*.
 
 ---
 
 ## 7. Sicurezza, anonimizzazione e trasparenza
 
-Prima di tirare le fila, una sezione che considero un dovere verso chi legge. Fare le cose "per bene" non significa solo far funzionare la pompa: significa anche lavorare in sicurezza e raccontare le cose come stanno, comprese quelle che non ho capito fino in fondo.
+Prima di tirare le fila, una sezione che considero un dovere verso chi legge. Fare le cose "per bene" non significa solo far funzionare la pompa: significa anche **lavorare in sicurezza** e raccontare le cose come stanno, comprese quelle che non ho capito fino in fondo.
 
-### La sicurezza elettrica prima di tutto
+### La sicurezza prima di tutto
 
-Un promemoria che non mi stancherò di ripetere: **si lavora su tensione di rete (230 V) e su una pompa.** Si deve prestare la massima attenzione. *Ci si può certo divertire ma non è un gioco*!
+Un promemoria che non mi stancherò di ripetere: **si lavora su tensione di rete (230 V) e su una pompa**. Si deve prestare la massima attenzione, **sempre**. *Ci si può e ci si deve certo divertire ma non è un gioco*!
 
-- Ogni intervento sui collegamenti va fatto a **impianto sezionato** (interruttore aperto, assenza di tensione verificata).
-- Il **magnetotermico** dedicato alla linea della pompa non è un optional: nel mio caso, come avete letto, è ciò che ha evitato guai seri quando la pompa ha cominciato a disperdere.
-- Lo **snubber RC** va montato vicino al carico induttivo (la pompa).
-- Se non si è sicuri di ciò che si sta facendo, **si chiama un elettricista.** Io l'ho fatto, senza vergogna, quando è stato il momento.
+- Ogni intervento sui collegamenti va fatto a **impianto sezionato** (interruttore aperto, con **assenza di tensione verificata**).
+- Il **magnetotermico** dedicato alla linea della pompa non è un optional: nel mio caso, come avete letto, è ciò che ha evitato guai più seri quando la pompa ha cominciato a disperdere.
+- Lo **snubber RC** va montato il più possibile vicino al carico induttivo (la pompa).
+- Se non si è sicuri di ciò che si sta facendo, **si chiama un elettricista.** Io l'ho fatto, senza vergogna, quando è stato il momento. Mi ha fatto capire alcune cose che mi torneranno utilissime.
 
 ### L'anonimizzazione: cosa ho nascosto e perché
 
 Tutti i dati sensibili in questo racconto e negli script sono stati **anonimizzati**. In particolare:
 
-- **Indirizzi IP** dei dispositivi → sostituiti con valori d'esempio.
-- **Chiavi e token** (ntfy) → rimossi o sostituiti con segnaposto.
-- **Nome della rete WiFi** e password → mai riportati.
+- Gli **Indirizzi IP** dei dispositivi → sostituiti con valori d'esempio.
+- **Chiavi e token** (*ntfy*) → rimossi o sostituiti con segnaposto.
+- Il **Nome della mia rete WiFi** e password → mai riportati.
 
-Perché insisto? Perché pubblicare online la configurazione reale di un dispositivo domotico — soprattutto uno che comanda un carico elettrico — è un rischio concreto. Chi replica il progetto deve inserire **i propri** dati, e imparare fin da subito l'abitudine a **non spargere in giro chiavi e indirizzi**.
+Perché insisto su questi aspetti? Perché pubblicare online la configurazione reale di un dispositivo domotico — soprattutto uno che comanda un carico elettrico — espone a un rischio concreto. Chi replica il progetto deve inserire **i propri** dati, e imparare fin da subito l'abitudine a **non spargere in giro chiavi e indirizzi**.
 
 ### Trasparenza: il mistero della tensione del sensore
 
 E qui viene la parte in cui non ho una risposta definita e preferisco dirvelo piuttosto che inventarne una elegante.
 
-Il sensore di livello è alimentato dall'uscita di riferimento dell'Add-on Shelly. La documentazione ufficiale indica che l'Add-on è alimentato a **3,3 V** dal dispositivo, con un'uscita di riferimento (**VREF OUT**) a bassa corrente e una seconda uscita che passa per un resistore di pull-up da **10 kΩ** (**VREF + R1 OUT**). L'ingresso analogico, inoltre, è di fatto un voltmetro con range **0–10 V**.
+Il sensore di livello è alimentato dall'uscita di riferimento dell'Add-on Shelly. La documentazione ufficiale indica che l'Add-on eroga **3,3 V** dal dispositivo, con un'uscita di riferimento (**VREF OUT**) a bassa corrente e una seconda uscita che passa per un resistore di pull-up da **10 kΩ** (**VREF + R1 OUT**). L'ingresso analogico, inoltre, è di fatto un voltmetro con range **0–10 V**.
 
-Ho misurato la tensione sul morsetto **VREF OUT "puro"** (quello diretto, non quello con il resistore da 10 kΩ), tra il polo positivo e la massa, e ho ottenuto:
+**Sul mio Add-on** ho misurato la tensione nel morsetto **VREF OUT "puro"** (quello diretto, non quello con il resistore da 10 kΩ), tra il polo positivo e la massa, e ho ottenuto:
 
 - **~9,92 V a vuoto** (senza sensore collegato);
 - **5,12 V con il sensore collegato.**
@@ -459,7 +459,7 @@ Ho misurato la tensione sul morsetto **VREF OUT "puro"** (quello diretto, non qu
 Quello che posso dire con sicurezza è il risultato pratico:
 
 - i **5,12 V** che arrivano al sensore quando è collegato rientrano nel suo range operativo dichiarato (**5–24 V**);
-- nel **mio** impianto, il sensore ha **sempre funzionato correttamente**;
+- nel **mio** impianto, il sensore **ha sempre funzionato correttamente**;
 - questo comportamento **non dipende dalla tensione di rete** (che nel mio caso è 240–245 V): l'Add-on è alimentato a bassa tensione e galvanicamente isolato.
 
 > ⚠️ **Avviso al lettore.** Il funzionamento del sensore, nel mio caso, è sempre risultato corretto — ma va preso **"così com'è", senza alcuna garanzia** che si comporti allo stesso modo in ogni configurazione. I valori di tensione che ho misurato non coincidono del tutto con ciò che ci si aspetterebbe dalla documentazione, e non ho una spiegazione definitiva. Se replicate il progetto, **verificate le vostre misure** e, nel dubbio, consultate la documentazione ufficiale aggiornata di Shelly.
@@ -470,22 +470,22 @@ Preferisco chiudere questa sezione con un punto interrogativo piuttosto che con 
 
 ## 8. Cosa ho imparato (e cosa farei domani)
 
-Siamo alla fine del cammino. La pompa si accende quando deve, si spegne quando deve, e se qualcosa va storto lo so dal telefono. Ho raggiunto il mio obiettivo pratico. Ma, come dicevo all'inizio, strada facendo è nato un obiettivo più grande: capire **se e come** una persona non esperta possa, oggi, realizzare qualcosa di simile con l'aiuto dell'AI. E la risposta, per me, è un **sì** convinto.
+Siamo alla fine del cammino. La pompa si accende quando deve, si spegne quando deve, e se qualcosa va storto lo so dal telefono. Ho raggiunto il mio obiettivo pratico. Ma, come dicevo all'inizio, strada facendo è nato un obiettivo più grande: capire **se e come** una persona non esperta come me possa, oggi, realizzare qualcosa di simile con l'aiuto dell'AI. E la risposta, nel mio caso, è un **sì** molto convinto.
 
 ### Le tre lezioni che porto a casa
 
-1. **L'AI è ormai un compagno straordinario, ma la responsabilità resta tua.** Mistral mi ha dato la direzione (e pazienza per qualche comando inventato). Gemini ha costruito (anche se mi avrebbe fatto svitare un'antenna che non si svita). Claude ha rifinito. Ma la verifica sulla documentazione, la prova sul campo, la scelta finale: quelle sono sempre state mie. **L'AI propone, l'umano verifica e decide.**
+1. **L'AI è ormai un compagno straordinario, ma la responsabilità resta tua.** Mistral mi ha dato la direzione (*e pazienza per qualche comando inventato*). Gemini ha costruito (*anche se mi avrebbe fatto svitare un'antenna che non si svita*). Claude ha rifinito e portato a compimento il progetto. Ma la verifica sulla documentazione, la prova sul campo, la scelta finale: quelle sono sempre state mie. **L'AI propone, l'umano verifica e decide.**
 
 2. **Non serve essere esperti per cominciare — serve conoscere e accettare i propri limiti.** Io sono quasi digiuno di elettrotecnica e ho perso la mano con la programmazione. Non l'ho nascosto: l'ho usato come punto di partenza, chiedendo, verificando, sbagliando e riprovando. I vicoli ciechi fanno parte del metodo.
 
-3. **Gli strumenti sono maturati moltissimo.** Lo ripeto perché è la cosa che più mi ha sorpreso: ciò che due anni fa era molto frustrante, oggi è possibile. La finestra per provarci non è mai stata così aperta.
+3. **Gli strumenti sono maturati moltissimo.** Lo ripeto perché è la cosa che più mi ha sorpreso: ciò che due anni fa era apparso molto frustrante, oggi si è dimostrato possibile. La finestra per provarci non è mai stata così aperta.
 
 ### Le idee "in cassaforte" (miglioramenti futuri, non indispensabili)
 
-Il sistema, così com'è, lo considero **robusto e affidabile** — la prova del fuoco lo ha dimostrato. Ma tengo da parte, senza fretta, un paio di idee per il futuro:
+Il sistema, così com'è, lo considero **robusto e affidabile** — la prova del fuoco lo ha dimostrato. Soddisfa pienamente le mie necessità ma tengo da parte, senza fretta, un paio di idee per il futuro:
 
-- **Timer dinamico post-blackout** — allungare il tempo del filtro anti-oscillazione dopo un'interruzione prolungata.
-- **Secondo sensore di minima assoluta** — una soglia più bassa che imponga un riempimento più lungo. Più robusta, ma richiede un intervento hardware.
+- L'implementazione negli script di un **timer dinamico post-blackout** — allungare il tempo del filtro anti-oscillazione dopo un'interruzione prolungata.
+- L'installazione di un **secondo sensore di minima assoluta** — una soglia più bassa che imponga un riempimento più lungo. Più robusta, ma richiede un intervento hardware.
 
 Nessuna delle due è indispensabile oggi. Le registro tra le ipotesi per il futuro.
 
