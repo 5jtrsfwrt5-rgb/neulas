@@ -2,7 +2,7 @@
 layout: home
 author_profile: true
 header:
-  image: "/immagini/profilo/Neulas_cop_01.webp"
+  image: "/immagini/profilo/Neulas_cop_02.webp"
 ---
 Benvenuto su **neulas**, il blog in cui racconto piccoli progetti, alcuni realizzati col supporto delle intelligenze artificiali.
 Dal bisogno alla soluzione, con passo fermo, tra sorpresa, vicoli ciechi, piccole vittorie e tanto apprendimento.
