@@ -1,20 +1,20 @@
 ---
 layout: single
-title: "L'ariete idraulico per portare l'acqua in casa"
+title: "Uno strumento antico per portare l'acqua in casa"
 date: 2026-07-14
 categories: autocostruzione
 tags: [ariete idraulico, automazione, acqua, pompa, ram pump, storia]
 description: >-
   Una sorgente, un dislivello e una vecchia tecnologia a costo zero.
-permalink: /tre-shelly-pompa-60-metri/
+permalink: /ariete-idraulico-uno-strumento-antico/
 ---
 
 
 ### Come ho costruito il mio ariete idraulico
 
-*Una guida per replicare il mio progetto con facilità.*
+*Una guida essenziale per replicare il mio progetto con facilità.*
 
-> Questo articolo riporta una piccola guida per ricostruire un ariete idraulico. Un racconto su come abbia soddisfatto le mie esigenze per molti anni fa parte di un altro post che puoi trovare qui **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**. Qui troverai una parte con altri dettagli di carattere più generale sulla storia dell'ariete idraulico e alcuni link a siti, sia storici che moderni, che ospitano alcuni esemplari notevoli.
+> Semplici istruzioni per costruire con le proprie mani un ariete idraulico. Un racconto, su come abbia soddisfatto le mie esigenze per molti anni, fa parte di un altro post che puoi trovare nel **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**. Qui troverai — oltre alla guida per costruirlo — altri dettagli, di carattere più generale sulla storia dell'ariete idraulico e alcuni link a siti, sia storici che moderni, che ospitano alcuni esemplari notevoli.
 
 ---
 
@@ -24,25 +24,25 @@ Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma
 
 - disponibilità di una buona **quantità d'acqua** da una sorgente, un fiume o ruscello, un deposito;
 - un **dislivello** tra il punto di prelievo dell'acqua e la posizione dell'ariete idraulico;
-- un punto di raccolta in posizione **più elevata** rispetto al punto di prelievo.
+- un punto di raccolta in posizione **più elevata** rispetto al punto di utilizzo dell'acqua.
 
 ![La disposizione dell'ariete idraulico deve rispettare alcune condizioni]({{ site.baseurl }}/immagini/ariete/SorgenteArietePrelievo.webp)
-*Una fonte d'acqua, sorgente o ruscello** in posizione poco più elevata rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
+**Una fonte d'acqua, sorgente o ruscello** *in posizione poco più elevata rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
 
 ## 2. Il dimensionamento
 **Le misure** da considerare quando si vuole costruire un ariete idraulico (di seguito troverete anche il termine ***pompa***) dipendono principalmente dalla **portata** d'acqua sulla quale si può fare affidamento.
-Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere una sezione maggiore rispetto a quella in uscita dalla pompa. Nel mio caso ho a disposizione tra 8.000 e 10.000 litri d'acqua al giorno.
-È una portata sufficiente a riempire un tubo da 32 millimetri.
-Nel mio caso dalla fonte parte una tubatura, in polietilene di trentadue millimetri di diametro (ø 32mm), che raggiunge la pompa e prosegue ridotta a venticinque millimetri (ø 25mm), sempre in polietilene. In questo caso il diametro è maggiore di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
+Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere *una sezione* ***maggiore*** *rispetto a quella in uscita* dalla pompa. Nel mio caso la portata è sufficiente a riempire un tubo da 32 millimetri.
+Dalla fonte parte una tubatura in **polietilene** (ø 32mm), che raggiunge la pompa e prosegue ridotta a venticinque millimetri (ø 25mm), sempre in polietilene. Nel *mio caso il diametro in uscita è maggiore* di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
 
 ## 3. Rigido è meglio
-Per evitare di disperdere l'energia del ***colpo d'ariete*** è preferibile che il tubo di ingresso alla pompa sia rigido (ad es. acciaio zincato).
+Per evitare di disperdere l'energia del ***colpo d'ariete*** è preferibile che il tubo di ingresso alla pompa sia **rigido** (ad es. *acciaio zincato*).
 Io ho optato per una soluzione differente. Ho utilizzato tubazioni in polietilene che ho interrato dall'uscita della sorgente alla pompa. Ho prestato molta attenzione ad evitare che si formassero gobbe o avvallamenti che potessero *intrappolare l'aria* e  ridurre le prestazione dell'apparato.
 
 ## 4. Cosa occorre: schema tecnico e lista della spesa
-Lo schema tecnico che ho predisposto prevede l'uso di 16 pezzi oltre alle tubazioni. Si tratta di una **mia scelta**, come quella dei materiali. Io ho preferito l'*ottone*.
+Lo **schema tecnico** che ho predisposto prevede l'uso di 16 pezzi oltre alle tubazioni. Si tratta di una **mia scelta**, come quella dei materiali. Io ho preferito l'*ottone*.
 Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche differenti materiali.
-Nella tabella seguente i numeri corrispondono a quelli dello schema:
+
+*Nella tabella seguente i numeri corrispondono a quelli dello schema*:
 
 | N. | Componente | Q.tà | Note |
 |---|---|---|---|
@@ -61,6 +61,7 @@ Nella tabella seguente i numeri corrispondono a quelli dello schema:
 | 15 | Nipplo da 3/4" | 1 | — |
 | 16 | Raccordo da tubo ø 25mm a 3/4" F | 1 | Filettatura a scelta, PE o metallo |
 | s.n | Tubazione in polietilene ø 32mm e ø 25mm | q.b. | — |
+| — | Teflon per idraulica | q.b. | Non riportato nello schema |
 
 ![Lo schema tecnico dell'ariete idraulico]({{ site.baseurl }}/immagini/ariete/SchemaAriete.webp)
 
