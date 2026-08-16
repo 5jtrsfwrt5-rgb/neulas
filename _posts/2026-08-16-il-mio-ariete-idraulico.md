@@ -27,16 +27,16 @@ Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma
 - un punto di raccolta in posizione **più elevata** rispetto al punto di utilizzo dell'acqua.
 
 ![La disposizione dell'ariete idraulico deve rispettare alcune condizioni]({{ site.baseurl }}/immagini/ariete/SorgenteArietePrelievo.webp)
-**Una fonte d'acqua, sorgente o ruscello** *in posizione poco più elevata rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
+**Una fonte d'acqua, sorgente o ruscello** in posizione *poco più elevata* rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
 
 ## 2. Il dimensionamento
 **Le misure** da considerare quando si vuole costruire un ariete idraulico (di seguito troverete anche il termine ***pompa***) dipendono principalmente dalla **portata** d'acqua sulla quale si può fare affidamento.
-Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere *una sezione* ***maggiore*** *rispetto a quella in uscita* dalla pompa. Nel mio caso la portata è sufficiente a riempire un tubo da 32 millimetri.
-Dalla fonte parte una tubatura in **polietilene** (ø 32mm), che raggiunge la pompa e prosegue ridotta a venticinque millimetri (ø 25mm), sempre in polietilene. Nel *mio caso il diametro in uscita è maggiore* di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
+Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere una sezione ***maggiore*** rispetto a quella in uscita dalla pompa. Nel mio caso la portata è sufficiente a riempire un tubo da 32 millimetri.
+Dalla fonte parte una tubatura in **polietilene** (ø 32mm), che raggiunge la pompa e prosegue con diametro ridotto (ø 25mm), sempre in polietilene. Nel *mio caso il diametro in uscita è maggiore* di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
 
 ## 3. Rigido è meglio
 Per evitare di disperdere l'energia del ***colpo d'ariete*** è preferibile che il tubo di ingresso alla pompa sia **rigido** (ad es. *acciaio zincato*).
-Io ho optato per una soluzione differente. Ho utilizzato tubazioni in polietilene che ho interrato dall'uscita della sorgente alla pompa. Ho prestato molta attenzione ad evitare che si formassero gobbe o avvallamenti che potessero *intrappolare l'aria* e  ridurre le prestazione dell'apparato.
+Io ho optato per una soluzione differente. Ho utilizzato tubazioni in polietilene che ho interrato dall'uscita della sorgente alla pompa. Ho prestato molta attenzione ad evitare che si formassero gobbe o avvallamenti del tubo che potessero *intrappolare l'aria* e ridurre le prestazione dell'apparato.
 
 ## 4. Cosa occorre: schema tecnico e lista della spesa
 Lo **schema tecnico** che ho predisposto prevede l'uso di 16 pezzi oltre alle tubazioni. Si tratta di una **mia scelta**, come quella dei materiali. Io ho preferito l'*ottone*.
@@ -46,7 +46,7 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 
 | N. | Componente | Q.tà | Note |
 |---|---|---|---|
-| 1 | Raccordo da tubo ø 32mm a 1" F | 1 | Filettatura a scelta, PE o metallo |
+| 1 | Raccordo da tubo in polietilene ø 32mm a 1" F | 1 | Filettatura a scelta, PE o metallo |
 | 2, 4, 6 | Nipplo da 1" | 3 | — |
 | 3 | Tee da 1" F/F/F | 1 | — |
 | 5 | Valvola di fondo da 1" F | 1 | Può essere sostituita anche da una valvola ***Clapet*** |
@@ -59,20 +59,30 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 | 13 | Manometro con attacco da 3/8" M | 1 | — |
 | 14 | Vaso di espansione con attacco da 1/2" M | 1 | Capacità 2 litri |
 | 15 | Nipplo da 3/4" | 1 | — |
-| 16 | Raccordo da tubo ø 25mm a 3/4" F | 1 | Filettatura a scelta, PE o metallo |
+| 16 | Raccordo da tubo in polietilene ø 25mm a 3/4" F | 1 | Filettatura a scelta, PE o metallo |
 | s.n | Tubazione in polietilene ø 32mm e ø 25mm | q.b. | — |
 | — | Teflon per idraulica | q.b. | Non riportato nello schema |
 
 ![Lo schema tecnico dell'ariete idraulico]({{ site.baseurl }}/immagini/ariete/SchemaAriete.webp)
 
+## 5. Il montaggio
+
+Non ci sono delle vere e proprie **istruzioni di montaggio** perché è sufficiente provvedere a **sigillare** adeguatamente con il teflon le varie giunzioni e procedere ad assemblare l'ariete idraulico disponendo i pezzi come nello schema. Sono pochi pezzi e non dovrebbero esserci difficoltà per nessuno.
+
+![Il mio ariete idraulico di scorta]({{ site.baseurl }}/immagini/ariete/ArieteIdraulicoReale.webp)
+
+## 6. Aguzzate la vista
+
+I più attenti tra voi noteranno nella foto un dettaglio che merita una spiegazione.
+Sulla valvola di fondo utilizzata è stata apportata una modifica per consentire un rapido disinnesco e favorire il ciclo successivo.
 
 
 <a id="sostieni"></a>
 ### Sostieni il prossimo progetto (Raspberry Pi / Arduino) ☕
 
-**Tutto ciò che trovate in queste pagine è, e resterà, liberamente disponibile**. È una scelta basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il piacere ricavato dalla costruzione di uno strumento che si è rivelato utile e funzionale. 
+Tutto ciò che trovate in queste pagine è, e resterà, **liberamente disponibile a titolo gratuito**. È una scelta basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il piacere — ricavato dalla costruzione di uno strumento che si è rivelato utile e funzionale — che spero possa trasmettersi a chi costruirà la propria versione. 
 
-Detto questo, il prossimo progetto è già nella mia testa e avrà come protagonisti un **Raspberry Pi e/o un Arduino** con, naturalmente, un nuovo racconto su questo blog. Se questo articolo o la guida tecnica ti sono stati utili e vuoi darmi una mano a finanziarlo, puoi offrirmi un caffè: si tratta di un contributo **su base strettamente volontaria**, che non sblocca nulla di "premium" — perché non c'è nulla di bloccato — ma che sarà per me un incoraggiamento concreto (e apprezzatissimo) a continuare.
+Detto questo, il prossimo progetto è già nella mia testa e avrà come protagonisti un **Raspberry Pi e/o un Arduino** con, naturalmente, un nuovo racconto su questo blog. Se questa guida tecnica e gli altri articoli del blog ti sono stati utili e vuoi darmi una mano a finanziarlo, puoi offrirmi un caffè: si tratta di un contributo **su base strettamente volontaria**, che non sblocca nulla di "premium" — perché non c'è nulla di bloccato — ma che sarà per me un incoraggiamento concreto (e apprezzatissimo) a continuare.
 
 > ☕ **[Offrimi un caffè per il prossimo progetto](LINK_DONAZIONI)**
 >
