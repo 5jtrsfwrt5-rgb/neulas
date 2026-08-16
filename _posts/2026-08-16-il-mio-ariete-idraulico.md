@@ -1,0 +1,88 @@
+---
+layout: single
+title: "L'ariete idraulico per portare l'acqua in casa"
+date: 2026-07-14
+categories: autocostruzione
+tags: [ariete idraulico, automazione, acqua, pompa, ram pump, storia]
+description: >-
+  Una sorgente, un dislivello e una vecchia tecnologia a costo zero.
+permalink: /tre-shelly-pompa-60-metri/
+---
+
+
+### Come ho costruito il mio ariete idraulico
+
+*Una guida per replicare il mio progetto con facilità.*
+
+> Questo articolo riporta una piccola guida per ricostruire un ariete idraulico. Un racconto su come abbia soddisfatto le mie esigenze per molti anni fa parte di un altro post che puoi trovare qui **[racconto dettagliato del progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)**. Qui troverai una parte con altri dettagli di carattere più generale sulla storia dell'ariete idraulico e alcuni link a siti, sia storici che moderni, che ospitano alcuni esemplari notevoli.
+
+---
+
+## 1. A chi può servire
+
+Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma ha dei requisiti imprescindibil che se non presenti lo rendono totalmente inutile ai fini pratici:
+
+- disponibilità di una buona **quantità d'acqua** da una sorgente, un fiume o ruscello, un deposito;
+- un **dislivello** tra il punto di prelievo dell'acqua e la posizione dell'ariete idraulico;
+- un punto di raccolta in posizione **più elevata** rispetto al punto di prelievo.
+
+![La disposizione dell'ariete idraulico deve rispettare alcune condizioni]({{ site.baseurl }}/immagini/ariete/SorgenteArietePrelievo.webp)
+*Una fonte d'acqua, sorgente o ruscello** in posizione poco più elevata rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
+
+## 2. Il dimensionamento
+**Le misure** da considerare quando si vuole costruire un ariete idraulico (di seguito troverete anche il termine ***pompa***) dipendono principalmente dalla **portata** d'acqua sulla quale si può fare affidamento.
+Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere una sezione maggiore rispetto a quella in uscita dalla pompa. Nel mio caso ho a disposizione tra 8.000 e 10.000 litri d'acqua al giorno.
+È una portata sufficiente a riempire un tubo da 32 millimetri.
+Nel mio caso dalla fonte parte una tubatura, in polietilene di trentadue millimetri di diametro (ø 32mm), che raggiunge la pompa e prosegue ridotta a venticinque millimetri (ø 25mm), sempre in polietilene. In questo caso il diametro è maggiore di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
+
+## 3. Rigido è meglio
+Per evitare di disperdere l'energia del ***colpo d'ariete*** è preferibile che il tubo di ingresso alla pompa sia rigido (ad es. acciaio zincato).
+Io ho optato per una soluzione differente. Ho utilizzato tubazioni in polietilene che ho interrato dall'uscita della sorgente alla pompa. Ho prestato molta attenzione ad evitare che si formassero gobbe o avvallamenti che potessero *intrappolare l'aria* e  ridurre le prestazione dell'apparato.
+
+## 4. Cosa occorre: schema tecnico e lista della spesa
+Lo schema tecnico che ho predisposto prevede l'uso di 16 pezzi oltre alle tubazioni. Si tratta di una **mia scelta**, come quella dei materiali. Io ho preferito l'*ottone*.
+Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche differenti materiali.
+Nella tabella seguente i numeri corrispondono a quelli dello schema:
+
+| N. | Componente | Q.tà | Note |
+|---|---|---|---|
+| 1 | Raccordo da tubo ø 32mm a 1" F | 1 | Filettatura a scelta, PE o metallo |
+| 2, 4, 6 | Nipplo da 1" | 3 | — |
+| 3 | Tee da 1" F/F/F | 1 | — |
+| 5 | Valvola di fondo da 1" F | 1 | Può essere sostituita anche da una valvola ***Clapet*** |
+| 7 | Valvola **inline** (tipo *Europa*) da 1" F/F | 1 | — |
+| 8 | Nipplo con riduzione da 1" a 3/4" | 1 | — |
+| 9 | Tee da 3/4" F/F/F | 1 | — |
+| 10 | Nipplo con riduzione da 3/4" a 1/2" | 1 | — |
+| 11 | Tee da 1/2" F/F/F | 1 | — |
+| 12 | Riduzione da 1/2" M a 3/8" F | 1 | — |
+| 13 | Manometro con attacco da 3/8" M | 1 | — |
+| 14 | Vaso di espansione con attacco da 1/2" M | 1 | Capacità 2 litri |
+| 15 | Nipplo da 3/4" | 1 | — |
+| 16 | Raccordo da tubo ø 25mm a 3/4" F | 1 | Filettatura a scelta, PE o metallo |
+| s.n | Tubazione in polietilene ø 32mm e ø 25mm | q.b. | — |
+
+![Lo schema tecnico dell'ariete idraulico]({{ site.baseurl }}/immagini/ariete/SchemaAriete.webp)
+
+
+
+<a id="sostieni"></a>
+### Sostieni il prossimo progetto (Raspberry Pi / Arduino) ☕
+
+**Tutto ciò che trovate in queste pagine è, e resterà, liberamente disponibile**. È una scelta basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il piacere ricavato dalla costruzione di uno strumento che si è rivelato utile e funzionale. 
+
+Detto questo, il prossimo progetto è già nella mia testa e avrà come protagonisti un **Raspberry Pi e/o un Arduino** con, naturalmente, un nuovo racconto su questo blog. Se questo articolo o la guida tecnica ti sono stati utili e vuoi darmi una mano a finanziarlo, puoi offrirmi un caffè: si tratta di un contributo **su base strettamente volontaria**, che non sblocca nulla di "premium" — perché non c'è nulla di bloccato — ma che sarà per me un incoraggiamento concreto (e apprezzatissimo) a continuare.
+
+> ☕ **[Offrimi un caffè per il prossimo progetto](LINK_DONAZIONI)**
+>
+> *(qualunque cifra, anche simbolica, va interamente all'acquisto del materiale per il progetto Raspberry Pi / Arduino)*
+
+### Un grazie e un augurio
+
+Se sei arrivato fin qui, grazie per la pazienza. Questo non voleva essere un tutorial perfetto da manuale, ma il **racconto in prima persona di un mio percorso**: fatto di ipotesi, entusiasmi, vicoli ciechi, piccole vittorie e una pompa che, a 60 metri da casa, adesso fa il suo dovere.
+
+Se sei una di quelle persone che hanno un'idea in testa ma pensano "*non ne sono capace*"… beh, forse non sei capace *da solo*. Ma con l'AI al fianco, un po' di pazienza e la disciplina di verificare sempre, la distanza tra l'idea e la realizzazione è diventata molto più corta di quanto sembrasse finora.
+
+Buona costruzione quindi. E, come si diceva un tempo tra radioamatori: **buon collegamento**.
+
+***— Roberto*** *- ...e non sono neppure un radioamatore*
