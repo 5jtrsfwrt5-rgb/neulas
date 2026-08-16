@@ -70,12 +70,18 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 
 <br>
 L'ariete sfrutta il colpo d'ariete (da cui il nome): la sovrapressione generata dall'arresto brusco di una colonna d'acqua in movimento. I componenti sono: **tubo di alimentazione** (*drive pipe*), **valvola di scarico** (*waste valve*), **valvola di ritegno** di mandata, **camera d'aria** (*polmone*) e **tubo di mandata**.
+
 **Il ciclo di funzionamento**: la valvola di scarico è aperta (per gravità/peso) e l'acqua accelera nel tubo di alimentazione acquistando energia cinetica. Quando la spinta dinamica vince il peso/molla della valvola, questa si chiude di scatto. **L’arresto improvviso genera il colpo d'ariete**: un picco di pressione che **apre la valvola** di ritegno e spinge acqua nella camera d'aria e nel tubo di mandata. L'aria compressa nel polmone fa da "molla": assorbe lo shock e rende il flusso in mandata più continuo; senza camera d'aria l'efficienza crolla e *le sollecitazioni distruggerebbero la pompa*. Quando la pressione cala, la valvola di ritegno si chiude; l'onda di depressione riflessa (con il peso della valvola) riapre la valvola di scarico e il ciclo ricomincia, con il caratteristico battito ritmico.
+
 **Bilancio energetico**: l'ariete non crea energia, converte tanta acqua a bassa prevalenza in poca acqua ad alta prevalenza. L'efficienza energetica tipica è del **60%, fino all'80%** nei migliori. 
+
 **Regole pratiche**: circa 1 litro consegnato ogni 8 litri transitati e 10 m di mandata per ogni metro di caduta.
+
 **Dimensionamento e diametro del tubo di mandata**. La "taglia" dell'ariete è definita dal tubo di alimentazione, mentre il tubo di mandata si sceglie in funzione della portata da trasportare.
-**Regole dalla letteratura tecnica**: Diametro mandata ≈ metà del diametro di alimentazione, in linea di massima. Tuttavia la mandata non determina le prestazioni: va dimensionata su portata e perdite di carico, con velocità dell'acqua ≤ 1,5 m/s per evitare colpi d'ariete e attriti eccessivi; per tratte molto lunghe conviene aumentare il diametro, e mai scendere sotto il diametro raccomandato. **Tubo di alimentazione*: la lunghezza deve essere compresa tra 150 e 1.000 volte il diametro (es. D = 50 mm → L tra 7,5 e 50 m) con una pendenza, ottimale, di circa il 20% (1:5). Il tubo deve essere rigido (acciaio zincato sarebbe l’ideale; se PVC, meglio Schedule 80), dritto e senza "gobbe" che intrappolino aria.
-</details>
+
+**Regole dalla letteratura tecnica**: Diametro mandata ≈ metà del diametro di alimentazione, in linea di massima. Tuttavia la mandata non determina le prestazioni: va dimensionata su portata e perdite di carico, con velocità dell'acqua ≤ 1,5 m/s per evitare colpi d'ariete violenti e attriti eccessivi; per tratte molto lunghe conviene aumentare il diametro, e mai scendere sotto il diametro raccomandato.
+
+**Tubo di alimentazione**: la lunghezza deve essere compresa tra 150 e 1.000 volte il diametro (es. ø = 32 mm → L tra 4,8 e 32 m) con una pendenza, ottimale, di circa il 20% (1:5). Il tubo deve essere rigido (acciaio zincato sarebbe l’ideale), dritto e senza "gobbe" che intrappolino aria.
 </details>
 
 ## 5. Il montaggio
