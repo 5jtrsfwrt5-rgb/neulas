@@ -46,22 +46,22 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 
 | N. | Componente | Q.tà | Note |
 |---|---|---|---|
-| 1 | Raccordo da tubo in polietilene ø 32mm a 1" F | 1 | Filettatura a scelta, PE o metallo |
+| 1 | Raccordo a compressione ø 32mm x 1" F | 1 | Filettatura in PE oppure metallica, a scelta |
 | 2, 4, 6 | Nipplo da 1" | 3 | — |
 | 3 | Tee da 1" F/F/F | 1 | — |
 | 5 | Valvola di fondo da 1" F | 1 | Può essere sostituita anche da una valvola ***Clapet*** |
-| 7 | Valvola **inline** (tipo *Europa*) da 1" F/F | 1 | — |
-| 8 | Nipplo con riduzione da 1" a 3/4" | 1 | — |
+| 7 | Valvola di non ritorno in linea — tipo ***Europa*** — da 1" F/F | 1 | — |
+| 8 | Nipplo con riduzione 1" x 3/4" | 1 | — |
 | 9 | Tee da 3/4" F/F/F | 1 | — |
-| 10 | Nipplo con riduzione da 3/4" a 1/2" | 1 | — |
+| 10 | Nipplo con riduzione 3/4" x 1/2" | 1 | — |
 | 11 | Tee da 1/2" F/F/F | 1 | — |
-| 12 | Riduzione da 1/2" M a 3/8" F | 1 | — |
-| 13 | Manometro con attacco da 3/8" M | 1 | — |
+| 12 | Riduzione 1/2" M x 1/4" F | 1 | — |
+| 13 | Manometro con attacco da 1/4" M | 1 | — |
 | 14 | Vaso di espansione con attacco da 1/2" M | 1 | Capacità 2 litri |
 | 15 | Nipplo da 3/4" | 1 | — |
-| 16 | Raccordo da tubo in polietilene ø 25mm a 3/4" F | 1 | Filettatura a scelta, PE o metallo |
+| 16 | Raccordo a compressione ø 25mm x 3/4" F | 1 | Filettatura in PE oppure metallica, a scelta |
 | s.n | Tubazione in polietilene ø 32mm e ø 25mm | q.b. | — |
-| — | Teflon per idraulica | q.b. | Non riportato nello schema |
+| — | Canapa draulica + Pasta idraulica o Nastro Teflon in PTFE per Filetti | q.b. | Non presente nello schema |
 
 ![Lo schema tecnico dell'ariete idraulico]({{ site.baseurl }}/immagini/ariete/SchemaAriete.webp)
 
@@ -69,7 +69,7 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 <summary><strong>🧭 Come funziona l’ariete idraulico</strong> (clicca)</summary>
 
 <br>
-*(dal web)*
+<em style="font-size: 0.75em; color: #4C4C4C;">(dal web - materiale rielaborato da vari siti)*</em>*
 L'ariete sfrutta il colpo d'ariete (da cui il nome): la sovrapressione generata dall'arresto brusco di una colonna d'acqua in movimento. I componenti sono: **tubo di alimentazione** (*drive pipe*), **valvola di scarico** (*waste valve*), **valvola di ritegno** di mandata, **camera d'aria** (*polmone*) e **tubo di mandata**.
 
 **Il ciclo di funzionamento**: la valvola di scarico è aperta (per gravità/peso) e l'acqua accelera nel tubo di alimentazione acquistando energia cinetica. Quando la spinta dinamica vince il peso/molla della valvola, questa si chiude di scatto. **L’arresto improvviso genera il colpo d'ariete**: un picco di pressione che **apre la valvola** di ritegno e spinge acqua nella camera d'aria e nel tubo di mandata. L'aria compressa nel polmone fa da "molla": assorbe lo shock e rende il flusso in mandata più continuo; senza camera d'aria l'efficienza crolla e *le sollecitazioni distruggerebbero la pompa*. Quando la pressione cala, la valvola di ritegno si chiude; l'onda di depressione riflessa (con il peso della valvola) riapre la valvola di scarico e il ciclo ricomincia, con il caratteristico battito ritmico.
