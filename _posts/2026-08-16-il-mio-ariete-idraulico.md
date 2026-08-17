@@ -69,7 +69,8 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 <summary><strong>🧭 Come funziona l’ariete idraulico</strong> (clicca)</summary>
 
 <br>
-<em style="font-size: 0.75em; color: #4C4C4C;">(dal web - materiale rielaborato da vari siti)*</em>
+<em style="font-size: 0.75em; color: #4C4C4C;">*(dal web - materiale rielaborato da vari siti)*</em>
+
 L'ariete sfrutta il **colpo d'ariete** (da cui il nome): la sovrapressione generata dall'arresto brusco di una colonna d'acqua in movimento. I componenti sono: **tubo di alimentazione** (*drive pipe*), **valvola di scarico** (*waste valve*), **valvola di ritegno** di mandata, **camera d'aria** (*polmone*) e **tubo di mandata**.
 
 **Il ciclo di funzionamento**: la valvola di scarico è aperta (per gravità/peso) e l'acqua accelera nel tubo di alimentazione acquistando energia cinetica. Quando la spinta dinamica vince il peso/molla della valvola, questa si chiude di scatto (esattamente come una porta che sbatte per la corrente d'aria). **L’arresto improvviso genera il colpo d'ariete**: un picco di pressione che **apre la valvola di ritegno** e spinge acqua nella camera d'aria e nel tubo di mandata. L'aria compressa nel polmone fa da "molla": assorbe lo shock e rende il flusso in mandata più continuo; senza camera d'aria l'efficienza crolla e *le sollecitazioni distruggerebbero la pompa*. Quando la pressione cala, la valvola di ritegno si chiude; l'onda di depressione riflessa (con il peso della valvola) riapre la valvola di scarico e il ciclo ricomincia, con il caratteristico battito ritmico.
