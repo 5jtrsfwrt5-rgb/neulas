@@ -507,4 +507,4 @@ Se sei una di quelle persone che hanno un'idea in testa ma pensano "*non ne sono
 
 Buona costruzione quindi. E, come si diceva un tempo tra radioamatori: **buon collegamento**.
 
-— ***Roberto*** - *...e non sono neppure un radioamatore*
+— ***Roberto*** — *...e non sono neppure un radioamatore*
