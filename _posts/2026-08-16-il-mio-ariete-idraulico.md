@@ -73,7 +73,7 @@ Si potrebbe costruire un efficiente ariete idraulico con meno pezzi e anche diff
 
 L'ariete sfrutta il **colpo d'ariete** (da cui il nome): la sovrapressione generata dall'arresto brusco di una colonna d'acqua in movimento. I componenti sono: **tubo di alimentazione** (*drive pipe*), **valvola di scarico** (*waste valve*), **valvola di ritegno** di mandata, **camera d'aria** (*polmone*) e **tubo di mandata**.
 
-**Il ciclo di funzionamento**: la valvola di scarico è aperta (per gravità/peso) e l'acqua accelera nel tubo di alimentazione acquistando energia cinetica. Quando la spinta dinamica vince il peso/molla della valvola, questa si chiude di scatto (esattamente come una porta che sbatte per la corrente d'aria). **L’arresto improvviso genera il colpo d'ariete**: un picco di pressione che **apre la valvola di ritegno** e spinge acqua nella camera d'aria e nel tubo di mandata. L'aria compressa nel polmone fa da "molla": assorbe lo shock e rende il flusso in mandata più continuo; senza camera d'aria l'efficienza crolla e *le sollecitazioni distruggerebbero la pompa*. Quando la pressione cala, la valvola di ritegno si chiude; l'onda di depressione riflessa (con il peso della valvola) riapre la valvola di scarico e il ciclo ricomincia, con il caratteristico battito ritmico.
+**Il ciclo di funzionamento**: la valvola di scarico è aperta (per gravità/peso) e l'acqua accelera nel tubo di alimentazione acquistando energia cinetica. Quando la spinta dinamica vince il peso/molla della valvola, questa si chiude di scatto (*esattamente come una porta che sbatte per la corrente d'aria*). **L’arresto improvviso genera il colpo d'ariete**: un picco di pressione che **apre la valvola di ritegno** e spinge acqua nella camera d'aria e nel tubo di mandata. L'aria compressa nel polmone fa da "molla": assorbe lo shock e rende il flusso in mandata più continuo; senza camera d'aria l'efficienza crolla e *le sollecitazioni distruggerebbero la pompa*. **Quando la pressione cala**, la valvola di ritegno si chiude; l'onda di depressione riflessa (con il peso della valvola) riapre la valvola di scarico e il ciclo ricomincia, con il caratteristico **battito** ritmico.
 
 **Bilancio energetico**: l'ariete **non crea energia**, converte tanta acqua a bassa prevalenza in poca acqua ad alta prevalenza. L'efficienza energetica tipica è del **60%, fino all'80%** nei migliori. 
 
@@ -81,26 +81,26 @@ L'ariete sfrutta il **colpo d'ariete** (da cui il nome): la sovrapressione gener
 
 **Dimensionamento e diametro del tubo di mandata**. la "taglia" dell'ariete è definita dal tubo di alimentazione, mentre il tubo di mandata si sceglie in funzione della portata da trasportare.
 
-**Regole dalla letteratura tecnica**: il diametro di mandata ≈ metà del diametro di alimentazione, in linea di massima. Tuttavia la mandata non determina le prestazioni: va dimensionata su portata e perdite di carico, con velocità dell'acqua ≤ 1,5 m/s per evitare colpi d'ariete troppo violenti e attriti eccessivi; per tratte molto lunghe conviene aumentare il diametro, e mai scendere sotto il diametro raccomandato.
+**Regole dalla letteratura tecnica**: predisporre il **diametro di mandata ≈ metà del diametro di alimentazione**, in linea di massima. Tuttavia la mandata non determina le prestazioni: va dimensionata su portata e perdite di carico, con velocità dell'acqua ≤ 1,5 m/s per evitare colpi d'ariete troppo violenti e attriti eccessivi; per tratte molto lunghe conviene aumentare il diametro, e **mai** scendere sotto il diametro raccomandato.
 
 **Tubo di alimentazione**: la lunghezza deve essere compresa tra 150 e 1.000 volte il diametro (es. ø = 32 mm → L tra 4,8 e 32 m) con una pendenza, ottimale, di circa il 20% (1:5). Il tubo deve essere rigido (*acciaio zincato* sarebbe l’ideale), dritto e senza "gobbe" che intrappolino aria.
 </details>
 
 ## 5. Il montaggio
 
-Non ci sono delle vere e proprie **istruzioni di montaggio** perché è sufficiente provvedere a **sigillare** adeguatamente con il teflon le varie giunzioni e procedere ad assemblare l'ariete idraulico disponendo i pezzi come nello schema. Sono pochi raccordi, due valvole, un manometro e un vaso d'espansione. Non dovrebbero esserci difficoltà per nessun appassionato del *fai da te*.
+Non descrivo delle vere e proprie **istruzioni di montaggio** perché è sufficiente provvedere a **sigillare** adeguatamente con il teflon — o canapa *e pasta idraulica* — le varie giunzioni e procedere ad assemblare l'ariete idraulico disponendo i pezzi come nello schema. Si tratta di pochi raccordi, due valvole, un manometro e un vaso d'espansione. Non dovrebbero esserci difficoltà per nessun appassionato del *fai da te*.
 
 ![Il mio ariete idraulico di scorta]({{ site.baseurl }}/immagini/ariete/ArieteIdraulicoReale.webp)
 
 ## 6. Aguzzate la vista
 
 I più attenti tra voi noteranno nella foto un dettaglio che merita una spiegazione.
-Sulla valvola di fondo utilizzata è stata apportata una modifica per consentire un rapido disinnesco e favorire il ciclo successivo. Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola inline — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo. Ho posizionato un piccolo bulloncino che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale non si riapriva in modo adeguatamente rapido.
+Sulla valvola di fondo utilizzata ho apportato una modifica per consentire un rapido disinnesco e favorire il ciclo successivo. Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola Europa — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo. Ho posizionato un piccolo bulloncino che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale non si riapriva in modo adeguatamente rapido e talvolta restava chiusa impedendo il funzionamento della pompa.
 
 <a id="sostieni"></a>
 ### Sostieni il prossimo progetto (Raspberry Pi / Arduino) ☕
 
-Tutto ciò che trovate in queste pagine è, e resterà, **liberamente disponibile a titolo gratuito**. È una scelta basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il piacere — ricavato dalla costruzione di uno strumento che si è rivelato utile e funzionale — che spero possa trasmettersi a chi costruirà la propria versione. 
+Tutto ciò che trovate nelle pagine di questo blog è, e resterà, **liberamente disponibile a titolo gratuito**. È una scelta basata su varie considerazioni: lo spirito di condivisione delle community di maker (dalle quali ho ricevuto tanto), la convinzione che la conoscenza cresca circolando, e il piacere — ricavato dalla costruzione di uno strumento che si è rivelato utile e funzionale — che spero possa trasmettersi a chi si avventurerà nella costruzione della propria versione. 
 
 Detto questo, il prossimo progetto è già nella mia testa e avrà come protagonisti un **Raspberry Pi e/o un Arduino** con, naturalmente, un nuovo racconto su questo blog. Se questa guida tecnica e gli altri articoli del blog ti sono stati utili e vuoi darmi una mano a finanziarlo, puoi offrirmi un caffè: si tratta di un contributo **su base strettamente volontaria**, che non sblocca nulla di "premium" — perché non c'è nulla di bloccato — ma che sarà per me un incoraggiamento concreto (e apprezzatissimo) a continuare.
 
@@ -110,10 +110,7 @@ Detto questo, il prossimo progetto è già nella mia testa e avrà come protagon
 
 ### Un grazie e un augurio
 
-Se sei arrivato fin qui, grazie per la pazienza. Questo non voleva essere un tutorial perfetto da manuale, ma il **racconto in prima persona di un mio percorso**: fatto di ipotesi, entusiasmi, vicoli ciechi, piccole vittorie e una pompa che, a 60 metri da casa, adesso fa il suo dovere.
+Se sei arrivato fin qui, **grazie**! Questo non voleva essere un tutorial perfetto da manuale, ma il **racconto in prima persona della costruzione di uno strumento** che ha comportato entusiasmi, vicoli ciechi, piccole vittorie, mi ha portato — *basandomi su una tecnologia antica* — a costruire una pompa che, da 70 metri da casa, ha svolto per **tanti anni** il suo lavoro.
 
-Se sei una di quelle persone che hanno un'idea in testa ma pensano "*non ne sono capace*"… beh, forse non sei capace *da solo*. Ma con l'AI al fianco, un po' di pazienza e la disciplina di verificare sempre, la distanza tra l'idea e la realizzazione è diventata molto più corta di quanto sembrasse finora.
 
-Buona costruzione quindi. E, come si diceva un tempo tra radioamatori: **buon collegamento**.
-
-***— Roberto*** *- ...e non sono neppure un radioamatore*
+— ***Roberto*** - *...e non sono neppure un idraulico*
