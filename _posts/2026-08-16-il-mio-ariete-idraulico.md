@@ -93,19 +93,17 @@ Non descrivo delle vere e proprie **istruzioni di montaggio** perché è suffici
 ![Il mio ariete idraulico di scorta]({{ site.baseurl }}/immagini/ariete/ArieteIdraulicoReale.webp)
 
 ## 6. Aguzzate la vista
-
 I più attenti tra voi noteranno nella foto un dettaglio che merita una spiegazione.
-Sulla valvola di fondo utilizzata ho apportato una modifica per consentire un rapido disinnesco e favorire il ciclo successivo. Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola Europa — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo. Ho posizionato un piccolo bulloncino che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale non si riapriva in modo adeguatamente rapido e talvolta restava chiusa impedendo il funzionamento della pompa.
+Sulla valvola di fondo utilizzata ho apportato **una modifica** per consentire un rapido disinnesco e favorire il ciclo successivo. Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola Europa — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo. Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale *non si riapriva in modo adeguatamente rapido* e talvolta restava chiusa impedendo il funzionamento della pompa.
 
 ## 7. Arieti notevoli
 ### Antico e moderno
 Una breve ricerca sul web sugli esemplari **più antichi** tuttora in funzione vi indirizzerà facilmente ad un paio di arieti idraulici: uno del 1796 e un altro, del quale trovate [**qui**](https://www.youtube.com/watch?v=Bbz6MFv8pyI) un video su YouTube, del 1793.
 Un altro video di un **moderno** ariete idraulico che viene alimentato da una condotta di ben **50 centimetri di diametro** lo potete trovare [**qui**](https://www.youtube.com/watch?v=pORYUjKoSuA).
 Di un interessante modello che **innova la tecnologia** integrandovi l’*effetto Venturi* potete trovare [**qui**](https://www.youtube.com/watch?v=LjFRoDoh6xE) un video che ne illustra le caratteristiche a confronto con un ariete idraulico.
-Io ho scelto di indicarvi soltanto questi pochi link. Con una ricerca generica, “*ram pump*” oppure “*ariete idraulico*”, troverete sul web, su YouTube, su FB, altre migliaia di esempi.
-Non sono in alcun modo affiliato a nessuno dei siti che vi ho indicato. Li ho semplicemente trovati *interessanti* e *riproponibili*. È il **mio giudizio**, niente di più.
-
-I più attenti tra voi noteranno nella foto un dettaglio che merita una spiegazione.
+Io ho scelto di indicarvi soltanto questi pochi link.
+Con una ricerca generica, “*ram pump*” oppure “*ariete idraulico*”, troverete sul web, YouTube, Vimeo, FB, altre migliaia di esempi.
+A questo proposito: *io non sono **in alcun modo** affiliato a nessuno dei siti che vi ho indicato*. Li ho semplicemente trovati *interessanti* e *riproponibili*. È il **mio giudizio**, niente di più.
 
 <a id="sostieni"></a>
 ### Sostieni il prossimo progetto (Raspberry Pi / Arduino) ☕
