@@ -146,7 +146,7 @@ Il guaio è arrivato con i dettagli. Mistral scriveva codice con grande sicurezz
 Il momento che ricordo meglio è un **errore ricorsivo**. Seguivo le sue indicazioni, lanciavo il codice, e il dispositivo rispondeva con l'equivalente di un "*questa cosa non esiste*". All'inizio pensavo di aver *sbagliato io* a copiare. Poi, dopo il terzo o quarto tentativo, ho capito: non stavo sbagliando io. **Quel comando non esisteva proprio.** L'AI lo aveva costruito per assonanza, per "*buon senso*" statistico, ma senza verificarlo — perché non poteva verificarlo e me lo riproponeva in varie salse ma sempre inefficace, insistendo nel reiterare l'errore.
 
 <details markdown="1">
-<summary><strong>🧭 Cosa stava succedendo, in realtà</strong> (clicca)</summary>
+<summary><strong>🧭 Cosa stava succedendo, in realtà</strong> <small>(clicca)</small></summary>
 
 <br>
 
@@ -188,7 +188,7 @@ Il primo traguardo concreto è stato riuscire a mandare *fisicamente* un pacchet
 Risolto il "come parlare", è arrivato il momento di affrontare il problema dell'**oscillazione dell'acqua** e dei segnali ridondanti del sensore già incontrato nell'Evoluzione 1. La soluzione, anche questa messa a punto con Gemini, è stata un **filtro temporale** (un *debounce*): dopo che un comando valido viene accettato, il sistema **ignora per un certo tempo** ogni nuovo impulso del sensore. In pratica dice: "*ho appena ricevuto l'ordine di accendere la pompa, adesso lavoro; non sto a sentire ogni schizzo d'acqua per i prossimi secondi*". È diventato uno dei pilastri più robusti del sistema.
 
 <details markdown="1">
-<summary><strong>⚙️ Il concetto di "debounce", spiegato in modo semplice</strong> (clicca)</summary>
+<summary><strong>⚙️ Il concetto di "debounce", spiegato in modo semplice</strong> <small>(clicca)</small></summary>
 
 <br>
 
@@ -218,7 +218,7 @@ Il mio modello di LoRa Add-on **non ha alcun connettore SMA**: l'antenna è un f
 Per fortuna, la lezione di Mistral aveva già fatto scuola: prima di mettere le mani sull'hardware, sono andato a **verificare sulla documentazione ufficiale**. Ed è lì che ho scoperto la differenza tra il modello standard (il mio) e il Pro.
 
 <details markdown="1">
-<summary><strong>📡 Standard vs Pro: la differenza che conta</strong> (clicca)</summary>
+<summary><strong>📡 Standard vs Pro: la differenza che conta</strong> <small>(clicca)</small></summary>
 
 <br>
 
@@ -300,7 +300,7 @@ Ricevuto via LoRa: PO^
 Un `PONG` **arrivato corrotto**: la radio ha ricevuto qualcosa, ma il messaggio era danneggiato — probabilmente per interferenza elettrica. Ecco perché la logica dei tentativi ripetuti è essenziale: un singolo messaggio sporco non deve mandare in crisi il sistema. 1T lo scarta, riprova al battito successivo, e quasi sempre il `PONG` seguente arriva pulito.
 
 <details markdown="1">
-<summary><strong>⚡ Interferenze e disturbi: perché lo snubber</strong> (clicca)</summary>
+<summary><strong>⚡ Interferenze e disturbi: perché lo snubber</strong> <small>(clicca)</small></summary>
 
 <br>
 
@@ -396,8 +396,6 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 
 <details markdown="1">
 <summary><strong>🔍 Una piccola <em>imperfezione</em> che ho scelto di non "aggiustare"</strong> <small>(clicca)</small></summary>
-
-<br>
 
 Nel ritorno alla normalità, il log mostra che la **prima** accensione dopo la riparazione si interrompe prima del previsto. La mia interpretazione è stata questa: durante il lungo blackout il livello in cisterna era sceso parecchio; quando la pompa è ripartita e l'acqua ha ricominciato a salire attraversando la soglia del sensore, le oscillazioni della superficie hanno generato un ulteriore impulso interpretato come "spegni".
 
