@@ -249,7 +249,7 @@ A quel punto il sistema, grazie a Gemini, *funzionava*. Ma tra "*funziona sul ba
 
 Il punto debole era chiaro: 1T mandava il comando "accendi la pompa" a 1R… e poi? Come faceva 1T a *sapere* che la pompa si era davvero accesa? Il segnale radio poteva perdersi, degradarsi, arrivare corrotto. Un comando "sparato nel buio" senza conferma non è un sistema affidabile: è solo una speranza.
 
-### 1) Il battito cardiaco: PING / PONG
+#### 5.1) Il battito cardiaco: PING / PONG
 
 A intervalli regolari — nel mio caso **ogni 30 minuti** — 1T manda a 1R un piccolo messaggio, `PING`. Se 1R è vivo e in ascolto, risponde `PONG`. Nel log reale si legge, ripetuto migliaia di volte, questo dialogo tranquillo:
 
@@ -262,7 +262,7 @@ PONG ricevuto: 1R operativo.
 
 Ogni riga è un battito. Finché il log prosegue così, il cuore del sistema batte.
 
-### 2) La conferma che conta: ACK e POMPA_ON
+#### 5.2) La conferma che conta: ACK e POMPA_ON
 
 Non basta però inviare il comando: 1T lo manda e poi **aspetta** che 1R risponda `POMPA_ON`. Solo allora considera il comando riuscito e manda **una sola** notifica:
 
@@ -276,11 +276,11 @@ Notifica ntfy inviata: [..] Elettropompa accesa per 400 secondi!
 
 Il `400` è il tempo di funzionamento in secondi: 1T dice a 1R non solo "accendi", ma "accendi **per 400 secondi**". Un comando completo e autosufficiente.
 
-### 3) Cosa succede se qualcosa va storto: i tentativi ripetuti (retry)
+#### 5.33) Cosa succede se qualcosa va storto: i tentativi ripetuti (retry)
 
 Vedi nel log quel `(tentativo 1/10)`? Se la conferma non arriva entro pochi secondi, 1T **riprova** — fino a dieci volte. E se dopo dieci tentativi 1R resta muto, il sistema non fa finta di niente: entra in **modalità allarme** ed, eventualmente, avvisa.
 
-### 4) La voce del sistema: **le notifiche ntfy**
+#### 5.44) La voce del sistema: **le notifiche ntfy**
 
 Per sapere cosa succede senza guardare i log, il sistema mi "parla" sul telefono tramite **ntfy**, un servizio di notifiche push semplice e leggero. Due tipi di messaggi:
 
@@ -289,7 +289,7 @@ Per sapere cosa succede senza guardare i log, il sistema mi "parla" sul telefono
 
 Il bello è che questa "voce" **non dipende dal WiFi del dispositivo lontano**: è 1T (che il WiFi ce l'ha) a parlare, riportando ciò che accade a 1R (che non ha WiFi).
 
-### 5) Il fantasma nella radio: il *glitch* e le interferenze
+#### 5.5) Il fantasma nella radio: il *glitch* e le interferenze
 
 In mezzo a migliaia di `PONG` puliti, ogni tanto nel log compare qualcosa del genere:
 
@@ -395,7 +395,7 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 2. **La robustezza costruita con Claude non era ipotetica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
 <details markdown="1">
-<summary><strong>🔍 Una piccola ***imperfezione*** che ho scelto di non "aggiustare"</strong> (clicca)</summary>
+<summary><strong>🔍 Una piccola imperfezione che ho scelto di non "aggiustare"</strong> (clicca)</summary>
 
 <br>
 
