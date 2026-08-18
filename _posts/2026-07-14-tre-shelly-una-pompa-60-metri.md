@@ -276,11 +276,11 @@ Notifica ntfy inviata: [..] Elettropompa accesa per 400 secondi!
 
 Il `400` è il tempo di funzionamento in secondi: 1T dice a 1R non solo "accendi", ma "accendi **per 400 secondi**". Un comando completo e autosufficiente.
 
-#### 5.33) Cosa succede se qualcosa va storto: i tentativi ripetuti (retry)
+### 5.3) Cosa succede se qualcosa va storto: i tentativi ripetuti (retry)
 
 Vedi nel log quel `(tentativo 1/10)`? Se la conferma non arriva entro pochi secondi, 1T **riprova** — fino a dieci volte. E se dopo dieci tentativi 1R resta muto, il sistema non fa finta di niente: entra in **modalità allarme** ed, eventualmente, avvisa.
 
-#### 5.44) La voce del sistema: **le notifiche ntfy**
+#### 5.4) La voce del sistema: **le notifiche ntfy**
 
 Per sapere cosa succede senza guardare i log, il sistema mi "parla" sul telefono tramite **ntfy**, un servizio di notifiche push semplice e leggero. Due tipi di messaggi:
 
