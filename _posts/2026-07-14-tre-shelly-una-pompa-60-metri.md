@@ -395,7 +395,7 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 2. **La robustezza costruita con Claude non era ipotetica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
 <details markdown="1">
-<summary><strong>🔍 Una _piccola imperfezione_ che ho scelto di non "aggiustare"</strong> (clicca)</summary>
+<summary><strong>🔍 Una piccola <em>imperfezione</em> che ho scelto di non "aggiustare"</strong> <small>(clicca)</small></summary>
 
 <br>
 
