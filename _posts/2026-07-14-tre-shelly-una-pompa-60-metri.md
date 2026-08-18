@@ -361,7 +361,7 @@ Notifica ntfy inviata: [..] ⚠️ Controllo corrente ⚠️
 
 ### Le ore difficili
 
-Non ho potuto sostituire la pompa immediatamente — serviva un elettricista e il pezzo di ricambio. E qui si vede il carattere del sistema: **per quasi un'intera giornata**, ogni 30 minuti, con pazienza ostinata, 1T ha continuato a cercare 1R, a fallire dieci volte, e a rilanciare l'allarme. Non si è "stancato", non è andato in tilt, non ha fatto scelte avventate. Ha solo continuato a fare il suo dovere: **cercare, verificare, avvisare*.*
+Non ho potuto sostituire la pompa immediatamente — serviva un elettricista e il pezzo di ricambio. E qui si vede la solidità del sistema: **per quasi un'intera giornata**, ogni 30 minuti, con pazienza ostinata, 1T ha continuato a cercare 1R, a fallire dieci volte, e a rilanciare l'allarme. Non si è "stancato", non è andato in tilt, non ha fatto scelte avventate. Ha solo continuato a eseguire la sua programmazione: **cercare, verificare, avvisare**.
 
 C'è anche un altro dettaglio che ha dimostrato l'efficienza del sistema. A un certo punto arriva a 1T una richiesta di accensione mentre 1R è ancora offline, e il sistema **non spara il comando nel vuoto**:
 
@@ -374,7 +374,7 @@ Mette il comando **in attesa**, invece di perderlo. Se ne ricorderà quando 1R t
 
 ### Il ritorno alla "vita"
 
-Finalmente la pompa viene sostituita (ne ho approfittato per aggiungere lo snubber) e il magnetotermico riarmato. Nel giro di pochi minuti, il log torna a respirare — e succede una cosa bellissima:
+Finalmente la pompa viene sostituita (nel frattempo ne ho approfittato per **aggiungere lo snubber**) e il magnetotermico riarmato. Nel giro di pochi minuti, il log torna a respirare — e succede una cosa bellissima:
 
 ```
 HEARTBEAT: invio PING a 1R...
@@ -395,7 +395,7 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 2. **La robustezza costruita con Claude non era ipotetica.** PING/PONG, tentativi, allarmi, comandi in attesa: ogni pezzo ha fatto la sua parte, in una situazione reale che non avevo pianificato.
 
 <details markdown="1">
-<summary><strong>🔍 Una piccola *imperfezione* che ho scelto di non "aggiustare"</strong> (clicca)</summary>
+<summary><strong>🔍 Una piccola ***imperfezione*** che ho scelto di non "aggiustare"</strong> (clicca)</summary>
 
 <br>
 
