@@ -15,6 +15,7 @@ permalink: /ariete-idraulico-uno-strumento-antico/
 *Una guida essenziale per replicare il mio progetto con facilità.*
 
 > Semplici istruzioni per costruire con le proprie mani un ariete idraulico. Un racconto, su come abbia soddisfatto le mie esigenze per molti anni, fa parte di un altro post che puoi trovare nel *[racconto dettagliato di quel progetto]({{ site.baseurl }}/tre-shelly-pompa-60-metri/)*.
+>
 >Qui troverai — oltre alla guida per costruirlo — altri dettagli, di carattere più generale sulla storia dell'ariete idraulico e alcuni link a siti, sia storici che moderni, che ospitano alcuni esemplari notevoli.
 
 ---
