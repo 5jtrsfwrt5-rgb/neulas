@@ -397,6 +397,8 @@ Questa è stata, per me, la vera **prova del fuoco del progetto** — anzi, dell
 <details markdown="1">
 <summary><strong>🔍 Una piccola <em>imperfezione</em> che ho scelto di non "aggiustare"</strong> <small>(clicca)</small></summary>
 
+<br>
+
 Nel ritorno alla normalità, il log mostra che la **prima** accensione dopo la riparazione si interrompe prima del previsto. La mia interpretazione è stata questa: durante il lungo blackout il livello in cisterna era sceso parecchio; quando la pompa è ripartita e l'acqua ha ricominciato a salire attraversando la soglia del sensore, le oscillazioni della superficie hanno generato un ulteriore impulso interpretato come "spegni".
 
 Ho ragionato su due possibili miglioramenti:

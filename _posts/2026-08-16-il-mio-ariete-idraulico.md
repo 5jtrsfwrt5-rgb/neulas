@@ -20,7 +20,7 @@ permalink: /ariete-idraulico-uno-strumento-antico/
 
 ## 1. A chi può servire
 
-Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma ha dei requisiti imprescindibil che se non presenti lo rendono totalmente inutile ai fini pratici:
+Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma ha dei requisiti imprescindibili che se non presenti lo rendono totalmente inutile ai fini pratici:
 
 - disponibilità di una buona **quantità d'acqua** da una sorgente, un fiume o ruscello, un deposito;
 - un **dislivello** tra il punto di prelievo dell'acqua e la posizione dell'ariete idraulico;
@@ -31,7 +31,7 @@ Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma
 
 ## 2. Il dimensionamento
 **Le misure** da considerare quando si vuole costruire un ariete idraulico (di seguito troverete anche il termine ***pompa***) dipendono principalmente dalla **portata** d'acqua sulla quale si può fare affidamento.
-Va tenuto conto anche del fatto che la tubatura di mandata dovrà avere una sezione ***maggiore*** rispetto a quella in uscita dalla pompa. Nel mio caso la portata è sufficiente a riempire un tubo da 32 millimetri.
+Va tenuto conto anche del fatto che la tubatura di alimentazione della pompa dovrà avere una sezione ***maggiore*** rispetto a quella di mandata. Nel mio caso la portata è sufficiente a riempire un tubo da 32 millimetri.
 Dalla fonte parte una tubatura in **polietilene** (ø 32mm), che raggiunge la pompa e prosegue con diametro ridotto (ø 25mm), sempre in polietilene. Nel *mio caso il diametro in uscita è maggiore* di quanto consigliato in letteratura ma devo superare una distanza considerevole: ***circa settanta metri*** e un dislivello di ***circa otto metri***.
 
 ## 3. Rigido è meglio
@@ -93,10 +93,15 @@ Non descrivo delle vere e proprie **istruzioni di montaggio** perché è suffici
 ![Il mio ariete idraulico di scorta]({{ site.baseurl }}/immagini/ariete/ArieteIdraulicoReale.webp)
 
 ## 6. Aguzzate la vista
-I più attenti tra voi noteranno nella foto un dettaglio che merita una spiegazione.
+I più attenti tra voi noteranno nella foto (qui sopra) e nel video del mio ariete idraulico in funzione (più sotto) un dettaglio che merita una spiegazione.
 Sulla valvola di fondo utilizzata ho apportato **una modifica** per consentire un rapido disinnesco e favorire il ciclo successivo.
 Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola Europa — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo.
 Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale *non si riapriva in modo adeguatamente rapido* e talvolta restava chiusa impedendo il funzionamento della pompa.
+
+<video width="100%" controls preload="metadata">
+  <source src="{{ '/immagini/filmati/ariete_idraulico.mp4' | relative_url }}" type="video/mp4">
+  Il tuo browser non supporta il tag video.
+</video>
 
 ## 7. Arieti notevoli
 ### Antico e moderno
