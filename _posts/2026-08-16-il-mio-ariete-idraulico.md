@@ -107,11 +107,11 @@ Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente i
 
 ## 7. Arieti notevoli
 ### Antico e moderno
-Una breve ricerca sul web sugli esemplari **più antichi** tuttora in funzione vi indirizzerà facilmente ad un paio di arieti idraulici: uno del 1796 e un altro, del quale trovate [**qui**](https://www.youtube.com/watch?v=Bbz6MFv8pyI) un video su YouTube, del 1793.
+Una breve ricerca sul web sugli esemplari **più antichi** tuttora in funzione vi indirizzerà facilmente ad un paio di arieti idraulici: uno del 1796 e un altro, del quale trovate [*qui*](https://www.youtube.com/watch?v=Bbz6MFv8pyI) un video su YouTube, del 1793.
 
-Un altro video di un **moderno** ariete idraulico che viene alimentato da una condotta di ben **50 centimetri di diametro** lo potete trovare [**qui**](https://www.youtube.com/watch?v=pORYUjKoSuA).
+Un altro video di un **moderno** ariete idraulico che viene alimentato da una condotta di ben **50 centimetri di diametro** lo potete trovare [*qui*](https://www.youtube.com/watch?v=pORYUjKoSuA).
 
-Di un interessante modello che **innova la tecnologia** integrandovi l’*effetto Venturi* potete trovare [**qui**](https://www.youtube.com/watch?v=LjFRoDoh6xE) un video che ne illustra le caratteristiche a confronto con un ariete idraulico.
+Di un interessante modello che **innova la tecnologia** integrandovi l’*effetto Venturi* potete trovare [*qui*](https://www.youtube.com/watch?v=LjFRoDoh6xE) un video che ne illustra le caratteristiche a confronto con un ariete idraulico.
 
 Io ho scelto di indicarvi soltanto questi pochi link.
 
