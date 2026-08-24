@@ -102,11 +102,11 @@ Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente i
 
 
 <div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden;">
-  <video id="video-ariete" width="100%" preload="metadata" poster="{{ '/immagini/filmati/ariete_idraulico_poster.jpg' | relative_url }}" style="display: block;">
+  <video id="video-ariete" width="100%" preload="metadata" playsinline poster="{{ '/immagini/filmati/ariete_idraulico_poster.webp' | relative_url }}" style="display: block;">
     <source src="{{ '/immagini/filmati/ariete_idraulico.mp4' | relative_url }}" type="video/mp4">
     Il tuo browser non supporta il tag video.
   </video>
-  <button id="play-btn" onclick="toggleVideo()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+  <button id="play-btn" type="button" aria-label="Riproduci video" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
     <svg id="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="#4a7ab5">
       <path d="M8 5v14l11-7z"/>
     </svg>
@@ -117,26 +117,35 @@ Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente i
 </div>
 
 <script>
-function toggleVideo() {
+(function() {
   var video = document.getElementById('video-ariete');
+  var playBtn = document.getElementById('play-btn');
   var playIcon = document.getElementById('play-icon');
   var pauseIcon = document.getElementById('pause-icon');
   
-  if (video.paused) {
-    video.play();
-    playIcon.style.display = 'none';
-    pauseIcon.style.display = 'block';
-  } else {
-    video.pause();
+  function toggleVideo() {
+    if (video.paused) {
+      video.play();
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'block';
+      playBtn.setAttribute('aria-label', 'Pausa video');
+    } else {
+      video.pause();
+      playIcon.style.display = 'block';
+      pauseIcon.style.display = 'none';
+      playBtn.setAttribute('aria-label', 'Riproduci video');
+    }
+  }
+  
+  playBtn.addEventListener('click', toggleVideo);
+  video.addEventListener('click', toggleVideo);
+  
+  video.addEventListener('ended', function() {
     playIcon.style.display = 'block';
     pauseIcon.style.display = 'none';
-  }
-}
-
-document.getElementById('video-ariete').addEventListener('ended', function() {
-  document.getElementById('play-icon').style.display = 'block';
-  document.getElementById('pause-icon').style.display = 'none';
-});
+    playBtn.setAttribute('aria-label', 'Riproduci video');
+  });
+})();
 </script>
 
 
