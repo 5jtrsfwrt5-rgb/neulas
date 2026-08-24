@@ -101,9 +101,8 @@ Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo �
 Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale *non si riapriva in modo adeguatamente rapido* e talvolta restava chiusa impedendo il funzionamento della pompa.
 
 
-
-<div style="position: relative; width: 100%; background-color: #4a7ab5; border-radius: 8px; overflow: hidden;">
-  <video id="video-ariete" width="100%" preload="metadata" style="display: block;">
+<div style="position: relative; width: 100%; border-radius: 8px; overflow: hidden;">
+  <video id="video-ariete" width="100%" preload="metadata" poster="{{ '/immagini/filmati/ariete_idraulico_poster.jpg' | relative_url }}" style="display: block;">
     <source src="{{ '/immagini/filmati/ariete_idraulico.mp4' | relative_url }}" type="video/mp4">
     Il tuo browser non supporta il tag video.
   </video>
