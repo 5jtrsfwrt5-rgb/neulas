@@ -100,10 +100,46 @@ Sulla valvola di fondo utilizzata ho apportato **una modifica** per consentire u
 Quando la velocità dell'acqua aumenta la valvola si chiude e il contraccolpo — oltre a consentire il passaggio di una parte dell'acqua oltre la valvola Europa — favorisce il calo di pressione che, con la riapertura della valvola, riavvia il ciclo.
 Ho posizionato **un piccolo bulloncino** che mi consente di regolare finemente il momento di avvio della depressione. È risultato particolarmente utile dato che la valvola originale *non si riapriva in modo adeguatamente rapido* e talvolta restava chiusa impedendo il funzionamento della pompa.
 
-<video width="100%" controls preload="metadata">
-  <source src="{{ '/immagini/filmati/ariete_idraulico.mp4' | relative_url }}" type="video/mp4">
-  Il tuo browser non supporta il tag video.
-</video>
+
+
+<div style="position: relative; width: 100%; background-color: #4a7ab5; border-radius: 8px; overflow: hidden;">
+  <video id="video-ariete" width="100%" preload="metadata" style="display: block;">
+    <source src="{{ '/immagini/filmati/ariete_idraulico.mp4' | relative_url }}" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+  </video>
+  <button id="play-btn" onclick="toggleVideo()" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; border-radius: 50%; background-color: rgba(255, 255, 255, 0.9); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+    <svg id="play-icon" width="32" height="32" viewBox="0 0 24 24" fill="#4a7ab5">
+      <path d="M8 5v14l11-7z"/>
+    </svg>
+    <svg id="pause-icon" width="32" height="32" viewBox="0 0 24 24" fill="#4a7ab5" style="display: none;">
+      <path d="M6 4h4v16H6zM14 4h4v16h-4z"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+function toggleVideo() {
+  var video = document.getElementById('video-ariete');
+  var playIcon = document.getElementById('play-icon');
+  var pauseIcon = document.getElementById('pause-icon');
+  
+  if (video.paused) {
+    video.play();
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'block';
+  } else {
+    video.pause();
+    playIcon.style.display = 'block';
+    pauseIcon.style.display = 'none';
+  }
+}
+
+document.getElementById('video-ariete').addEventListener('ended', function() {
+  document.getElementById('play-icon').style.display = 'block';
+  document.getElementById('pause-icon').style.display = 'none';
+});
+</script>
+
 
 ## 7. Arieti notevoli
 ### Antico e moderno
