@@ -26,10 +26,10 @@ Un ariete idraulico può tuttora assolvere, come nel passato, la sua funzione ma
 
 - disponibilità di una buona **quantità d'acqua** da una sorgente, un fiume o ruscello, un deposito;
 - un **dislivello** tra il punto di prelievo dell'acqua e la posizione dell'ariete idraulico;
-- un punto di raccolta in posizione **più elevata** rispetto al punto di utilizzo dell'acqua.
+- un punto di raccolta o utilizzo in posizione **più elevata** rispetto alla posizione dell'ariete.
 
 ![La disposizione dell'ariete idraulico deve rispettare alcune condizioni]({{ site.baseurl }}/immagini/ariete/SorgenteArietePrelievo.webp)
-**Una fonte d'acqua, sorgente o ruscello** in posizione *poco più elevata* rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.
+<em style="font-size: 0.75em; color: #4C4C4C;">**Una fonte d'acqua, sorgente o ruscello** in posizione *poco più elevata* rispetto all'ariete e un punto di utilizzo ad una quota *nettamente superiore*.</em>
 
 ## 2. Il dimensionamento
 **Le misure** da considerare quando si vuole costruire un ariete idraulico (di seguito troverete anche il termine ***pompa***) dipendono principalmente dalla **portata** d'acqua sulla quale si può fare affidamento.
